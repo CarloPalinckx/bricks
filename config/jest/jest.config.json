@@ -1,0 +1,29 @@
+{
+    "globals": {
+        "ts-jest": {
+            "tsConfigFile": "./config/typescript/tsconfig.json"
+        }
+    },
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+    },
+    "rootDir": "../../",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "node"
+    ],
+    "coverageDirectory": "./reports/jest",
+    "coverageThreshold": {
+        "src": {
+            "branches": 100,
+            "functions": 100,
+            "lines": 100,
+            "statements": 100
+        }
+    }
+}

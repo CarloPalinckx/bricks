@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots HelloWorld with emoji 1`] = `
+<div>
+  👋 🌍!
+</div>
+`;
+
+exports[`Storyshots HelloWorld with text 1`] = `
+<div>
+  Hello World!
+</div>
+`;

@@ -1,0 +1,8 @@
+.DS_Store
+/.idea
+/.stfolder
+/.phpstorm_helpers
+/.vscode
+/node_modules
+/reports
+/dist
