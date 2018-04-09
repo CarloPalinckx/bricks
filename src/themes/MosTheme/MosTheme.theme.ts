@@ -1,47 +1,6 @@
-type ThemeType = {
-    button:{
-        destructive:ButtonThemeType;
-        flat:ButtonThemeType;
-        primary:ButtonThemeType;
-        secondary:ButtonThemeType;
-        warning:ButtonThemeType;
-    };
-    color:string;
-    fontFamily:string;
-    fontSize:string;
-    headingColor:string;
-    headingFontFamily:string;
-    headingFontSize:string;
-    iconFill:string;
-    subHeadingColor:string;
-    subHeadingFontFamily:string;
-    subHeadingFontSize:string;
-};
+import ThemeType from '../types/ThemeType';
 
-type ButtonThemeType = {
-    backgroundColor:{
-        default:string;
-        hover:string;
-        focus:string;
-        active:string;
-    };
-    borderColor:{
-        default:string;
-        hover:string;
-        focus:string;
-        active:string;
-    };
-    borderRadius:string;
-    borderWidth:string;
-    color:{
-        default:string;
-        hover:string;
-        focus:string;
-        active:string;
-    };
-};
-
-const adminTheme:ThemeType = {
+const theme:ThemeType = {
     button: {
         destructive: {
             backgroundColor: {
@@ -154,16 +113,16 @@ const adminTheme:ThemeType = {
             }
         },
     },
-    color: '#55656D',
-    fontFamily: 'Arial',
+    color: '#333740',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontSize: '16px',
-    headingColor: '#21252B',
-    headingFontFamily: 'Arial',
+    headingColor: '#333740',
+    headingFontFamily: 'Melbourne, sans-serif',
     headingFontSize: '28px',
     iconFill: '#5BD16A',
-    subHeadingColor: '#21252B',
-    subHeadingFontFamily: 'Arial',
-    subHeadingFontSize: '20px',
+    subHeadingColor: '#88979d',
+    subHeadingFontFamily: 'Source Sans Pro, sans-serif',
+    subHeadingFontSize: '18px',
 };
 
-export { ThemeType, ButtonThemeType, adminTheme };
+export default theme;
