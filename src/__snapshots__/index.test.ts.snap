@@ -44,27 +44,27 @@ exports[`Storyshots Button Destructive 1`] = `
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
   font-size: 16px;
-  background-color: #ED2157;
+  background-color: #ed2157;
   border-radius: 0;
-  border: solid 1px #ED2157;
+  border: solid 1px #ed2157;
   color: #fff;
 }
 
 .c0:hover {
-  background-color: #ED2157;
-  border-color: #ED2157;
+  background-color: #ed2157;
+  border-color: #ed2157;
   color: #fff;
 }
 
 .c0:focus {
-  background-color: #ED2157;
-  border-color: #ED2157;
+  background-color: #ed2157;
+  border-color: #ed2157;
   color: #fff;
 }
 
 .c0:active {
-  background-color: #ED2157;
-  border-color: #ED2157;
+  background-color: #ed2157;
+  border-color: #ed2157;
   color: #fff;
 }
 
@@ -89,8 +89,22 @@ exports[`Storyshots Button Destructive 1`] = `
   box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
 }
 
+.c0:disabled {
+  background: #edeff2 repeating-linear-gradient( -45deg, #dbdfe6, #dbdfe6 20px, transparent 20px, transparent 40px );
+  border: 0;
+  padding: 12px 36px;
+  box-shadow: none;
+  cursor: default;
+  opacity: .7;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #333740;
+}
+
 <button
   className="c0"
+  disabled={undefined}
   href={undefined}
   onClick={[Function]}
   target={undefined}
@@ -98,6 +112,103 @@ exports[`Storyshots Button Destructive 1`] = `
   type="button"
 >
   Click me
+</button>
+`;
+
+exports[`Storyshots Button Disabled 1`] = `
+.c0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  line-height: 1;
+  padding: 11px 35px;
+  box-shadow: 0 6px 3px -5px rgba(51,55,64 ,.3);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-transform: translateZ(0) translate3d(0,0,0);
+  -ms-transform: translateZ(0) translate3d(0,0,0);
+  transform: translateZ(0) translate3d(0,0,0);
+  -webkit-transition: -webkit-transform 0.1s,background 0.3s,color 0.3s,box-shadow 0.1s;
+  -webkit-transition: transform 0.1s,background 0.3s,color 0.3s,box-shadow 0.1s;
+  transition: transform 0.1s,background 0.3s,color 0.3s,box-shadow 0.1s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 16px;
+  background-color: #5bd16a;
+  border-radius: 0;
+  border: solid 1px #5bd16a;
+  color: #fff;
+}
+
+.c0:hover {
+  background-color: #5bd16a;
+  border-color: #5bd16a;
+  color: #fff;
+}
+
+.c0:focus {
+  background-color: #5bd16a;
+  border-color: #5bd16a;
+  color: #fff;
+}
+
+.c0:active {
+  background-color: #5bd16a;
+  border-color: #5bd16a;
+  color: #fff;
+}
+
+.c0:hover {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
+}
+
+.c0:active {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  box-shadow: 0 2px 3px -2px rgba(51,55,64 ,.3);
+}
+
+.c0:focus {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
+}
+
+.c0:disabled {
+  background: #edeff2 repeating-linear-gradient( -45deg, #dbdfe6, #dbdfe6 20px, transparent 20px, transparent 40px );
+  border: 0;
+  padding: 12px 36px;
+  box-shadow: none;
+  cursor: default;
+  opacity: .7;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #333740;
+}
+
+<button
+  className="c0"
+  disabled={true}
+  href={undefined}
+  onClick={[Function]}
+  target={undefined}
+  title="Click me if you can!"
+  type="button"
+>
+  Click me if you can!
 </button>
 `;
 
@@ -127,27 +238,27 @@ exports[`Storyshots Button Primary 1`] = `
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
   font-size: 16px;
-  background-color: #5BD16A;
+  background-color: #5bd16a;
   border-radius: 0;
-  border: solid 1px #5BD16A;
+  border: solid 1px #5bd16a;
   color: #fff;
 }
 
 .c0:hover {
-  background-color: #5BD16A;
-  border-color: #5BD16A;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
 .c0:focus {
-  background-color: #5BD16A;
-  border-color: #5BD16A;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
 .c0:active {
-  background-color: #5BD16A;
-  border-color: #5BD16A;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
@@ -172,8 +283,22 @@ exports[`Storyshots Button Primary 1`] = `
   box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
 }
 
+.c0:disabled {
+  background: #edeff2 repeating-linear-gradient( -45deg, #dbdfe6, #dbdfe6 20px, transparent 20px, transparent 40px );
+  border: 0;
+  padding: 12px 36px;
+  box-shadow: none;
+  cursor: default;
+  opacity: .7;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #333740;
+}
+
 <button
   className="c0"
+  disabled={undefined}
   href={undefined}
   onClick={[Function]}
   target={undefined}
@@ -210,26 +335,26 @@ exports[`Storyshots Button Secondary 1`] = `
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
   font-size: 16px;
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-radius: 0;
   border: solid 1px #d2d7e0;
   color: #333740;
 }
 
 .c0:hover {
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-color: #d2d7e0;
   color: #333740;
 }
 
 .c0:focus {
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-color: #d2d7e0;
   color: #333740;
 }
 
 .c0:active {
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-color: #d2d7e0;
   color: #333740;
 }
@@ -255,8 +380,22 @@ exports[`Storyshots Button Secondary 1`] = `
   box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
 }
 
+.c0:disabled {
+  background: #edeff2 repeating-linear-gradient( -45deg, #dbdfe6, #dbdfe6 20px, transparent 20px, transparent 40px );
+  border: 0;
+  padding: 12px 36px;
+  box-shadow: none;
+  cursor: default;
+  opacity: .7;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #333740;
+}
+
 <button
   className="c0"
+  disabled={undefined}
   href={undefined}
   onClick={[Function]}
   target={undefined}
@@ -293,27 +432,27 @@ exports[`Storyshots Button Warning 1`] = `
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
   font-size: 16px;
-  background-color: #FCC200;
+  background-color: #fcc200;
   border-radius: 0;
-  border: solid 1px #FCC200;
+  border: solid 1px #fcc200;
   color: #fff;
 }
 
 .c0:hover {
-  background-color: #FCC200;
-  border-color: #FCC200;
+  background-color: #fcc200;
+  border-color: #fcc200;
   color: #fff;
 }
 
 .c0:focus {
-  background-color: #FCC200;
-  border-color: #FCC200;
+  background-color: #fcc200;
+  border-color: #fcc200;
   color: #fff;
 }
 
 .c0:active {
-  background-color: #FCC200;
-  border-color: #FCC200;
+  background-color: #fcc200;
+  border-color: #fcc200;
   color: #fff;
 }
 
@@ -338,8 +477,22 @@ exports[`Storyshots Button Warning 1`] = `
   box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
 }
 
+.c0:disabled {
+  background: #edeff2 repeating-linear-gradient( -45deg, #dbdfe6, #dbdfe6 20px, transparent 20px, transparent 40px );
+  border: 0;
+  padding: 12px 36px;
+  box-shadow: none;
+  cursor: default;
+  opacity: .7;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #333740;
+}
+
 <button
   className="c0"
+  disabled={undefined}
   href={undefined}
   onClick={[Function]}
   target={undefined}
@@ -376,27 +529,27 @@ exports[`Storyshots Button With a link 1`] = `
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
   font-size: 16px;
-  background-color: #5BD16A;
+  background-color: #5bd16a;
   border-radius: 0;
-  border: solid 1px #5BD16A;
+  border: solid 1px #5bd16a;
   color: #fff;
 }
 
 .c0:hover {
-  background-color: #5BD16A;
-  border-color: #5BD16A;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
 .c0:focus {
-  background-color: #5BD16A;
-  border-color: #5BD16A;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
 .c0:active {
-  background-color: #5BD16A;
-  border-color: #5BD16A;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
@@ -421,8 +574,22 @@ exports[`Storyshots Button With a link 1`] = `
   box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
 }
 
+.c0:disabled {
+  background: #edeff2 repeating-linear-gradient( -45deg, #dbdfe6, #dbdfe6 20px, transparent 20px, transparent 40px );
+  border: 0;
+  padding: 12px 36px;
+  box-shadow: none;
+  cursor: default;
+  opacity: .7;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #333740;
+}
+
 <a
   className="c0"
+  disabled={undefined}
   href="http://www.google.nl"
   onClick={[Function]}
   target="_blank"
@@ -462,13 +629,13 @@ exports[`Storyshots FlatButton default 1`] = `
   background: transparent;
   border-radius: 0;
   border: solid 1px transparent;
-  color: #21252B;
+  color: #21252b;
 }
 
 .c0:hover {
   background-color: transparent;
   border-color: #d2d7e0;
-  color: #21252B;
+  color: #21252b;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -478,7 +645,7 @@ exports[`Storyshots FlatButton default 1`] = `
 .c0:focus {
   background-color: transparent;
   border-color: #d2d7e0;
-  color: #21252B;
+  color: #21252b;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -488,7 +655,7 @@ exports[`Storyshots FlatButton default 1`] = `
 .c0:active {
   background-color: transparent;
   border-color: #d2d7e0;
-  color: #21252B;
+  color: #21252b;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
@@ -497,6 +664,7 @@ exports[`Storyshots FlatButton default 1`] = `
 
 <button
   className="c0"
+  disabled={false}
   href={undefined}
   onClick={[Function]}
   target={undefined}
@@ -533,26 +701,26 @@ exports[`Storyshots FoldOut With a toggle 1`] = `
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
   font-size: 16px;
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-radius: 0;
   border: solid 1px #d2d7e0;
   color: #333740;
 }
 
 .c1:hover {
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-color: #d2d7e0;
   color: #333740;
 }
 
 .c1:focus {
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-color: #d2d7e0;
   color: #333740;
 }
 
 .c1:active {
-  background-color: #EDEFF2;
+  background-color: #edeff2;
   border-color: #d2d7e0;
   color: #333740;
 }
@@ -578,6 +746,19 @@ exports[`Storyshots FoldOut With a toggle 1`] = `
   box-shadow: 0 9px 3px -6px rgba(51,55,64 ,.3);
 }
 
+.c1:disabled {
+  background: #edeff2 repeating-linear-gradient( -45deg, #dbdfe6, #dbdfe6 20px, transparent 20px, transparent 40px );
+  border: 0;
+  padding: 12px 36px;
+  box-shadow: none;
+  cursor: default;
+  opacity: .7;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #333740;
+}
+
 .c2 {
   -webkit-transition: height 300ms cubic-bezier(0.5,0,0.1,1);
   transition: height 300ms cubic-bezier(0.5,0,0.1,1);
@@ -595,6 +776,7 @@ exports[`Storyshots FoldOut With a toggle 1`] = `
   >
     <button
       className="c1"
+      disabled={undefined}
       href={undefined}
       onClick={[Function]}
       target={undefined}
