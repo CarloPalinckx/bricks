@@ -58,9 +58,6 @@ jobs:
           command: npm run build   
 
   publish-npm:
-    dependencies:
-      pre:
-        - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
     docker:
       - image: circleci/node:8.9.1
     working_directory: ~/repo
@@ -77,6 +74,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Authenticating user
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
           name: Publishing to NPM
           command: npm publish
