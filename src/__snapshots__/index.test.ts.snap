@@ -1427,6 +1427,30 @@ exports[`Storyshots Notification With a custom icon 1`] = `
 </div>
 `;
 
+exports[`Storyshots PriceTag default 1`] = `
+.c0 {
+  color: #333740;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.c0 sup {
+  font-size: .7em;
+  font-weight: 400;
+}
+
+<span
+  className="c0"
+>
+  €
+   
+  12
+  ,
+  00
+</span>
+`;
+
 exports[`Storyshots Spacer With margin 1`] = `
 .c2 {
   color: #333740;
