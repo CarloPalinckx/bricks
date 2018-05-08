@@ -1,20 +1,39 @@
 import { StyledComponentClass as _S } from 'styled-components';
-import ThemeType from '../../themes/types/ThemeType';
 import styled from '../../utility/styled';
-import Notification, { PropsType } from './Notification.template';
+import Notification from './Notification.template';
 
-const applyTheme = (theme:ThemeType, severity:PropsType['severity']):string => `
-    background: ${theme.notification[severity].background};
-    border-color: ${theme.notification[severity].borderColor};
-    color: ${theme.notification[severity].color};
-`;
+type VariantStyleType = {
+    backgroundColor:string;
+    borderColor:string;
+    color:string;
+};
+
+type NotificationThemeType = {
+    common:{
+        fontFamily:string;
+        fontSize:string;
+    };
+    error:VariantStyleType;
+    info:VariantStyleType;
+    success:VariantStyleType;
+    warning:VariantStyleType;
+};
 
 const StyledNotification = styled(Notification)`
-    font-family: ${({ theme }):string => theme.fontFamily};
-    font-size: ${({ theme }):string => theme.fontSize};
     border-width: 1px;
     border-style: solid;
-    ${({ severity, theme }):string => applyTheme(theme, severity)}
+    font-family: ${({ theme }):string => theme.Notification.common.fontFamily};
+    font-size: ${({ theme }):string => theme.Notification.common.fontSize};
+
+    ${({ theme, severity }):string => `
+        background-color: ${theme.Notification[severity].backgroundColor};
+        border-color: ${theme.Notification[severity].borderColor};
+        color: ${theme.Notification[severity].color};
+    `}
 `;
 
 export default StyledNotification;
+export {
+    NotificationThemeType,
+    VariantStyleType,
+};

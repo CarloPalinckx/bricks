@@ -1,172 +1,244 @@
-import ThemeType from '../types/ThemeType';
+import ThemeType from '../../types/ThemeType';
+
+const bodyFont = 'Source Sans Pro, sans-serif';
+const headingFont = 'Melbourne, sans-serif';
+
+const fontSize = {
+    larger3: '36px',
+    larger2: '28px',
+    larger1: '22px',
+    base: '14px',
+};
+
+const green = {
+    lighter1: '#7ce88a',
+    base: '#6bde78',
+    darker1: '#5bd16a',
+    darker2: '#4cc55b',
+};
+
+const silver = {
+    lighter1: '#fff',
+    base: '#f8f9fb',
+    darker1: '#edeff2',
+    darker2: '#e4e7ec',
+    darker3: '#dbdfe6',
+    darker4: '#d2d7e0',
+};
+
+const grey = {
+    lighter3: '#a6aab3',
+    lighter2: '#88979d',
+    lighter1: '#55656d',
+    base: '#333740',
+    darker1: '#21252b',
+};
+
+const red = {
+    lighter1: '#ff245e',
+    base: '#ed2157',
+    darker1: '#dc1b4f',
+    darker2: '#c81746',
+};
+
+const yellow = {
+    lighter1: '#ffda5b',
+    base: '#ffce28',
+    darker1: '#fcc200',
+    darker2: '#edb107',
+};
 
 const theme:ThemeType = {
-    button: {
-        destructive: {
-            backgroundColor: {
-                default: '#ed2157',
-                hover: '#ed2157',
-                focus: '#ed2157',
-                active: '#ed2157',
-            },
-            borderColor: {
-                default: '#ed2157',
-                hover: '#ed2157',
-                focus: '#ed2157',
-                active: '#ed2157',
-            },
+    Button: {
+        common: {
             borderRadius: '0',
             borderWidth: '1px',
-            color: {
-                default: '#fff',
-                hover: '#fff',
-                focus: '#fff',
-                active: '#fff',
-            }
+            fontSize: fontSize.base,
+            fontWeight: '400',
+            fontFamily: bodyFont,
         },
         primary: {
-            backgroundColor: {
-                default: '#5bd16a',
-                hover: '#5bd16a',
-                focus: '#5bd16a',
-                active: '#5bd16a',
+            idle: {
+                backgroundColor: green.darker1,
+                borderColor: green.darker1,
+                color: silver.lighter1,
             },
-            borderColor: {
-                default: '#5bd16a',
-                hover: '#5bd16a',
-                focus: '#5bd16a',
-                active: '#5bd16a',
+            hover: {
+                backgroundColor: green.darker1,
+                borderColor: green.darker1,
+                color: silver.lighter1,
             },
-            borderRadius: '0',
-            borderWidth: '1px',
-            color: {
-                default: '#fff',
-                hover: '#fff',
-                focus: '#fff',
-                active: '#fff',
-            }
+            focus: {
+                backgroundColor: green.darker1,
+                borderColor: green.darker1,
+                color: silver.lighter1,
+            },
+            active: {
+                backgroundColor: green.darker1,
+                borderColor: green.darker1,
+                color: silver.lighter1,
+            },
         },
         secondary: {
-            backgroundColor: {
-                default: '#edeff2',
-                hover: '#edeff2',
-                focus: '#edeff2',
-                active: '#edeff2',
+            idle: {
+                backgroundColor: silver.darker1,
+                borderColor: silver.darker4,
+                color: grey.base,
             },
-            borderColor: {
-                default: '#d2d7e0',
-                hover: '#d2d7e0',
-                focus: '#d2d7e0',
-                active: '#d2d7e0',
+            hover: {
+                backgroundColor: silver.darker1,
+                borderColor: silver.darker4,
+                color: grey.base,
             },
-            borderRadius: '0',
-            borderWidth: '1px',
-            color: {
-                default: '#333740',
-                hover: '#333740',
-                focus: '#333740',
-                active: '#333740',
-            }
+            focus: {
+                backgroundColor: silver.darker1,
+                borderColor: silver.darker4,
+                color: grey.base,
+            },
+            active: {
+                backgroundColor: silver.darker1,
+                borderColor: silver.darker4,
+                color: grey.base,
+            },
         },
         warning: {
-            backgroundColor: {
-                default: '#fcc200',
-                hover: '#fcc200',
-                focus: '#fcc200',
-                active: '#fcc200',
+            idle: {
+                backgroundColor: yellow.darker1,
+                borderColor: yellow.darker1,
+                color: silver.lighter1,
             },
-            borderColor: {
-                default: '#fcc200',
-                hover: '#fcc200',
-                focus: '#fcc200',
-                active: '#fcc200',
+            hover: {
+                backgroundColor: yellow.darker1,
+                borderColor: yellow.darker1,
+                color: silver.lighter1,
             },
+            focus: {
+                backgroundColor: yellow.darker1,
+                borderColor: yellow.darker1,
+                color: silver.lighter1,
+            },
+            active: {
+                backgroundColor: yellow.darker1,
+                borderColor: yellow.darker1,
+                color: silver.lighter1,
+            },
+        },
+        destructive: {
+            idle: {
+                backgroundColor: red.base,
+                borderColor: red.base,
+                color: silver.lighter1,
+            },
+            hover: {
+                backgroundColor: red.base,
+                borderColor: red.base,
+                color: silver.lighter1,
+            },
+            focus: {
+                backgroundColor: red.base,
+                borderColor: red.base,
+                color: silver.lighter1,
+            },
+            active: {
+                backgroundColor: red.base,
+                borderColor: red.base,
+                color: silver.lighter1,
+            },
+        },
+        disabled:{
+            color: grey.base,
+            backgroundColor: silver.darker1,
+            stripingColor: silver.darker3,
+        },
+    },
+    FlatButton: {
+        idle: {
+            borderColor: 'transparent',
             borderRadius: '0',
             borderWidth: '1px',
-            color: {
-                default: '#fff',
-                hover: '#fff',
-                focus: '#fff',
-                active: '#fff',
-            }
+            color: grey.darker1,
+            fontFamily: bodyFont,
+            fontSize: fontSize.base,
+        },
+        hover: {
+            borderColor: silver.darker4,
+            color: grey.darker1,
+        },
+        focus: {
+            borderColor: silver.darker4,
+            color: grey.darker1,
+        },
+        active: {
+            borderColor: silver.darker4,
+            color: grey.darker1,
         },
     },
-    buttonDisabled: {
-        backgroundColor1: '#edeff2',
-        backgroundColor2: '#dbdfe6',
-        color: '#333740',
-    },
-    buttonFlat: {
-        borderColor: {
-            default: 'transparent',
-            hover: '#d2d7e0',
-            focus: '#d2d7e0',
-            active: '#d2d7e0',
+    Notification: {
+        common: {
+            fontFamily: bodyFont,
+            fontSize: fontSize.base,
         },
-        borderRadius: '0',
-        borderWidth: '1px',
-        color: {
-            default: '#21252b',
-            hover: '#21252b',
-            focus: '#21252b',
-            active: '#21252b',
-        },
-    },
-    notification: {
         error: {
-            color: '#c81746',
-            background: '#ffbdce',
+            color: red.darker2,
+            backgroundColor: '#ffbdce',
             borderColor: '#ff6c93',
         },
         warning: {
             color: '#bb8d0a',
-            background: '#fff0be',
-            borderColor: '#ffce28',
+            backgroundColor: '#fff0be',
+            borderColor: yellow.base,
         },
         success: {
             color: '#31953d',
-            background: '#d2f5d6',
-            borderColor: '#6bde78',
+            backgroundColor: '#d2f5d6',
+            borderColor: green.base,
         },
         info: {
             color: '#4e82bb',
-            background: '#dde7f2',
+            backgroundColor: '#dde7f2',
             borderColor: '#c8d2dd',
         },
     },
-    color: '#333740',
-    fontFamily: 'Source Sans Pro, sans-serif',
-    fontSize: '16px',
-    headingColor: '#333740',
-    headingFontFamily: 'Melbourne, sans-serif',
-    headingFontSize: '28px',
-    iconFill: '#5bd16a',
-    priceTag: {
+    Text:{
+        color: grey.base,
+        fontFamily: bodyFont,
+        fontSize: fontSize.base,
+    },
+    Heading:{
+        color: grey.base,
+        fontFamily: headingFont,
+        fontSize: fontSize.larger2,
+        fontWeight: '400',
+    },
+    PriceTag: {
         default: {
-            color: '#333740',
-            fontFamily: 'Source Sans Pro, sans-serif',
-            fontSize: '28px',
+            color: grey.base,
+            fontFamily: bodyFont,
+            fontSize: fontSize.larger2,
             fontWeight: '400',
-            sup: {
+            super: {
                 fontSize: '.7em',
                 fontWeight: '400',
             },
         },
         action: {
-            fontSize: '24px',
+            fontSize: fontSize.larger1,
             fontWeight: '400',
-            color: '#88979d',
-            fontFamily: 'Source Sans Pro, sans-serif',
+            color: grey.lighter2,
+            fontFamily: bodyFont,
 
-            sup: {
+            super: {
                 fontSize: '.7em',
                 fontWeight: '400',
             }
         }
     },
-    subHeadingColor: '#88979d',
-    subHeadingFontFamily: 'Source Sans Pro, sans-serif',
-    subHeadingFontSize: '18px',
+    SubHeading:{
+        color: grey.lighter2,
+        fontFamily: bodyFont,
+        fontSize: fontSize.larger1,
+        fontWeight: '400',
+    }
 };
 
 export default theme;

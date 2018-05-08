@@ -19,11 +19,11 @@ exports[`ErrorBoundary should catch an error and report it 1`] = `
 }
 
 .c0 {
-  font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
   border-width: 1px;
   border-style: solid;
-  background: #ffbdce;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 14px;
+  background-color: #ffbdce;
   border-color: #ff6c93;
   color: #c81746;
 }

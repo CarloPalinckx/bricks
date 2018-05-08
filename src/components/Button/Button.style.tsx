@@ -1,37 +1,66 @@
-import { StyledComponentClass } from 'styled-components';
-import ButtonThemeType from '../../themes/types/ButtonThemeType';
-import ThemeType from '../../themes/types/ThemeType';
+import { StyledComponentClass as _S } from 'styled-components';
 import styled from '../../utility/styled';
-import ButtonTemplate, { PropsType } from './Button.template';
+import ButtonTemplate from './Button.template';
 
-const applyTheme = (buttonTheme:ButtonThemeType):string => {
+type ButtonStylesType = {
+    idle:ButtonVariantStylesType;
+    active:ButtonVariantStylesType;
+    focus:ButtonVariantStylesType;
+    hover:ButtonVariantStylesType;
+};
+
+type ButtonVariantStylesType = {
+    backgroundColor:string;
+    borderColor:string;
+    color:string;
+};
+
+type ButtonThemeType = {
+    common:{
+        fontSize:string;
+        fontFamily:string;
+        fontWeight:string;
+        borderWidth:string;
+        borderRadius:string;
+    };
+    primary:ButtonStylesType;
+    secondary:ButtonStylesType;
+    destructive:ButtonStylesType;
+    warning:ButtonStylesType;
+    disabled:{
+        color:string;
+        backgroundColor:string;
+        stripingColor:string;
+    };
+};
+
+const applyTheme = (buttonTheme:ButtonStylesType):string => {
     return `
-        background-color: ${buttonTheme.backgroundColor.default};
-        border-radius: ${buttonTheme.borderRadius};
-        border: solid ${buttonTheme.borderWidth} ${buttonTheme.borderColor.default};
-        color: ${buttonTheme.color.default};
+        background-color: ${buttonTheme.idle.backgroundColor};
+        border-color: ${buttonTheme.idle.borderColor};
+        color: ${buttonTheme.idle.color};
 
         &:hover {
-            background-color: ${buttonTheme.backgroundColor.hover};
-            border-color: ${buttonTheme.borderColor.hover};
-            color: ${buttonTheme.color.hover};
+            background-color: ${buttonTheme.hover.backgroundColor};
+            border-color: ${buttonTheme.hover.borderColor};
+            color: ${buttonTheme.hover.color};
         }
 
         &:focus {
-            background-color: ${buttonTheme.backgroundColor.focus};
-            border-color: ${buttonTheme.borderColor.focus};
-            color: ${buttonTheme.color.focus};
+            background-color: ${buttonTheme.focus.backgroundColor};
+            border-color: ${buttonTheme.focus.borderColor};
+            color: ${buttonTheme.focus.color};
         }
 
         &:active {
-            background-color: ${buttonTheme.backgroundColor.active};
-            border-color: ${buttonTheme.borderColor.active};
-            color: ${buttonTheme.color.active};
+            background-color: ${buttonTheme.active.backgroundColor};
+            border-color: ${buttonTheme.active.borderColor};
+            color: ${buttonTheme.active.color};
         }
     `;
 };
 
-const Button:StyledComponentClass<PropsType, ThemeType> = styled(ButtonTemplate)`
+const Button = styled(ButtonTemplate)`
     position: relative;
     appearance: none;
     border: none;
@@ -45,15 +74,19 @@ const Button:StyledComponentClass<PropsType, ThemeType> = styled(ButtonTemplate)
     transition: transform .1s, background .3s, color .3s, box-shadow .1s, border .3s;
     user-select: none;
     text-decoration: none;
-    font-family: ${({ theme }):string => theme.fontFamily};
-    font-size: ${({ theme }):string => theme.fontSize};
+    font-family: ${({ theme }):string => theme.Button.common.fontFamily};
+    font-size: ${({ theme }):string => theme.Button.common.fontSize};
+    border-radius: ${({ theme }):string => theme.Button.common.borderRadius};
+    border-width: ${({ theme }):string => theme.Button.common.borderWidth};
+    font-weight: ${({ theme }):string => theme.Button.common.fontWeight};
+    border-style: solid;
 
     ${({ variant, theme }):string => {
         switch (variant) {
-            case 'secondary': return applyTheme(theme.button.secondary);
-            case 'destructive': return applyTheme(theme.button.destructive);
-            case 'warning': return applyTheme(theme.button.warning);
-            default: return applyTheme(theme.button.primary);
+            case 'secondary': return applyTheme(theme.Button.secondary);
+            case 'destructive': return applyTheme(theme.Button.destructive);
+            case 'warning': return applyTheme(theme.Button.warning);
+            default: return applyTheme(theme.Button.primary);
         }
     }}
 
@@ -83,23 +116,23 @@ const Button:StyledComponentClass<PropsType, ThemeType> = styled(ButtonTemplate)
         content: '';
         opacity: 0;
         transition: opacity .3s;
-        background: repeating-linear-gradient(
-                -45deg,
-                ${({ theme }):string => theme.buttonDisabled.backgroundColor1},
-                ${({ theme }):string => theme.buttonDisabled.backgroundColor1} 20px,
-                ${({ theme }):string => theme.buttonDisabled.backgroundColor2} 20px,
-                ${({ theme }):string => theme.buttonDisabled.backgroundColor2} 40px
-            );
+        background: ${({ theme }):string => `repeating-linear-gradient(
+            -45deg,
+            ${theme.Button.disabled.backgroundColor},
+            ${theme.Button.disabled.backgroundColor} 20px,
+            ${theme.Button.disabled.stripingColor} 20px,
+            ${theme.Button.disabled.stripingColor} 40px
+        );`}
     }
 
     &:disabled {
-        background: ${({ theme }):string => theme.buttonDisabled.backgroundColor1}
+        background: ${({ theme }):string => theme.Button.disabled.backgroundColor}
         border: 1px solid transparent;
         box-shadow: none;
         cursor: default;
         opacity: .7;
         transform: none;
-        color: ${({ theme }):string => theme.buttonDisabled.color};
+        color: ${({ theme }):string => theme.Button.disabled.color};
 
         &::before {
             opacity: 1;
@@ -108,3 +141,8 @@ const Button:StyledComponentClass<PropsType, ThemeType> = styled(ButtonTemplate)
 `;
 
 export default Button;
+export {
+    ButtonStylesType,
+    ButtonVariantStylesType,
+    ButtonThemeType,
+};

@@ -8,7 +8,7 @@ exports[`Storyshots Box Default 1`] = `
 .c5 {
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -232,7 +232,7 @@ exports[`Storyshots BreakpointProvider Default 1`] = `
 .c1 {
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -283,10 +283,13 @@ exports[`Storyshots Button Destructive 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
-  background-color: #ed2157;
+  font-size: 14px;
   border-radius: 0;
-  border: solid 1px #ed2157;
+  border-width: 1px;
+  font-weight: 400;
+  border-style: solid;
+  background-color: #ed2157;
+  border-color: #ed2157;
   color: #fff;
 }
 
@@ -399,10 +402,13 @@ exports[`Storyshots Button Disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
-  background-color: #5bd16a;
+  font-size: 14px;
   border-radius: 0;
-  border: solid 1px #5bd16a;
+  border-width: 1px;
+  font-weight: 400;
+  border-style: solid;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
@@ -515,10 +521,13 @@ exports[`Storyshots Button Primary 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
-  background-color: #5bd16a;
+  font-size: 14px;
   border-radius: 0;
-  border: solid 1px #5bd16a;
+  border-width: 1px;
+  font-weight: 400;
+  border-style: solid;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
@@ -631,10 +640,13 @@ exports[`Storyshots Button Secondary 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
-  background-color: #edeff2;
+  font-size: 14px;
   border-radius: 0;
-  border: solid 1px #d2d7e0;
+  border-width: 1px;
+  font-weight: 400;
+  border-style: solid;
+  background-color: #edeff2;
+  border-color: #d2d7e0;
   color: #333740;
 }
 
@@ -747,10 +759,13 @@ exports[`Storyshots Button Warning 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
-  background-color: #fcc200;
+  font-size: 14px;
   border-radius: 0;
-  border: solid 1px #fcc200;
+  border-width: 1px;
+  font-weight: 400;
+  border-style: solid;
+  background-color: #fcc200;
+  border-color: #fcc200;
   color: #fff;
 }
 
@@ -863,10 +878,13 @@ exports[`Storyshots Button With a link 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
-  background-color: #5bd16a;
+  font-size: 14px;
   border-radius: 0;
-  border: solid 1px #5bd16a;
+  border-width: 1px;
+  font-weight: 400;
+  border-style: solid;
+  background-color: #5bd16a;
+  border-color: #5bd16a;
   color: #fff;
 }
 
@@ -957,7 +975,7 @@ exports[`Storyshots ErrorBoundary Default 1`] = `
 .c0 {
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -997,7 +1015,7 @@ exports[`Storyshots FlatButton Default 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   background: transparent;
   border-radius: 0;
   border: solid 1px transparent;
@@ -1055,7 +1073,7 @@ exports[`Storyshots FoldOut With a toggle 1`] = `
 .c2 {
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -1086,10 +1104,13 @@ exports[`Storyshots FoldOut With a toggle 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
-  background-color: #edeff2;
+  font-size: 14px;
   border-radius: 0;
-  border: solid 1px #d2d7e0;
+  border-width: 1px;
+  font-weight: 400;
+  border-style: solid;
+  background-color: #edeff2;
+  border-color: #d2d7e0;
   color: #333740;
 }
 
@@ -1424,11 +1445,11 @@ exports[`Storyshots Notification Error 1`] = `
 }
 
 .c0 {
-  font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
   border-width: 1px;
   border-style: solid;
-  background: #ffbdce;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 14px;
+  background-color: #ffbdce;
   border-color: #ff6c93;
   color: #c81746;
 }
@@ -1474,11 +1495,11 @@ exports[`Storyshots Notification Info 1`] = `
 }
 
 .c0 {
-  font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
   border-width: 1px;
   border-style: solid;
-  background: #dde7f2;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 14px;
+  background-color: #dde7f2;
   border-color: #c8d2dd;
   color: #4e82bb;
 }
@@ -1524,11 +1545,11 @@ exports[`Storyshots Notification Success 1`] = `
 }
 
 .c0 {
-  font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
   border-width: 1px;
   border-style: solid;
-  background: #d2f5d6;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 14px;
+  background-color: #d2f5d6;
   border-color: #6bde78;
   color: #31953d;
 }
@@ -1574,11 +1595,11 @@ exports[`Storyshots Notification Warning 1`] = `
 }
 
 .c0 {
-  font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
   border-width: 1px;
   border-style: solid;
-  background: #fff0be;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 14px;
+  background-color: #fff0be;
   border-color: #ffce28;
   color: #bb8d0a;
 }
@@ -1624,11 +1645,11 @@ exports[`Storyshots Notification With a custom icon 1`] = `
 }
 
 .c0 {
-  font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
   border-width: 1px;
   border-style: solid;
-  background: #fff0be;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 14px;
+  background-color: #fff0be;
   border-color: #ffce28;
   color: #bb8d0a;
 }
@@ -1688,7 +1709,7 @@ exports[`Storyshots Spacer With margin 1`] = `
 .c2 {
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -1722,7 +1743,7 @@ exports[`Storyshots Spacer With padding 1`] = `
 .c2 {
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -1752,7 +1773,7 @@ exports[`Storyshots SubHeading Default 1`] = `
 .c0 {
   color: #88979d;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -1770,7 +1791,7 @@ exports[`Storyshots SubHeading With a hierarchy 1`] = `
 .c0 {
   color: #88979d;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -1790,7 +1811,7 @@ exports[`Storyshots Text Default 1`] = `
 .c0 {
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
