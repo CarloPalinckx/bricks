@@ -249,6 +249,27 @@ const theme:ThemeType = {
         scrollbar: {
             background: grey.base,
         }
+    },
+    MessageStream: {
+        common: {
+            backgroundColor: silver.lighter1,
+            borderColor: silver.darker3,
+        },
+        read: {
+            backgroundColor: silver.base,
+        },
+        success: {
+            borderColor: green.darker1,
+        },
+        info: {
+            borderColor: silver.darker3,
+        },
+        warning: {
+            borderColor: yellow.darker1,
+        },
+        error: {
+            borderColor: red.base,
+        },
     }
 };
 
