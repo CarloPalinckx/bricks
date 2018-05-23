@@ -3356,3 +3356,87 @@ exports[`Storyshots Text Default 1`] = `
 
 </p>
 `;
+
+exports[`Storyshots TransitionAnimation Default 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-flex-wrap: no-wrap;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  margin: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.c3 {
+  color: #333740;
+  font-family: Melbourne,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.c1 {
+  -webkit-animation: zoomIn .3s both;
+  animation: zoomIn .3s both;
+}
+
+.c2 {
+  border: solid 3px rgba(255,36,94,0.3);
+  padding: 6px 24px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        role="heading"
+      >
+        Lorem ipsum
+      </div>
+    </div>
+  </div>
+</div>
+`;
