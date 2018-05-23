@@ -73,7 +73,10 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
           name: Publishing to NPM
-          command: npm publish
+          command: |
+            if !npm publish; then
+              echo this tag is already published
+            fi
 
   cleanup:
     <<: *defaults
