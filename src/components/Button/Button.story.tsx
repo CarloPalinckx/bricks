@@ -1,73 +1,79 @@
-import { boolean } from '@storybook/addon-knobs/react';
+import { boolean, select, text } from '@storybook/addon-knobs/react';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
+import trbl from '../../utility/trbl';
 import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Contrast from '../Contrast';
+import Icon from '../Icon';
+import Spacer from '../Spacer';
 
 storiesOf('Button', module)
-    .add('Primary', () => {
+    .add('With text', () => {
         return (
             <Button
-                variant="primary"
-                title="Click me!"
-                action={():void => { alert('clicked!'); }}
+                variant={select(
+                    'variant',
+                    [
+                        'primary',
+                        'secondary',
+                        'warning',
+                        'destructive',
+                        'flat'
+                    ],
+                    'primary'
+                )}
+                title={text('title', 'Click me')}
+                disabled={boolean('disabled', false)}
+                action={():void => { /* */ }}
+                compact={boolean('compact', false)}
+            />
+        );
+    })
+    .add('With an icon', () => {
+        return (
+            <Button
+                variant={select(
+                    'variant',
+                    [
+                        'primary',
+                        'secondary',
+                        'warning',
+                        'destructive',
+                        'flat'
+                    ],
+                    'secondary'
+                )}
+                title={text('title', 'Click me')}
+                disabled={boolean('disabled', false)}
+                action={():void => { /* */ }}
+                compact
             >
-                Click me
+                <Icon size="small" icon="gear" />
             </Button>
         );
     })
-    .add('Secondary', () => {
+    .add('On a contrast area', () => {
         return (
-            <Button
-                variant="secondary"
-                title="Click me!"
-                action={():void => { alert('clicked!'); }}
-            >
-                Click me
-            </Button>
+            <Contrast>
+                <Spacer offsetType="inner" offset={trbl(12)}>
+                    <ButtonGroup>
+                        <Button
+                            variant="secondary"
+                            title={text('title', 'Click me')}
+                            disabled={boolean('disabled', false)}
+                            action={():void => { /* */ }}
+                        />
+                        <Button
+                            variant="flat"
+                            title={'Click me'}
+                            action={():void => { /* */ }}
+                            compact
+                        >
+                            <Icon size="small" icon="gear" />
+                        </Button>
+                    </ButtonGroup>
+                </Spacer>
+            </Contrast>
         );
-    })
-    .add('Destructive', () => {
-        return (
-            <Button
-                variant="destructive"
-                title="Click me!"
-                action={():void => { alert('clicked!'); }}
-            >
-                Click me
-            </Button>
-        );
-    })
-    .add('Warning', () => {
-        return (
-            <Button
-                variant="warning"
-                title="Click me!"
-                action={():void => { alert('clicked!'); }}
-            >
-                Click me
-            </Button>
-        );
-    })
-    .add('Disabled', () => {
-        return (
-            <Button
-                title="Click me if you can!"
-                action={():void => { alert('clicked!'); }}
-                disabled={boolean('disabled', true)}
-            >
-                Click me if you can!
-            </Button>
-        );
-    })
-    .add('With a link', () => {
-            return (
-                <Button
-                    variant="primary"
-                    title="Click me!"
-                    href="http://www.google.nl"
-                    target="_blank"
-                >
-                    Click me
-                </Button>
-            );
     });

@@ -1,5 +1,5 @@
 import { ButtonThemeType } from '../components/Button';
-import { FlatButtonThemeType } from '../components/FlatButton';
+import { ContrastThemeType } from '../components/Contrast/Contrast.style';
 import { HeadingThemeType } from '../components/Heading';
 import { MessageStreamThemeType } from '../components/MessageStream';
 import { NotificationThemeType } from '../components/Notification';
@@ -10,7 +10,7 @@ import { TextThemeType } from '../components/Text';
 
 type ThemeType = {
     Button:ButtonThemeType;
-    FlatButton:FlatButtonThemeType;
+    Contrast:ContrastThemeType;
     Heading:HeadingThemeType;
     MessageStream:MessageStreamThemeType;
     Notification:NotificationThemeType;
