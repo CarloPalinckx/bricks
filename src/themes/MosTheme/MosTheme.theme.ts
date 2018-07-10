@@ -257,10 +257,64 @@ const theme: ThemeType = {
         },
     },
     Heading: {
-        color: grey.base,
-        fontFamily: headingFont,
-        fontSize: fontSize.larger2,
-        fontWeight: '400',
+        default: {
+            color: grey.base,
+            fontFamily: headingFont,
+            fontSize: fontSize.larger2,
+            fontWeight: '400',
+            lineHeight: '1.5',
+            textTransform: 'none',
+        },
+        hierarchy: {
+            hierarchy1: {
+                color: grey.base,
+                fontFamily: headingFont,
+                fontSize: fontSize.larger3,
+                fontWeight: '400',
+                lineHeight: '1.25',
+                textTransform: 'none',
+            },
+            hierarchy2: {
+                color: grey.base,
+                fontFamily: headingFont,
+                fontSize: fontSize.larger2,
+                fontWeight: '400',
+                lineHeight: '1.25',
+                textTransform: 'none',
+            },
+            hierarchy3: {
+                color: grey.base,
+                fontFamily: headingFont,
+                fontSize: fontSize.larger1,
+                fontWeight: '400',
+                lineHeight: '1.25',
+                textTransform: 'none',
+            },
+            hierarchy4: {
+                color: grey.base,
+                fontFamily: bodyFont,
+                fontSize: '20px',
+                fontWeight: '400',
+                lineHeight: '1.25',
+                textTransform: 'none',
+            },
+            hierarchy5: {
+                color: grey.base,
+                fontFamily: bodyFont,
+                fontSize: '18px',
+                fontWeight: '400',
+                lineHeight: '1.25',
+                textTransform: 'none',
+            },
+            hierarchy6: {
+                color: grey.base,
+                fontFamily: bodyFont,
+                fontSize: fontSize.base,
+                fontWeight: '400',
+                lineHeight: '1.25',
+                textTransform: 'uppercase',
+            },
+        }
     },
     InlineNotification: {
         common: {
@@ -373,12 +427,6 @@ const theme: ThemeType = {
             background: grey.base,
         },
     },
-    SubHeading: {
-        color: grey.lighter2,
-        fontFamily: bodyFont,
-        fontSize: fontSize.larger1,
-        fontWeight: '400',
-    },
     Text: {
         default: {
             color: grey.base,
@@ -391,6 +439,15 @@ const theme: ThemeType = {
         },
         strong: {
             fontWeight: '700',
+        },
+        small: {
+            fontSize: '12px',
+        },
+        base: {
+            fontSize: '14px',
+        },
+        large: {
+            fontSize: '16px',
         },
     },
     TextField: {

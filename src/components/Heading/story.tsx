@@ -4,9 +4,13 @@ import React from 'react';
 import Heading, { PropsType } from '.';
 
 storiesOf('Heading', module)
-    .add('Default', () => <Heading>This is a div element.</Heading>)
-    .add('With a hierarchy', () => {
-        const hierarchy = select('Hierarchy', [1, 2, 3, 4, 5, 6], 1) as PropsType['hierarchy'];
+    .add('Default', () => {
+        const hierarchy = select('Hierarchy', [1, 2, 3, 4, 5, 6] , 1) as PropsType['hierarchy'];
+        const element = select('Element', ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p'] , 'h1') as PropsType['element'];
 
-        return <Heading hierarchy={hierarchy}>This is an h{hierarchy} element.</Heading>;
+        return (
+            <Heading hierarchy={hierarchy} element={element}>
+                This is an {element !== undefined ? `${element}` : 'div'} element, with {hierarchy !== undefined ? `h${hierarchy}` : 'h1'} styling.
+            </Heading>
+        );
     });
