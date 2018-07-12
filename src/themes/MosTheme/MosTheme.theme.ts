@@ -214,6 +214,36 @@ const theme: ThemeType = {
                 textDecoration: 'underline',
             },
         },
+        plain: {
+            idle: {
+                backgroundColor: 'transparent',
+                borderColor: 'transparent',
+                color: grey.base,
+                boxShadow: 'none',
+                textDecoration: 'none',
+            },
+            hover: {
+                backgroundColor: 'transparent',
+                borderColor: 'transparent',
+                color: grey.base,
+                boxShadow: 'none',
+                textDecoration: 'none',
+            },
+            focus: {
+                backgroundColor: 'transparent',
+                borderColor: 'transparent',
+                color: grey.base,
+                boxShadow: 'none',
+                textDecoration: 'none',
+            },
+            active: {
+                backgroundColor: 'transparent',
+                borderColor: 'transparent',
+                color: grey.base,
+                boxShadow: 'none',
+                textDecoration: 'none',
+            },
+        },
         disabled: {
             color: grey.lighter2,
             backgroundColor: silver.darker2,
@@ -314,7 +344,7 @@ const theme: ThemeType = {
                 lineHeight: '1.25',
                 textTransform: 'uppercase',
             },
-        }
+        },
     },
     InlineNotification: {
         common: {
@@ -356,6 +386,11 @@ const theme: ThemeType = {
         error: {
             borderColor: red.base,
         },
+    },
+    Modal: {
+        backgroundColor: silver.lighter1,
+        backdropColor: 'rgba(0, 0, 0, 0.3)',
+        borderRadius: '3px',
     },
     Notification: {
         common: {
