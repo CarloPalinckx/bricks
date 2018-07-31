@@ -2,9 +2,14 @@ import _R from 'react';
 import { StyledComponentClass as _S } from 'styled-components';
 import _T from '../../types/ThemeType';
 import styled, { withProps } from '../../utility/styled';
+import SeverityType from '../../types/SeverityType';
 
 type TextVariantStyleType = {
     fontSize: string;
+};
+
+type SeverityStyleType = {
+    color: string;
 };
 
 type TextThemeType = {
@@ -20,6 +25,12 @@ type TextThemeType = {
     strong: {
         fontWeight: string;
     };
+    severity: {
+        success: SeverityStyleType;
+        warning: SeverityStyleType;
+        error: SeverityStyleType;
+        info: SeverityStyleType;
+    };
     small: TextVariantStyleType;
     base: TextVariantStyleType;
     large: TextVariantStyleType;
@@ -31,11 +42,21 @@ type TextPropsType = {
     strong?: boolean;
     variant?: 'small' | 'base' | 'large';
     textAlign?: 'left' | 'right' | 'center' | 'justify';
+    severity?: SeverityType | '';
 };
 
-const StyledText = withProps<TextPropsType, HTMLParagraphElement>(styled.p)`
-    color: ${({ descriptive, theme }): string =>
-        descriptive ? theme.Text.descriptive.color : theme.Text.default.color};
+const StyledParagraph = withProps<TextPropsType, HTMLParagraphElement>(styled.p)`
+    color: ${({ descriptive, severity, theme }): string => {
+        if (descriptive !== undefined && descriptive) {
+            return theme.Text.descriptive.color;
+        }
+
+        if (severity !== undefined && severity !== '') {
+            return theme.Text.severity[severity].color;
+        }
+
+        return theme.Text.default.color;
+    }}
     font-family: ${({ theme }): string => theme.Text.default.fontFamily};
     font-size: ${({ variant, theme }): string => (variant ? theme.Text[variant].fontSize : theme.Text.base.fontSize)};
     font-weight: ${({ strong, theme }): string =>
@@ -45,5 +66,6 @@ const StyledText = withProps<TextPropsType, HTMLParagraphElement>(styled.p)`
     margin: 0;
 `;
 
-export default StyledText;
-export { TextThemeType, TextVariantStyleType };
+const StyledSpan = StyledParagraph.withComponent('span');
+
+export { StyledSpan, StyledParagraph, TextThemeType, TextVariantStyleType, SeverityStyleType };
