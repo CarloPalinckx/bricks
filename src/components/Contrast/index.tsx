@@ -1,35 +1,26 @@
 import deepmerge from 'deepmerge';
-import React, { Component } from 'react';
+import React, { StatelessComponent } from 'react';
 import ThemeType from '../../types/ThemeType';
 import { ThemeProvider } from '../../utility/styled';
 import StyledContrast from './style';
-import { withTheme } from 'styled-components';
 
 type PropsType = {
     enable?: boolean;
-    theme?: ThemeType;
 };
 
-class Contrast extends Component<PropsType> {
-    public contrastTheme: ThemeType;
+const contrastTheme = (theme: ThemeType): ThemeType => {
+    return deepmerge(theme, theme.Contrast.overides as Partial<ThemeType>);
+};
 
-    public constructor(props: PropsType) {
-        super(props);
-        const theme = props.theme as ThemeType;
+const ContrastThemeProvider: StatelessComponent<{ enable?: boolean }> = ({ enable, children }): JSX.Element => (
+    <ThemeProvider theme={!enable ? (theme): ThemeType => theme : contrastTheme}>{children}</ThemeProvider>
+);
 
-        this.contrastTheme = deepmerge(theme, theme.Contrast.overides as Partial<ThemeType>);
-    }
+const Contrast: StatelessComponent<PropsType> = (props): JSX.Element => (
+    <StyledContrast>
+        <ContrastThemeProvider enable={props.enable !== false}>{props.children}</ContrastThemeProvider>
+    </StyledContrast>
+);
 
-    public render(): JSX.Element {
-        return this.props.enable === undefined || this.props.enable ? (
-            <StyledContrast>
-                <ThemeProvider theme={this.contrastTheme}>{this.props.children}</ThemeProvider>
-            </StyledContrast>
-        ) : (
-            <div>{this.props.children}</div>
-        );
-    }
-}
-
-export default withTheme(Contrast);
-export { PropsType };
+export default Contrast;
+export { ContrastThemeProvider, PropsType };
