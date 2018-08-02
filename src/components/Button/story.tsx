@@ -8,6 +8,11 @@ import ButtonGroup from '../ButtonGroup';
 import Contrast from '../Contrast';
 import Icon from '../Icon';
 import Box from '../Box';
+import { MediumIcons } from '../Icon/types';
+
+/* tslint:disable */
+const mediumIconKeys = Object.keys(MediumIcons).filter(key => MediumIcons[key as any].match('<svg'));
+/* tslint:enable */
 
 storiesOf('Button', module)
     .add('With text', () => {
@@ -23,9 +28,6 @@ storiesOf('Button', module)
                 title={text('title', 'Click me')}
                 disabled={boolean('disabled', false)}
                 flat={boolean('flat', false)}
-                action={(): void => {
-                    /* */
-                }}
                 compact={boolean('compact', false)}
             />
         );
@@ -33,23 +35,20 @@ storiesOf('Button', module)
     .add('With an icon', () => {
         return (
             <Button
+                title={text('title', 'Press any key to continue')}
                 variant={
                     select(
                         'variant',
                         ['primary', 'secondary', 'warning', 'destructive', 'plain'],
-                        'secondary',
+                        'destructive',
                     ) as PropsType['variant']
                 }
-                title={text('title', 'Click me')}
+                icon={select('Icon', mediumIconKeys, 'keyboard') as PropsType['icon']}
+                iconAlign={select('Align icon', ['left', 'right'], 'right') as PropsType['iconAlign']}
                 disabled={boolean('disabled', false)}
                 flat={boolean('flat', false)}
-                action={(): void => {
-                    /* */
-                }}
-                compact
-            >
-                <Icon size="medium" icon="gear" />
-            </Button>
+                compact={boolean('compact', false)}
+            />
         );
     })
     .add('On a contrast area', () => {
