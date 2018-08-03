@@ -1,9 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Modal from '.';
 import { mountWithTheme } from '../../utility/styled';
 import BreakpointProvider from '../BreakpointProvider';
 import { PropsType } from '../BreakpointProvider/';
-import StyledModal from './style';
+import StyledModal, { StyledModalWrapper } from './style';
 import TransitionAnimation from '../TransitionAnimation';
 import Button from '../Button';
 
@@ -42,7 +43,7 @@ describe('Modal', () => {
         expect(component.find(StyledModal).length).toBe(1);
     });
 
-    it('should be possible to close the modal view', () => {
+    it('should be possible to close the modal view using the close button', () => {
         const clickMock = jest.fn();
         const component = mountWithTheme(<Modal show={true} title="Foo" closeAction={clickMock} />);
         const closeButton = component.find(Button).first();
@@ -50,6 +51,48 @@ describe('Modal', () => {
         closeButton.simulate('click');
 
         expect(clickMock).toHaveBeenCalled();
+    });
+
+    it('should close when clicked outside the modal view', () => {
+        const clickMock = jest.fn();
+
+        /*tslint:disable*/
+        const mapMouseEvent = {} as any;
+        /*tslint:enable*/
+
+        document.addEventListener = jest.fn((event, callback) => {
+            mapMouseEvent[event] = callback;
+        });
+
+        const component = mountWithTheme(<Modal show={true} title="Foo" closeAction={clickMock} />).find(
+            StyledModalWrapper,
+        );
+
+        mapMouseEvent.mousedown({
+            target: ReactDOM.findDOMNode(component.instance()),
+        });
+
+        expect(clickMock).toHaveBeenCalled();
+    });
+
+    it('should not close when clicked inside the modal view', () => {
+        const clickMock = jest.fn();
+
+        /*tslint:disable*/
+        const mapMouseEvent = {} as any;
+        /*tslint:enable*/
+
+        document.addEventListener = jest.fn((event, callback) => {
+            mapMouseEvent[event] = callback;
+        });
+
+        const component = mountWithTheme(<Modal show={true} title="Foo" closeAction={clickMock} />).find(StyledModal);
+
+        mapMouseEvent.mousedown({
+            target: ReactDOM.findDOMNode(component.instance()),
+        });
+
+        expect(clickMock).not.toHaveBeenCalled();
     });
 
     it('should not break when no closeAction is provided', () => {
