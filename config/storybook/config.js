@@ -1,7 +1,10 @@
 import { configure, addDecorator } from '@storybook/react';
 import themeDecorator from './decorators/themeDecorator';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { setOptions } from '@storybook/addon-options';
+import { configureViewport } from '@storybook/addon-viewport';
+
+configureViewport();
 
 setOptions({
     name: 'Bricks',

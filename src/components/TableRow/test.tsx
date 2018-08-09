@@ -1,6 +1,6 @@
 import React from 'react';
 import TableRow from '.';
-import { mountWithTheme } from '../../utility/styled';
+import { mountWithTheme } from '../../utility/styled/testing';
 import TableCell from '../TableCell';
 import StyledTableCell from '../TableCell/style';
 import StyledTableRow from './style';
