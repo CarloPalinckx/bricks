@@ -2,8 +2,10 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 const Visualizer = require('webpack-visualizer-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const WebpackBar = require('webpackbar');
 
 module.exports = {
+    mode: 'production',
     entry: './src/index.ts',
     stats: {
         assets: true,
@@ -19,6 +21,9 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
+    },
+    optimization: {
+        minimize: true,
     },
     module: {
         rules: [
@@ -62,10 +67,10 @@ module.exports = {
         'styled-components': 'styled-components',
     },
     plugins: [
-        new UglifyJSPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
         }),
+        new WebpackBar(),
         new Visualizer({
             filename: '../reports/webpack/statistics-circle.html',
         }),
