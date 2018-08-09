@@ -1,4 +1,4 @@
-import { text } from '@storybook/addon-knobs/react';
+import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import EmptyState, { EmptyStatePropsType } from '.';

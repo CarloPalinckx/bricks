@@ -20,6 +20,8 @@ storiesOf('Icon', module)
         /* tslint:disable */
         return (
             <Box wrap margin={trbl(12)}>
+                xxx
+                {console.log(SmallIcons)}
                 {smallIconKeys.map(icon => (
                     <Box basis={'33.333333%'} alignItems={'center'} margin={trbl(12, 0)} key={icon}>
                         <Icon color={iconColor} size="small" icon={icon as any} />
