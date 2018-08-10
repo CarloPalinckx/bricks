@@ -1,7 +1,5 @@
-/* tslint:disable */
 enum Illustrations {
-    cactus = require('./assets/cactus.color.svg'),
+    cactus,
 }
-/* tslint:enable */
 
 export { Illustrations };

@@ -35,7 +35,7 @@ storiesOf('Button', module)
     .add('With an icon', () => {
         return (
             <Button
-                title={text('title', 'Press any key to continue')}
+                title={text('title', 'Delete')}
                 variant={
                     select(
                         'variant',
@@ -43,8 +43,8 @@ storiesOf('Button', module)
                         'destructive',
                     ) as PropsType['variant']
                 }
-                icon={select('Icon', mediumIconKeys, 'keyboard') as PropsType['icon']}
-                iconAlign={select('Align icon', ['left', 'right'], 'right') as PropsType['iconAlign']}
+                icon={select('Icon', mediumIconKeys, 'trash') as PropsType['icon']}
+                iconAlign={select('Align icon', ['left', 'right'], 'left') as PropsType['iconAlign']}
                 disabled={boolean('disabled', false)}
                 flat={boolean('flat', false)}
                 compact={boolean('compact', false)}

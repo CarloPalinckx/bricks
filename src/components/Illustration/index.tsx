@@ -1,3 +1,4 @@
+/// <reference path="../../index.d.ts" />
 import React, { StatelessComponent } from 'react';
 import { StyledType } from '../../utility/styled';
 import { StyledIllustration } from './style';
@@ -7,12 +8,14 @@ type IllustrationPropsType = StyledType & {
     illustration: keyof typeof Illustrations;
 };
 
-const IllustrationElement: StatelessComponent<IllustrationPropsType> = (props): JSX.Element => {
-    const illustration = Illustrations[props.illustration];
-
-    /* tslint:disable */
-    return <StyledIllustration aria-hidden role="img" dangerouslySetInnerHTML={{ __html: illustration as any }} />;
-    /* tslint:enable */
+const IllustrationElement: StatelessComponent<IllustrationPropsType> = ({ illustration }): JSX.Element => {
+    return (
+        <StyledIllustration
+            aria-hidden
+            role="img"
+            src={`${__ENVIRONMENT__.ASSET_LOCATION}/illustrations/${illustration}.svg`}
+        />
+    );
 };
 
 export default IllustrationElement;

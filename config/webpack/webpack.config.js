@@ -69,6 +69,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
+            '__ENVIRONMENT__.ASSET_LOCATION': JSON.stringify('http://assets.myonlinestore.com'),
         }),
         new WebpackBar(),
         new Visualizer({

@@ -5,8 +5,9 @@ import Box from '../Box';
 import { Illustrations } from './types';
 
 /* tslint:disable */
-const IllustrationKeys = Object.keys(Illustrations).filter(key => Illustrations[key as any].match('<svg'));
+const IllustrationKeys = Object.keys(Illustrations).filter(key => !isNaN(Illustrations[key as any] as any));
 /* tslint:enable */
+
 storiesOf('Illustration', module).add('default', () => (
     <>
         {IllustrationKeys.map(illustration => (

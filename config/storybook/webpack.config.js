@@ -1,5 +1,6 @@
 const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = (baseConfig, env, config) => {
     config.devServer = {
@@ -23,14 +24,18 @@ module.exports = (baseConfig, env, config) => {
     config.resolve.extensions.push('.js');
     config.resolve.extensions.push('.jsx');
     config.resolve.extensions.push('.json');
-    console.log(config.module);
+
     // loaders
+
+    config.module.rules = config.module.rules.filter(rule => {
+        return !(rule.loader !== undefined && rule.loader.includes('svg-url-loader'));
+    });
 
     config.module.rules.push({
         test: /\.tsx?$/,
         loader: 'ts-loader',
         options: {
-            configFile: __dirname + '/../typescript/tsconfig.json',
+            configFile: `${__dirname}/../typescript/tsconfig.json`,
         },
     });
 
@@ -45,6 +50,15 @@ module.exports = (baseConfig, env, config) => {
     });
 
     config.module.rules.push({
+        test: /\.color\.svg$/,
+        loader: 'svg-inline-loader',
+        options: {
+            classPrefix: true,
+            removeTags: false,
+        },
+    });
+
+    config.module.rules.push({
         enforce: 'pre',
         test: /\.js$/,
         loader: 'source-map-loader',
@@ -53,6 +67,12 @@ module.exports = (baseConfig, env, config) => {
     // plugins
 
     config.plugins.push(new FriendlyErrorsWebpackPlugin());
+
+    config.plugins.push(
+        new webpack.DefinePlugin({
+            '__ENVIRONMENT__.ASSET_LOCATION': JSON.stringify('http://assets.myonlinestore.com'),
+        }),
+    );
 
     return config;
 };

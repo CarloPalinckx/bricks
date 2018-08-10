@@ -24,6 +24,7 @@
     "simplebar": "^2.6.1"
   },
   "devDependencies": {
+    "@google-cloud/storage": "^1.7.0",
     "@storybook/addon-knobs": "^4.0.0-alpha.16",
     "@storybook/addon-options": "^4.0.0-alpha.16",
     "@storybook/addon-storyshots": "^4.0.0-alpha.16",
@@ -54,7 +55,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
     "friendly-errors-webpack-plugin": "^1.6.1",
-    "jest": "^23.4.2",
+    "jest": "^22.4.0",
     "jest-styled-components": "^5.0.0",
     "moment": "^2.18.1",
     "prettier": "^1.12.1",
@@ -62,11 +63,12 @@
     "react-dom": "^16.3.2",
     "react-test-renderer": "^16.3.2",
     "react-transition-group": "^2.3.1",
+    "recursive-readdir": "^2.2.2",
     "rimraf": "^2.6.2",
     "source-map-loader": "^0.2.3",
     "styled-components": "^3.2.3",
     "svg-inline-loader": "^0.8.0",
-    "ts-jest": "^23.1.3",
+    "ts-jest": "^22.4.1",
     "ts-loader": "^4.4.2",
     "tslint": "^5.9.1",
     "tslint-react": "^3.5.1",
@@ -95,7 +97,8 @@
     "build-storybook": "build-storybook -c ./config/storybook -o .out",
     "cs-fix": "prettier --write ./src/**/*.{ts,tsx}",
     "cs": "prettier --list-different ./src/**/*.{ts,tsx}",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publish": "npm run deploy-storybook"
   },
   "files": [
     "dist"

@@ -1,6 +1,6 @@
 import React, { Children, SFC } from 'react';
 import StyledButton, { StyledAnchor } from './style';
-import Icon, { MediumPropsType } from '../Icon';
+import Icon, { MediumIcons } from '../Icon';
 import Box from '../Box';
 import trbl from '../../utility/trbl';
 
@@ -14,7 +14,7 @@ type PropsType = {
     disabled?: boolean;
     flat?: boolean;
     color?: string;
-    icon?: MediumPropsType['icon'];
+    icon?: keyof typeof MediumIcons;
     iconAlign?: 'right' | 'left';
     action?(): void;
 };

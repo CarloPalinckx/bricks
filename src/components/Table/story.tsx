@@ -24,7 +24,7 @@ type RowType = [CellType, CellType, CellType];
 
 type DemoPropsType = {
     draggable: boolean;
-    verbose?: boolean;
+    manual?: boolean;
 };
 
 type DemoStateType = {
@@ -69,7 +69,7 @@ class Demo extends Component<DemoPropsType, DemoStateType> {
     };
 
     public render(): JSX.Element {
-        if (this.props.verbose) {
+        if (this.props.manual) {
             return (
                 <Table dragEndHandler={this.dragEndHandler}>
                     <TableRow>
@@ -131,6 +131,6 @@ storiesOf('Table', module).add('Default', () => {
     return <Demo draggable={false} />;
 });
 
-storiesOf('Table', module).add('Verbose', () => {
-    return <Demo verbose draggable={boolean('draggable', false)} />;
+storiesOf('Table', module).add('Manually rendered with TableRow and TableCell', () => {
+    return <Demo manual draggable={boolean('draggable', false)} />;
 });

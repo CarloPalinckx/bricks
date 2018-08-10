@@ -1,4 +1,5 @@
 {
+    "testURL": "http://localhost",
     "globals": {
         "ts-jest": {
             "useBabelrc": true,
