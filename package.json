@@ -16,6 +16,7 @@
     "components"
   ],
   "dependencies": {
+    "@sambego/storybook-styles": "^1.0.0",
     "babel-loader": "^7.1.5",
     "deepmerge": "^2.1.0",
     "react-beautiful-dnd": "^8.0.3",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@google-cloud/storage": "^1.7.0",
+    "@storybook/addon-info": "^4.0.0-alpha.16",
     "@storybook/addon-knobs": "^4.0.0-alpha.16",
     "@storybook/addon-options": "^4.0.0-alpha.16",
     "@storybook/addon-storyshots": "^4.0.0-alpha.16",

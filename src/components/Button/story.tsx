@@ -1,5 +1,6 @@
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import styles from '@sambego/storybook-styles';
 import React from 'react';
 import { PropsType } from '.';
 import trbl from '../../utility/trbl';
@@ -14,7 +15,32 @@ import { MediumIcons } from '../Icon/types';
 const mediumIconKeys = Object.keys(MediumIcons).filter(key => MediumIcons[key as any].match('<svg'));
 /* tslint:enable */
 
-storiesOf('Button', module)
+(storiesOf('Button', module) as any)
+    .addDecorator(styles({
+        padding: '40px',
+        backgroundColor: '#fff',
+        backgroundImage: `linear-gradient(45deg, rgba(0,0,0,.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.05)75%, rgba(0,0,0,.05)),
+                            linear-gradient(45deg, rgba(0,0,0,.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.05) 75%, rgba(0,0,0,.05))`,
+        backgroundSize: '30px 30px',
+        backgroundPosition: '0 0, 15px 15px'
+    }))
+    .addParameters({
+        info: {
+            inline: true,
+            source: false,
+            propTables: false,
+            styles: {
+                header: {
+                    body: {
+                        marginBottom: '-15px',
+                    },
+                },
+                infoBody: {
+                    border: 'none',
+                },
+            }
+        },
+    })
     .add('With text', () => {
         return (
             <Button
@@ -31,6 +57,16 @@ storiesOf('Button', module)
                 compact={boolean('compact', false)}
             />
         );
+    }, {
+        info: {
+            text: `
+            description or documentation about my component, supports markdown
+  
+            ~~~js
+            <Button>Click Here</Button>
+            ~~~
+          `
+        }
     })
     .add('With an icon', () => {
         return (
