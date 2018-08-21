@@ -22,7 +22,7 @@ const mediumIconKeys = Object.keys(MediumIcons).filter(key => MediumIcons[key as
         backgroundImage: `linear-gradient(45deg, rgba(0,0,0,.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.05)75%, rgba(0,0,0,.05)),
                             linear-gradient(45deg, rgba(0,0,0,.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.05) 75%, rgba(0,0,0,.05))`,
         backgroundSize: '30px 30px',
-        backgroundPosition: '0 0, 15px 15px'
+        backgroundPosition: '0 0, 15px 15px',
     }))
     .addParameters({
         info: {
@@ -59,13 +59,11 @@ const mediumIconKeys = Object.keys(MediumIcons).filter(key => MediumIcons[key as
         );
     }, {
         info: {
-            text: `
-            description or documentation about my component, supports markdown
-  
-            ~~~js
-            <Button>Click Here</Button>
-            ~~~
-          `
+            text: `## Markdown text
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."`
         }
     })
     .add('With an icon', () => {
