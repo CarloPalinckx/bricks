@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Icon from '../Icon';
-import StyledCheckbox, { StyledCheckboxSkin } from './style';
+import { StyledCheckbox, StyledCheckboxSkin } from './style';
 import Box from '../Box';
 
 type StateType = {
@@ -8,10 +8,12 @@ type StateType = {
 };
 
 type PropsType = {
-    checked: boolean;
+    checked: boolean | 'indeterminate';
     value: string;
     name: string;
-    changeHandler(change: { checked: boolean }): void;
+    onChange(change: { checked: boolean | 'indeterminate' }): void;
+    onMount?(): void;
+    onUnmount?(): void;
 };
 
 class Checkbox extends Component<PropsType, StateType> {
@@ -23,9 +25,19 @@ class Checkbox extends Component<PropsType, StateType> {
         };
     }
 
-    public handleChange = (): void => {
-        this.props.changeHandler({
-            checked: !this.props.checked,
+    public componentDidMount(): void {
+        if (this.props.onMount !== undefined) {
+            this.props.onMount();
+        }
+    }
+
+    public componentWillUnmount(): void {
+        if (this.props.onUnmount !== undefined) this.props.onUnmount();
+    }
+
+    public changeHandler = (): void => {
+        this.props.onChange({
+            checked: !(this.props.checked === true),
         });
     };
 
@@ -34,23 +46,26 @@ class Checkbox extends Component<PropsType, StateType> {
     };
 
     public render(): JSX.Element {
+        const htmlChecked = this.props.checked === true;
+
         return (
             <StyledCheckboxSkin
-                onClick={this.handleChange}
+                checkedState={this.props.checked}
+                onClick={this.changeHandler}
                 elementFocus={this.state.focus}
-                checked={this.props.checked}
             >
                 <Box justifyContent="center" alignItems="center" height="100%">
-                    {this.props.checked && <Icon size="small" color="#fff" icon="checkmark" />}
+                    {this.props.checked === true && <Icon size="small" color="#fff" icon="checkmark" />}
+                    {this.props.checked === 'indeterminate' && <Icon size="small" color="#fff" icon="minus" />}
                 </Box>
                 <StyledCheckbox
                     onFocus={this.toggleFocus}
                     onBlur={this.toggleFocus}
                     name={this.props.name}
                     value={this.props.value}
-                    checked={this.props.checked}
+                    checked={htmlChecked}
                     type="checkbox"
-                    onChange={this.handleChange}
+                    onChange={this.changeHandler}
                 />
             </StyledCheckboxSkin>
         );

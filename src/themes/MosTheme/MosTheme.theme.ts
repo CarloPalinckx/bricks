@@ -599,27 +599,32 @@ const theme: ThemeType = {
         },
     },
     Table: {
-        backgroundColor: silver.darker4,
-    },
-    TableCell: {
         default: {
-            backgroundColor: silver.lighter1,
-            borderColor: silver.darker4,
-        },
-        header: {
             backgroundColor: silver.darker1,
         },
-    },
-    TableRow: {
-        default: {
-            backgroundColor: silver.lighter1,
-            borderColor: 'rgba(107,222,120,0)',
+        cell: {
+            default: {
+                backgroundColor: silver.lighter1,
+                borderColor: silver.darker4,
+            },
+            header: {
+                backgroundColor: silver.darker1,
+            },
         },
-        hover: {
-            backgroundColor: silver.base,
-        },
-        focus: {
-            borderColor: 'rgba(107,222,120,0.4)',
+        row: {
+            default: {
+                backgroundColor: silver.lighter1,
+                borderColor: 'rgba(107,222,120,0)',
+            },
+            hover: {
+                backgroundColor: silver.base,
+            },
+            focus: {
+                borderColor: 'rgba(107,222,120,0.4)',
+            },
+            dragging: {
+                boxShadow: '0 6px 48px 0 rgba(33,37,43,0.30)',
+            },
         },
     },
     Text: {
