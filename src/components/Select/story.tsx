@@ -5,20 +5,24 @@ import { object, text } from '@storybook/addon-knobs';
 import Text from '../Text';
 import trbl from '../../utility/trbl';
 import Icon from '../Icon';
+import Box from '../Box';
 
 type OptionType = {
     image: string;
     value: string;
     label: string;
     description: string;
+};
+
+type ProvidedType = {
     isSelected?: boolean;
 };
 
 const options: Array<OptionType> = [
     {
         image: 'https://picsum.photos/g/40/40/?random',
-        value: 'A',
-        label: 'Bar A',
+        value: 'Aaaaaaaaaaaaaaaaaaaaaaaaa',
+        label: 'Bar Aaaaaaaaaaaaaaaaaaaaaaaaa',
         description: 'Lorem ipsum dolor sit amet.',
     },
     {
@@ -53,7 +57,7 @@ const options: Array<OptionType> = [
     },
 ];
 
-type DemoPropsType = { renderOption?(option: OptionType): JSX.Element };
+type DemoPropsType = { renderOption?(option: OptionType, provided: ProvidedType): JSX.Element };
 
 class Demo extends Component<DemoPropsType, { value: string }> {
     public constructor(props: DemoPropsType) {
@@ -70,28 +74,14 @@ class Demo extends Component<DemoPropsType, { value: string }> {
 
     public render(): JSX.Element {
         return (
-<<<<<<< HEAD
             <Select
                 placeholder={text('placeholder', 'Search a value')}
                 value={this.state.value}
                 emptyText={text('emptyText', 'No results')}
                 onChange={this.handleChange}
                 options={object('options', options)}
+                renderOption={this.props.renderOption}
             />
-=======
-            <Box>
-                <Box basis="300px" grow={0} direction="column">
-                    <Select
-                        renderOption={this.props.renderOption}
-                        placeholder={text('placeholder', 'Search a value')}
-                        value={this.state.value}
-                        emptyText={text('emptyText', 'No results')}
-                        onChange={this.handleChange}
-                        options={object('options', options)}
-                    />
-                </Box>
-            </Box>
->>>>>>> f5800ac... Added custom rendering story to select
         );
     }
 }
@@ -102,13 +92,17 @@ storiesOf('Select', module)
     })
     .add('With a custom option renderer', () => (
         <Demo
-            renderOption={({ image, label, description, isSelected }): JSX.Element => (
+            renderOption={({ image, label, description }, { isSelected }): JSX.Element => (
                 <Box>
                     <Box alignItems="center">
-                        {(isSelected && <Icon size="medium" icon="checkmark" />) || <img src={image} alt={label} />}
+                        {(isSelected && (
+                            <Text descriptive={isSelected}>
+                                <Icon size="small" icon="checkmark" />
+                            </Text>
+                        )) || <img src={image} alt={label} />}
                     </Box>
                     <Box direction="column" margin={trbl(0, 0, 0, 12)}>
-                        <Text>{label}</Text>
+                        <Text descriptive={isSelected}>{label}</Text>
                         <Text descriptive variant="small">
                             {description}
                         </Text>

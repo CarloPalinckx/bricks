@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent, Component, RefObject, createRef } from 'react';
+import React, { ChangeEvent, KeyboardEvent, Component, RefObject, createRef, MouseEvent } from 'react';
 import { createPortal } from 'react-dom';
 import Box from '../Box';
 import FoldOut from '../FoldOut';
@@ -15,7 +15,7 @@ type OptionBase = {
     label: string;
 };
 
-type OptionAdditionsType = {
+type ProvidedType = {
     isSelected: boolean;
 };
 
@@ -31,7 +31,7 @@ type PropsType<GenericOption extends OptionBase> = {
     options: Array<GenericOption>;
     emptyText: string;
     onChange(value: string): void;
-    renderOption?(option: GenericOption & OptionAdditionsType): JSX.Element;
+    renderOption?(option: GenericOption, provided: ProvidedType): JSX.Element;
 };
 
 class Select<GenericOption extends OptionBase> extends Component<PropsType<GenericOption>, StateType> {
@@ -82,21 +82,21 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
         );
     };
 
-    public componentDidUpdate(prevProps: PropsType<GenericOption>, prevState: StateType): void {
+    public componentDidUpdate(_: PropsType<GenericOption>, prevState: StateType): void {
         if (this.inputRef.current !== null && !prevState.isOpen && this.state.isOpen) {
             this.inputRef.current.focus();
         }
     }
 
     public componentDidMount(): void {
-        document.addEventListener('mousedown', this.handleClickOutside);
+        document.addEventListener('mousedown', this.handleClickOutside as any);
     }
 
     public componentWillUnmount(): void {
-        document.removeEventListener('mousedown', this.handleClickOutside);
+        document.removeEventListener('mousedown', this.handleClickOutside as any);
     }
 
-    public handleClickOutside = (event: MouseEvent): void => {
+    public handleClickOutside = (event: MouseEvent<HTMLDivElement>): void => {
         if (!this.wrapperRef.contains(event.target as Node)) {
             this.close();
         }
@@ -202,35 +202,29 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                                     this.filterOptions().map((option, index) => {
                                         const isSelected = option.value === this.props.value;
 
-                                        /* tslint:disable:no-any */
                                         return (
                                             <Option
                                                 isTargeted={index === this.state.optionPointer}
                                                 key={`${option.value}-${option.label}`}
                                                 onMouseEnter={(): void => this.cycleTo(index)}
-                                                onClick={(): void => {
+                                                onClick={(event: MouseEvent<HTMLDivElement>): void => {
+                                                    event.stopPropagation();
                                                     this.handleChange(option.value);
                                                 }}
                                             >
-                                                <Text inline descriptive={option.value === this.props.value}>
-                                                    {isSelected &&
-                                                        this.props.renderOption === undefined && (
-                                                            <Box margin={trbl(0, 6, 0, 0)} inline>
+                                                {(this.props.renderOption !== undefined &&
+                                                    this.props.renderOption(option, { isSelected })) || (
+                                                    <Text inline descriptive={isSelected}>
+                                                        {isSelected && (
+                                                            <Box inline margin={trbl(0, 6, 0, 0)}>
                                                                 <Icon size="small" icon="checkmark" />
                                                             </Box>
                                                         )}
-                                                    <Box>
-                                                        {(this.props.renderOption !== undefined &&
-                                                            this.props.renderOption({
-                                                                ...(option as any),
-                                                                isSelected,
-                                                            })) ||
-                                                            option.label}
-                                                    </Box>
-                                                </Text>
+                                                        {option.label}
+                                                    </Text>
+                                                )}
                                             </Option>
                                         );
-                                        /* tslint:enable:no-any */
                                     })}
                             </FoldOut>
                         </ScrollBox>
@@ -243,4 +237,4 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
 }
 
 export default Select;
-export { PropsType, StateType, OptionBase, OptionAdditionsType };
+export { PropsType, StateType, OptionBase, ProvidedType };
