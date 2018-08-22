@@ -2,7 +2,7 @@ import trbl from '.';
 
 describe('trbl', () => {
     it('should handle the auto value', () => {
-        expect(trbl(12, 'auto')).toEqual({
+        expect(trbl(6, 'auto')).toEqual({
             top: '12px',
             right: 'auto',
             bottom: '12px',
@@ -11,7 +11,7 @@ describe('trbl', () => {
     });
 
     it('should generate px values from a shorthand with 1 coordinate', () => {
-        expect(trbl(12)).toEqual({
+        expect(trbl(6)).toEqual({
             top: '12px',
             right: '12px',
             bottom: '12px',
@@ -20,7 +20,7 @@ describe('trbl', () => {
     });
 
     it('should generate px values from a shorthand with 2 coordinates', () => {
-        expect(trbl(12, 24)).toEqual({
+        expect(trbl(6, 12)).toEqual({
             top: '12px',
             right: '24px',
             bottom: '12px',
@@ -29,7 +29,7 @@ describe('trbl', () => {
     });
 
     it('should generate px values from a shorthand with 3 coordinates', () => {
-        expect(trbl(12, 24, 48)).toEqual({
+        expect(trbl(6, 12, 24)).toEqual({
             top: '12px',
             right: '24px',
             bottom: '48px',
@@ -38,7 +38,7 @@ describe('trbl', () => {
     });
 
     it('should generate px values from a shorthand with 4 coordinates', () => {
-        expect(trbl(12, 24, 36, 48)).toEqual({
+        expect(trbl(6, 12, 18, 24)).toEqual({
             top: '12px',
             right: '24px',
             bottom: '36px',

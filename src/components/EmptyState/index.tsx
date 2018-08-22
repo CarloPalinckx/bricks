@@ -17,12 +17,12 @@ type EmptyStatePropsType = {
 const EmptyStateElement: StatelessComponent<EmptyStatePropsType> = (props): JSX.Element => (
     <Box direction="column" alignItems="center" justifyContent="space-around">
         <Illustration illustration={'cactus'} />
-        <Box padding={trbl(18, 0, 0, 0)}>
+        <Box padding={trbl(9, 0, 0, 0)}>
             <Heading hierarchy={1} textAlign="center">
                 {props.title}
             </Heading>
         </Box>
-        <Box margin={trbl(12, 0, 24, 0)}>
+        <Box margin={trbl(6, 0, 12, 0)}>
             <Text textAlign="center" descriptive>
                 {props.message}
             </Text>

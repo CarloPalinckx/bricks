@@ -41,8 +41,8 @@ const Message: StatelessComponent<MessagePropsType> = (props): JSX.Element => {
     return (
         <StyledMessage title={props.title} severity={props.severity}>
             <Contrast enable={props.read}>
-                <Box padding={trbl(12, 24)} wrap alignItems="center" alignContent="flex-start">
-                    <Box direction="column" grow={1} basis={'250px'} margin={trbl(0, 24, 0, 0)}>
+                <Box padding={trbl(6, 12)} wrap alignItems="center" alignContent="flex-start">
+                    <Box direction="column" grow={1} basis={'250px'} margin={trbl(0, 12, 0, 0)}>
                         <Text strong>{props.title}</Text>
                         <Text>
                             <span dangerouslySetInnerHTML={{ __html: props.message }} />
@@ -55,7 +55,7 @@ const Message: StatelessComponent<MessagePropsType> = (props): JSX.Element => {
                             basis="auto"
                             justifyContent="center"
                             alignItems="flex-end"
-                            margin={trbl(6, 0)}
+                            margin={trbl(3, 0)}
                         >
                             <Button
                                 title={props.buttonLabel}

@@ -39,7 +39,7 @@ class RadioButton extends Component<PropsType, StateType> {
     public render(): JSX.Element {
         return (
             <StyledRadioWrapper onClick={this.handleChange}>
-                <Box margin={trbl(0, 9, 0, 0)}>
+                <Box margin={trbl(0, 4, 0, 0)}>
                     <StyledRadioButtonSkin elementFocus={this.state.focus} checked={this.props.checked}>
                         <StyledRadioButton
                             onFocus={this.toggleFocus}

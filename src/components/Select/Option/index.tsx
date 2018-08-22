@@ -21,7 +21,7 @@ const Option: SFC<PropsType> = (props): JSX.Element => {
 
     return (
         <StyledOption isTargeted={props.isTargeted} onClick={onClick} onMouseEnter={mouseEnter}>
-            <Box padding={trbl(6, 18)}>{props.children}</Box>
+            <Box padding={trbl(3, 9)}>{props.children}</Box>
         </StyledOption>
     );
 };

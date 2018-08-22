@@ -60,14 +60,14 @@ class Modal extends Component<PropsType> {
                             >
                                 <Box
                                     shrink={0}
-                                    margin={breakpoint === 'small' ? trbl(24) : trbl(24, 36)}
+                                    margin={breakpoint === 'small' ? trbl(12) : trbl(12, 18)}
                                     alignItems="flex-start"
                                     alignContent="center"
                                     justifyContent="space-between"
                                 >
                                     <Heading hierarchy={2}>{this.props.title}</Heading>
                                     <Box
-                                        margin={trbl(-12, -12, -6, 0)}
+                                        margin={trbl(-6, -6, -3, 0)}
                                         alignContent="center"
                                         justifyContent="flex-end"
                                         alignItems="center"
@@ -79,13 +79,13 @@ class Modal extends Component<PropsType> {
                                     </Box>
                                 </Box>
                                 <ScrollBox>
-                                    <Box padding={breakpoint === 'small' ? trbl(0, 24, 24, 24) : trbl(0, 36, 36, 36)}>
+                                    <Box padding={breakpoint === 'small' ? trbl(0, 12, 12, 12) : trbl(0, 18, 18, 18)}>
                                         {this.props.children}
                                     </Box>
                                 </ScrollBox>
                                 {this.props.renderFixed && (
                                     <Contrast>
-                                        <Box direction="column" alignItems="stretch" shrink={0} padding={trbl(24, 36)}>
+                                        <Box direction="column" alignItems="stretch" shrink={0} padding={trbl(12, 18)}>
                                             {this.props.renderFixed()}
                                         </Box>
                                     </Contrast>

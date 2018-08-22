@@ -45,7 +45,7 @@ describe('Box', () => {
     });
 
     it('can have a margin', () => {
-        const component = shallow(<Box margin={trbl(24, 0, 'auto')} />);
+        const component = shallow(<Box margin={trbl(12, 0, 'auto')} />);
 
         /* tslint:disable */
         (expect(component) as any).toHaveStyleRule('margin', '24px 0px auto 0px');
@@ -53,7 +53,7 @@ describe('Box', () => {
     });
 
     it('can have padding', () => {
-        const component = shallow(<Box padding={trbl(24, 0, 'auto')} />);
+        const component = shallow(<Box padding={trbl(12, 0, 'auto')} />);
 
         /*tslint:disable */
         (expect(component) as any).toHaveStyleRule('padding', '24px 0px auto 0px');

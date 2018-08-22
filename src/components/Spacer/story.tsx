@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 
 storiesOf('Spacer ⚠️ ', module)
     .add('With margin', () => (
-        <Spacer offset={trbl(12)}>
+        <Spacer offset={trbl(6)}>
             <StyledDiv>
                 <Text>This has a margin.</Text>
             </StyledDiv>
@@ -20,7 +20,7 @@ storiesOf('Spacer ⚠️ ', module)
     ))
     .add('With padding', () => (
         <StyledDiv>
-            <Spacer offset={trbl(12)} offsetType="inner">
+            <Spacer offset={trbl(6)} offsetType="inner">
                 <Text>This has padding.</Text>
             </Spacer>
         </StyledDiv>

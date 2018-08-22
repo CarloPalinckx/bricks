@@ -20,7 +20,7 @@ type StateType = {
 
 const DemoContent: StatelessComponent = (): JSX.Element => {
     return (
-        <Box margin={trbl(24)}>
+        <Box margin={trbl(12)}>
             <Text>
                 Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus
                 mollis interdum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
@@ -47,7 +47,7 @@ class Demo extends Component<PropsType, StateType> {
     public render(): JSX.Element {
         return (
             <Box height="90vh" justifyContent="center" alignItems="center">
-                <Box margin={trbl(48)}>
+                <Box margin={trbl(24)}>
                     <Popover
                         isOpen={this.state.isOpen}
                         placement={this.props.placement}

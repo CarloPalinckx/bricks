@@ -54,7 +54,7 @@ storiesOf('Button', module)
     .add('On a contrast area', () => {
         return (
             <Contrast>
-                <Box padding={trbl(12)}>
+                <Box padding={trbl(6)}>
                     <ButtonGroup>
                         <Button
                             variant="secondary"

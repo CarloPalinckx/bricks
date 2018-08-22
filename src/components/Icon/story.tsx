@@ -19,11 +19,11 @@ storiesOf('Icon', module)
 
         /* tslint:disable */
         return (
-            <Box wrap margin={trbl(12)}>
+            <Box wrap margin={trbl(6)}>
                 {smallIconKeys.map(icon => (
-                    <Box basis={'33.333333%'} alignItems={'center'} margin={trbl(12, 0)} key={icon}>
+                    <Box basis={'33.333333%'} alignItems={'center'} margin={trbl(6, 0)} key={icon}>
                         <Icon color={iconColor} size="small" icon={icon as any} />
-                        <Box margin={trbl(0, 0, 0, 24)}>
+                        <Box margin={trbl(0, 0, 0, 12)}>
                             <Text>{icon}</Text>
                         </Box>
                     </Box>
@@ -37,11 +37,11 @@ storiesOf('Icon', module)
 
         /* tslint:disable */
         return (
-            <Box wrap margin={trbl(24)}>
+            <Box wrap margin={trbl(12)}>
                 {mediumIconKeys.map(icon => (
-                    <Box basis={'33.333333%'} alignItems={'center'} margin={trbl(12, 0)} key={icon}>
+                    <Box basis={'33.333333%'} alignItems={'center'} margin={trbl(6, 0)} key={icon}>
                         <Icon color={iconColor} size="medium" icon={icon as any} />
-                        <Box margin={trbl(0, 0, 0, 24)}>
+                        <Box margin={trbl(0, 0, 0, 12)}>
                             <Text>{icon}</Text>
                         </Box>
                     </Box>
@@ -55,11 +55,11 @@ storiesOf('Icon', module)
 
         /* tslint:disable */
         return (
-            <Box wrap margin={trbl(24)}>
+            <Box wrap margin={trbl(12)}>
                 {largeIconKeys.map(icon => (
-                    <Box basis={'50%'} alignItems={'center'} margin={trbl(12, 0)} key={icon}>
+                    <Box basis={'50%'} alignItems={'center'} margin={trbl(6, 0)} key={icon}>
                         <Icon color={iconColor} size="large" icon={icon as any} />
-                        <Box margin={trbl(0, 0, 0, 24)}>
+                        <Box margin={trbl(0, 0, 0, 12)}>
                             <Text>{icon}</Text>
                         </Box>
                     </Box>

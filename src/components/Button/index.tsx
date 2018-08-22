@@ -29,14 +29,14 @@ const ButtonContents: SFC<ButtonContentsType> = (props): JSX.Element => (
     <>
         {props.icon &&
             props.iconAlign !== 'right' && (
-                <Box inline padding={trbl(0, 6, 0, 0)}>
+                <Box inline padding={trbl(0, 3, 0, 0)}>
                     <Icon icon={props.icon} size={'medium'} />
                 </Box>
             )}
         {Children.count(props.children) > 0 ? props.children : props.title}
         {props.icon &&
             props.iconAlign === 'right' && (
-                <Box inline padding={trbl(0, 0, 0, 6)}>
+                <Box inline padding={trbl(0, 0, 0, 3)}>
                     <Icon icon={props.icon} size={'medium'} />
                 </Box>
             )}

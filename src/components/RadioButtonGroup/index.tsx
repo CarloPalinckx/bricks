@@ -16,9 +16,9 @@ const RadioButtonGroup: StatelessComponent = (props): JSX.Element => {
                 const direction = breakpoint === 'small' ? 'column' : 'row';
 
                 return (
-                    <Box direction={direction} justifyContent="flex-start" alignItems="stretch" wrap margin={trbl(-6)}>
+                    <Box direction={direction} justifyContent="flex-start" alignItems="stretch" wrap margin={trbl(-3)}>
                         {Children.map(props.children, (child): JSX.Element => (
-                            <Box direction="row" alignSelf="stretch" margin={trbl(6)}>
+                            <Box direction="row" alignSelf="stretch" margin={trbl(3)}>
                                 {child}
                             </Box>
                         ))}

@@ -147,7 +147,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                     <Box alignItems="stretch">
                         {(this.state.isOpen && (
                             <>
-                                <Box alignItems="center" margin={trbl(0, 6, 0, 0)}>
+                                <Box alignItems="center" margin={trbl(0, 3, 0, 0)}>
                                     <Icon icon="search" size="small" color={'#d2d7e0'} />
                                 </Box>
                                 <input
@@ -190,7 +190,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                         <ScrollBox autoHideScrollBar={false} showInsetShadow={false}>
                             <FoldOut isOpen={this.state.isOpen}>
                                 {this.filterOptions().length === 0 && (
-                                    <Box padding={trbl(12)}>
+                                    <Box padding={trbl(6)}>
                                         <Text>{this.props.emptyText}</Text>
                                     </Box>
                                 )}
@@ -205,7 +205,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                                             }}
                                         >
                                             <Text descriptive={option.value === this.props.value}>
-                                                <Box margin={trbl(0, 6, 0, 0)} inline>
+                                                <Box margin={trbl(0, 3, 0, 0)} inline>
                                                     {option.value === this.props.value && (
                                                         <Icon size="small" icon="checkmark" />
                                                     )}

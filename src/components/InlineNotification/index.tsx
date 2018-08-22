@@ -17,7 +17,7 @@ const InlineNotification: SFC<PropsType> = (props): JSX.Element => {
     return (
         <Text variant="small" severity={props.severity}>
             <Box inline>
-                <Box inline margin={trbl(0, 6, 0, 0)}>
+                <Box inline margin={trbl(0, 3, 0, 0)}>
                     <Icon size="medium" icon={icon} />
                 </Box>
                 <Box inline>{(Children.count(props.children) > 0 && props.children) || props.message}</Box>

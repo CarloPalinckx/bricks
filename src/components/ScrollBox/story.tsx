@@ -84,14 +84,14 @@ class Demo extends Component<{}, DemoStateType> {
                                 });
                             }}
                         >
-                            <Box padding={trbl(12, 24, 12, 12)} direction={'column'}>
+                            <Box padding={trbl(6, 12, 6, 6)} direction={'column'}>
                                 <Heading>They see me scrollin'</Heading>
                                 <Text>{demoContent}</Text>
                             </Box>
                         </ScrollBox>
                     </Box>
                 </StyledDiv>
-                <Box margin={trbl(48, 0, 12)}>
+                <Box margin={trbl(12, 0, 6)}>
                     <Heading>Scroll event</Heading>
                 </Box>
                 <Text>

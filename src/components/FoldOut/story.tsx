@@ -49,7 +49,7 @@ class DemoComponent extends Component<{}, StateType> {
         return (
             <div>
                 <FoldOut isOpen={this.state.isOpen}>
-                    <Box padding={trbl(0, 0, 12)}>
+                    <Box padding={trbl(0, 0, 6)}>
                         <Text>{demoContent}</Text>
                     </Box>
                 </FoldOut>
