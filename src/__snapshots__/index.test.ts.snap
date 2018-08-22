@@ -7733,52 +7733,69 @@ exports[`Storyshots Text Default 1`] = `
 `;
 
 exports[`Storyshots TextField Default 1`] = `
-.c2 {
-  position: relative;
+.c3 {
   width: 100%;
   border: none;
   background: transparent;
   font-size: inherit;
   display: block;
-  margin-top: 1em;
-  padding: 0;
+  padding: 9px;
   line-height: 1.5;
   outline: none;
+  min-width: 12px;
 }
 
 .c1 {
-  -webkit-transition: top 0.2s,-webkit-transform 0.2s,font-size 0.2s,color 0.2s;
-  -webkit-transition: top 0.2s,transform 0.2s,font-size 0.2s,color 0.2s;
-  transition: top 0.2s,transform 0.2s,font-size 0.2s,color 0.2s;
-  display: block;
-  line-height: 1.5;
-  position: absolute;
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-  top: 0;
-  font-size: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #a6aab3;
-  -webkit-transform: translate3d(0,0.85em,0) scale(1);
-  -ms-transform: translate3d(0,0.85em,0) scale(1);
-  transform: translate3d(0,0.85em,0) scale(1);
+  color: #55656d;
+  background-color: #f8f9fb;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  max-width: 40%;
+}
+
+.c1:first-of-type {
+  border-right: solid 1px #d2d7e0;
+}
+
+.c1:last-of-type {
+  border-left: solid 1px #d2d7e0;
+}
+
+.c2 {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .c0 {
-  -webkit-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+  -webkit-transition: border-color 100ms,box-shadow 100ms;
+  transition: border-color 100ms,box-shadow 100ms;
   border: solid 1px #d2d7e0;
   font-size: 14px;
   font-family: Source Sans Pro,sans-serif;
   border-radius: 3px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  padding: 0.3em 12px 0.4em 12px;
   cursor: text;
+  overflow: hidden;
 }
 
 .c0 * {
@@ -7791,73 +7808,101 @@ exports[`Storyshots TextField Default 1`] = `
   onClick={[Function]}
   onFocusCapture={[Function]}
 >
-  <label
+  <div
     className="c1"
   >
-    First name
-  </label>
+    <span
+      className="c2"
+    >
+      Username
+    </span>
+  </div>
   <input
-    className="c2"
+    className="c3"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
     value=""
   />
+  <div
+    className="c1"
+  >
+    <span
+      className="c2"
+    >
+      $
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Storyshots TextField With Feedback 1`] = `
 Array [
-  .c2 {
-  position: relative;
+  .c3 {
   width: 100%;
   border: none;
   background: transparent;
   font-size: inherit;
   display: block;
-  margin-top: 1em;
-  padding: 0;
+  padding: 9px;
   line-height: 1.5;
   outline: none;
+  min-width: 12px;
 }
 
 .c1 {
-  -webkit-transition: top 0.2s,-webkit-transform 0.2s,font-size 0.2s,color 0.2s;
-  -webkit-transition: top 0.2s,transform 0.2s,font-size 0.2s,color 0.2s;
-  transition: top 0.2s,transform 0.2s,font-size 0.2s,color 0.2s;
-  display: block;
-  line-height: 1.5;
-  position: absolute;
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-  top: 0;
-  font-size: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #a6aab3;
-  -webkit-transform: translate3d(0,0.85em,0) scale(1);
-  -ms-transform: translate3d(0,0.85em,0) scale(1);
-  transform: translate3d(0,0.85em,0) scale(1);
+  color: #55656d;
+  background-color: #f8f9fb;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  max-width: 40%;
+}
+
+.c1:first-of-type {
+  border-right: solid 1px #d2d7e0;
+}
+
+.c1:last-of-type {
+  border-left: solid 1px #d2d7e0;
+}
+
+.c2 {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .c0 {
-  -webkit-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+  -webkit-transition: border-color 100ms,box-shadow 100ms;
+  transition: border-color 100ms,box-shadow 100ms;
   border: solid 1px #d2d7e0;
   font-size: 14px;
   font-family: Source Sans Pro,sans-serif;
   border-radius: 3px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  padding: 0.3em 12px 0.4em 12px;
   cursor: text;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom: solid 2px #c81746;
+  overflow: hidden;
+  border: solid 1px #c81746;
 }
 
 .c0 * {
@@ -7870,19 +7915,32 @@ Array [
     onClick={[Function]}
     onFocusCapture={[Function]}
   >
-    <label
+    <div
       className="c1"
     >
-      First name
-    </label>
+      <span
+        className="c2"
+      >
+        Username
+      </span>
+    </div>
     <input
-      className="c2"
+      className="c3"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       type="text"
       value=""
     />
+    <div
+      className="c1"
+    >
+      <span
+        className="c2"
+      >
+        $
+      </span>
+    </div>
   </div>,
   .c0 {
   box-sizing: border-box;

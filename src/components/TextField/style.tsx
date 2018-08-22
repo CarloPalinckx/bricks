@@ -13,58 +13,61 @@ type TextFieldThemeType = {
             fontFamily: string;
             color: string;
         };
+        affix: {
+            color: string;
+            backgroundColor: string;
+        };
     };
     active: {
         common: {
             color: string;
         };
-        label: {
+        affix: {
             color: string;
         };
     };
     focus: {
         borderColor: string;
+        boxShadow: string;
     };
 };
 
-const StyledInput = styled.input`
-    position: relative;
+const StyledInput = withProps<WrapperProps, HTMLInputElement>(styled.input)`
     width: 100%;
     border: none;
     background: transparent;
     font-size: inherit;
     display: block;
-    margin-top: 1em;
-    padding: 0;
+    padding: 9px;
     line-height: 1.5;
     outline: none;
+    min-width: 12px;
 `;
 
-type FloatingLabelProps = {
-    active: boolean;
-};
-
-const StyledFloatingLabel = withProps<FloatingLabelProps, HTMLLabelElement>(styled.label)`
-    transition: top 0.2s, transform 0.2s, font-size 0.2s, color 0.2s;
-    display: block;
-    line-height: 1.5;
-    position: absolute;
-    transform-origin: top left;
-    top: 0;
-    font-size: 1em;
+const StyledAffixWrapper = styled.div`
+    display: flex;
+    padding: 0 12px;
     user-select: none;
+    color: ${({ theme }): string => theme.TextField.idle.affix.color};
+    background-color: ${({ theme }): string => theme.TextField.idle.affix.backgroundColor};
+    align-items: center;
+    flex-shrink: 0;
+    max-width: 40%;
 
-    ${({ active, theme }): string => {
-        return active
-            ? `
-                color: ${theme.TextField.active.label.color};
-                transform: translate3d(0, 0.3em, 0) scale(0.85);
-            `
-            : `
-                color: ${theme.TextField.idle.common.color};
-                transform: translate3d(0, 0.85em, 0) scale(1);
-            `;
-    }};
+    &:first-of-type {
+        border-right: solid 1px ${({ theme }): string => theme.TextField.idle.common.borderColor};
+    }
+
+    &:last-of-type {
+        border-left: solid 1px ${({ theme }): string => theme.TextField.idle.common.borderColor};
+    }
+`;
+
+const StyledAffix = styled.span`
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 `;
 
 type WrapperProps = {
@@ -77,28 +80,26 @@ type WrapperProps = {
 };
 
 const StyledWrapper = withProps<WrapperProps, HTMLDivElement>(styled.div)`
-    transition: border-color 0.3s;
+    transition: border-color 100ms, box-shadow 100ms;
     border: solid 1px ${({ focus, theme }): string =>
         focus ? theme.TextField.focus.borderColor : theme.TextField.idle.common.borderColor};
+    box-shadow: ${({ focus, theme }): string => (focus ? theme.TextField.focus.boxShadow : '')};
     font-size: ${({ theme }): string => theme.TextField.idle.common.fontSize};
     font-family: ${({ theme }): string => theme.TextField.idle.common.fontFamily};
     border-radius: ${({ theme }): string => theme.TextField.idle.common.borderRadius};
-    display: inline-block;
+    display: flex;
     position: relative;
-    padding: 0.3em 12px 0.4em 12px;
     cursor: text;
+    overflow: hidden;
 
-    ${({ feedback, theme }): string =>
-        feedback !== undefined && feedback.severity !== 'info'
-            ? `
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-                border-bottom: solid 2px ${theme.Text.severity[feedback.severity].color};
-            `
+    ${({ feedback, theme, focus }): string =>
+        feedback !== undefined && feedback.severity !== 'info' && focus === false
+            ? `border: solid 1px ${theme.Text.severity[feedback.severity].color};`
             : ''};
+
     * {
         cursor: text;
     }
 `;
 
-export { StyledWrapper, StyledInput, StyledFloatingLabel, TextFieldThemeType };
+export { StyledWrapper, StyledInput, TextFieldThemeType, StyledAffix, StyledAffixWrapper };

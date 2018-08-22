@@ -28,10 +28,11 @@ class Demo extends Component<DemoPropsType, { value: string }> {
     public render(): JSX.Element {
         return (
             <TextField
+                prefix={text('Prefix', 'Username')}
+                suffix={text('Suffix', '$')}
                 value={this.state.value}
                 name="firstname"
-                label="First name"
-                handleChange={(value: string): void => this.setState({ value })}
+                onChange={(value: string): void => this.setState({ value })}
                 extractRef={(ref: HTMLInputElement): void => {
                     this.ref = ref;
                 }}

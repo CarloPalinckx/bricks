@@ -665,17 +665,22 @@ const theme: ThemeType = {
                 fontFamily: bodyFont,
                 color: grey.lighter3,
             },
+            affix: {
+                color: grey.lighter1,
+                backgroundColor: silver.base,
+            },
         },
         active: {
             common: {
                 color: grey.lighter3,
             },
-            label: {
+            affix: {
                 color: grey.lighter3,
             },
         },
         focus: {
-            borderColor: grey.lighter1,
+            borderColor: green.darker2,
+            boxShadow: '0 0 0 4px rgba(107,222,120,0.4)',
         },
     },
     Tile: {
