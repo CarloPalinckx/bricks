@@ -5,7 +5,7 @@ exports[`PriceTag should render a base price 1`] = `
   position: relative;
   color: #88979d;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -76,7 +76,7 @@ exports[`PriceTag should render a label with the price is 0 1`] = `
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -126,7 +126,7 @@ exports[`PriceTag should render an action price 1`] = `
   position: relative;
   color: #6bde78;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -182,7 +182,7 @@ exports[`PriceTag should render with a dashed fraction 1`] = `
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -236,7 +236,7 @@ exports[`PriceTag should render with a fraction in superscript 1`] = `
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -294,7 +294,7 @@ exports[`PriceTag should render with a hidden currency 1`] = `
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -347,7 +347,7 @@ exports[`PriceTag should render with a hidden currency and superscript franction
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -405,7 +405,7 @@ exports[`PriceTag should render with a hidden fraction on a round value 1`] = `
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -457,7 +457,7 @@ exports[`PriceTag should render with showDash and superscript on a round value 1
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 

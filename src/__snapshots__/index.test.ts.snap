@@ -1807,8 +1807,8 @@ exports[`Storyshots EmptyState Default 1`] = `
   color: #333740;
   font-family: Melbourne,sans-serif;
   font-size: 36px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 46px;
   text-transform: none;
   text-align: center;
   margin: 0;
@@ -2081,8 +2081,8 @@ exports[`Storyshots EmptyState With button (as children) 1`] = `
   color: #333740;
   font-family: Melbourne,sans-serif;
   font-size: 36px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 46px;
   text-transform: none;
   text-align: center;
   margin: 0;
@@ -2369,8 +2369,8 @@ exports[`Storyshots Heading Default 1`] = `
   color: #333740;
   font-family: Melbourne,sans-serif;
   font-size: 36px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 46px;
   text-transform: none;
   text-align: left;
   margin: 0;
@@ -4341,8 +4341,8 @@ exports[`Storyshots Modal Default 1`] = `
   color: #333740;
   font-family: Melbourne,sans-serif;
   font-size: 28px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 36px;
   text-transform: none;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -5299,7 +5299,7 @@ exports[`Storyshots PriceTag Default 1`] = `
   position: relative;
   color: #333740;
   font-family: Source Sans Pro,sans-serif;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -5325,7 +5325,7 @@ exports[`Storyshots RadioButton Default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px 9px 0px 0px;
+  margin: 0px 8px 0px 0px;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -5447,7 +5447,7 @@ exports[`Storyshots RadioButtonGroup Default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px 9px 0px 0px;
+  margin: 0px 8px 0px 0px;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -5707,8 +5707,8 @@ exports[`Storyshots Raised Default 1`] = `
   color: #333740;
   font-family: Melbourne,sans-serif;
   font-size: 28px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 36px;
   text-transform: none;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -5804,9 +5804,9 @@ Array [
 .c5 {
   color: #333740;
   font-family: Melbourne,sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
   text-transform: none;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -5932,7 +5932,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 48px 0px 12px 0px;
+  margin: 24px 0px 12px 0px;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -5951,9 +5951,9 @@ Array [
 .c1 {
   color: #333740;
   font-family: Melbourne,sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
   text-transform: none;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -8100,8 +8100,8 @@ exports[`Storyshots Tile Default 1`] = `
   color: #333740;
   font-family: Melbourne,sans-serif;
   font-size: 28px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 36px;
   text-transform: none;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -8139,7 +8139,7 @@ exports[`Storyshots Toggle Default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px 9px 0px 0px;
+  margin: 0px 8px 0px 0px;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -8263,9 +8263,9 @@ exports[`Storyshots TransitionAnimation Default 1`] = `
 .c3 {
   color: #333740;
   font-family: Melbourne,sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
   text-transform: none;
   margin: 0;
   -webkit-font-smoothing: antialiased;

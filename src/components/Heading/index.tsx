@@ -13,14 +13,6 @@ type HeadingHierarchyThemeType = {
 };
 
 type HeadingThemeType = StyledType & {
-    default: {
-        color: string;
-        fontFamily: string;
-        fontSize: string;
-        fontWeight: string;
-        lineHeight: string;
-        textTransform: string;
-    };
     hierarchy: {
         hierarchy1: HeadingHierarchyThemeType;
         hierarchy2: HeadingHierarchyThemeType;
@@ -50,18 +42,26 @@ const HeadingElement: StatelessComponent<PropsType> = (props): JSX.Element => {
 
 const StyledHeading = styled(HeadingElement)`
     color: ${({ hierarchy, theme }): string =>
-        !hierarchy ? theme.Heading.default.color : theme.Heading.hierarchy[`hierarchy${hierarchy}`].color};
+        !hierarchy ? theme.Heading.hierarchy.hierarchy1.color : theme.Heading.hierarchy[`hierarchy${hierarchy}`].color};
     font-family: ${({ hierarchy, theme }): string =>
-        !hierarchy ? theme.Heading.default.fontFamily : theme.Heading.hierarchy[`hierarchy${hierarchy}`].fontFamily};
+        !hierarchy
+            ? theme.Heading.hierarchy.hierarchy1.fontFamily
+            : theme.Heading.hierarchy[`hierarchy${hierarchy}`].fontFamily};
     font-size: ${({ hierarchy, theme }): string =>
-        !hierarchy ? theme.Heading.default.fontSize : theme.Heading.hierarchy[`hierarchy${hierarchy}`].fontSize};
+        !hierarchy
+            ? theme.Heading.hierarchy.hierarchy1.fontSize
+            : theme.Heading.hierarchy[`hierarchy${hierarchy}`].fontSize};
     font-weight: ${({ hierarchy, theme }): string =>
-        !hierarchy ? theme.Heading.default.fontWeight : theme.Heading.hierarchy[`hierarchy${hierarchy}`].fontWeight};
+        !hierarchy
+            ? theme.Heading.hierarchy.hierarchy1.fontWeight
+            : theme.Heading.hierarchy[`hierarchy${hierarchy}`].fontWeight};
     line-height: ${({ hierarchy, theme }): string =>
-        !hierarchy ? theme.Heading.default.lineHeight : theme.Heading.hierarchy[`hierarchy${hierarchy}`].lineHeight};
+        !hierarchy
+            ? theme.Heading.hierarchy.hierarchy1.lineHeight
+            : theme.Heading.hierarchy[`hierarchy${hierarchy}`].lineHeight};
     text-transform: ${({ hierarchy, theme }): string =>
         !hierarchy
-            ? theme.Heading.default.textTransform
+            ? theme.Heading.hierarchy.hierarchy1.textTransform
             : theme.Heading.hierarchy[`hierarchy${hierarchy}`].textTransform}
     text-align: ${({ textAlign }): string => (textAlign !== undefined ? textAlign : '')};
     margin: 0;

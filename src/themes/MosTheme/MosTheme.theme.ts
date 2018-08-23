@@ -5,13 +5,7 @@ import ThemeType from '../../types/ThemeType';
 const bodyFont = 'Source Sans Pro,sans-serif';
 const headingFont = 'Melbourne,sans-serif';
 
-const fontSize = {
-    smaller1: '12px',
-    base: '14px',
-    larger1: '22px',
-    larger2: '28px',
-    larger3: '36px',
-};
+const fontSize = '14px';
 
 const green = {
     lighter1: '#7ce88a',
@@ -62,9 +56,9 @@ const theme: ThemeType = {
     },
     Button: {
         common: {
+            fontSize,
             borderRadius: roundness.base,
             borderWidth: '0',
-            fontSize: fontSize.base,
             fontWeight: '400',
             fontFamily: bodyFont,
         },
@@ -381,62 +375,54 @@ const theme: ThemeType = {
         },
     },
     Heading: {
-        default: {
-            color: grey.base,
-            fontFamily: headingFont,
-            fontSize: fontSize.larger2,
-            fontWeight: '400',
-            lineHeight: '1.5',
-            textTransform: 'none',
-        },
         hierarchy: {
             hierarchy1: {
                 color: grey.base,
                 fontFamily: headingFont,
-                fontSize: fontSize.larger3,
-                fontWeight: '400',
-                lineHeight: '1.25',
+                fontSize: '36px',
+                fontWeight: '700',
+                lineHeight: '46px',
                 textTransform: 'none',
             },
             hierarchy2: {
                 color: grey.base,
                 fontFamily: headingFont,
-                fontSize: fontSize.larger2,
-                fontWeight: '400',
-                lineHeight: '1.25',
+                fontSize: '28px',
+                fontWeight: '700',
+                lineHeight: '36px',
                 textTransform: 'none',
             },
             hierarchy3: {
                 color: grey.base,
                 fontFamily: headingFont,
-                fontSize: fontSize.larger1,
-                fontWeight: '400',
-                lineHeight: '1.25',
+                fontSize: '24px',
+                fontWeight: '700',
+                lineHeight: '30px',
                 textTransform: 'none',
             },
             hierarchy4: {
                 color: grey.base,
-                fontFamily: bodyFont,
-                fontSize: '20px',
-                fontWeight: '400',
-                lineHeight: '1.25',
+                fontFamily: headingFont,
+                fontSize: '22px',
+                fontWeight: '700',
+                lineHeight: '28px',
                 textTransform: 'none',
             },
             hierarchy5: {
                 color: grey.base,
-                fontFamily: bodyFont,
+                fontFamily: headingFont,
                 fontSize: '18px',
-                fontWeight: '400',
-                lineHeight: '1.25',
+                fontWeight: '700',
+                lineHeight: '22px',
                 textTransform: 'none',
             },
             hierarchy6: {
+                fontSize,
                 color: grey.base,
                 fontFamily: bodyFont,
-                fontSize: fontSize.base,
                 fontWeight: '400',
-                lineHeight: '1.25',
-                textTransform: 'uppercase',
+                lineHeight: '18px',
+                textTransform: 'none',
             },
         },
     },
@@ -445,9 +431,9 @@ const theme: ThemeType = {
     },
     Link: {
         default: {
+            fontSize,
             color: grey.base,
             textDecoration: 'underline',
-            fontSize: fontSize.base,
         },
         hover: {
             color: green.darker1,
@@ -481,8 +467,8 @@ const theme: ThemeType = {
     },
     Notification: {
         common: {
+            fontSize,
             fontFamily: bodyFont,
-            fontSize: fontSize.base,
         },
         error: {
             color: red.darker2,
@@ -537,19 +523,19 @@ const theme: ThemeType = {
     },
     PriceTag: {
         default: {
+            fontSize,
             color: grey.base,
             fontFamily: bodyFont,
-            fontSize: fontSize.larger2,
             fontWeight: '400',
         },
         action: {
-            fontSize: fontSize.larger2,
+            fontSize,
             fontWeight: '400',
             color: green.base,
             fontFamily: bodyFont,
         },
         base: {
-            fontSize: fontSize.larger1,
+            fontSize,
             fontWeight: '400',
             color: grey.lighter2,
             fontFamily: bodyFont,
@@ -570,11 +556,11 @@ const theme: ThemeType = {
             },
         },
         input: {
+            fontSize,
             background: silver.lighter1,
             borderColor: silver.darker4,
             color: grey.base,
             fontFamily: bodyFont,
-            fontSize: fontSize.base,
             fontWeight: '400',
         },
         placeholder: {
@@ -587,10 +573,10 @@ const theme: ThemeType = {
             borderRadius: roundness.base,
         },
         Text: {
-            fontSize: fontSize.base,
+            fontSize,
         },
         Button: {
-            fontSize: fontSize.base,
+            fontSize,
         },
     },
     ScrollBox: {
@@ -629,9 +615,9 @@ const theme: ThemeType = {
     },
     Text: {
         default: {
+            fontSize,
             color: grey.base,
             fontFamily: bodyFont,
-            fontSize: fontSize.base,
             fontWeight: '400',
         },
         descriptive: {
@@ -659,9 +645,9 @@ const theme: ThemeType = {
     TextField: {
         idle: {
             common: {
+                fontSize,
                 borderRadius: roundness.base,
                 borderColor: silver.darker4,
-                fontSize: fontSize.base,
                 fontFamily: bodyFont,
                 color: grey.lighter3,
             },
