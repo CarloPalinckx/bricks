@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Toggle Default 1`] = `
+<div
+  className="sc-hmzhuo dDpeHg"
+  onClick={[Function]}
+>
+  <div
+    className="sc-bwzfXH doEFQb"
+  >
+    <div
+      checked={true}
+      className="sc-ksYbfQ eRLZjr"
+      disabled={false}
+    >
+      <input
+        checked={true}
+        className="sc-cJSrbW biawQL"
+        disabled={false}
+        id={undefined}
+        name="Toggle"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="checkbox"
+        value="foot"
+      />
+    </div>
+  </div>
+</div>
+`;

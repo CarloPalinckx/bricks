@@ -4,6 +4,7 @@ import trbl from '../../utility/trbl';
 import InlineNotification from '../InlineNotification';
 import Box from '../Box';
 import { StyledInput, StyledWrapper, StyledAffix, StyledAffixWrapper } from './style';
+import withCurrencyFormatting, { WithCurrencyFormattingType } from './formatters/withCurrencyFormatting';
 
 type PropsType = {
     value: string;
@@ -16,6 +17,7 @@ type PropsType = {
     suffix?: string;
     extractRef?(ref: HTMLInputElement): void;
     onChange(value: string): void;
+    onBlur?(): void;
 };
 
 type StateType = {
@@ -24,6 +26,8 @@ type StateType = {
 };
 
 class TextField extends Component<PropsType, StateType> {
+    public static Currency: WithCurrencyFormattingType = withCurrencyFormatting(TextField);
+
     private inputRef: HTMLInputElement;
 
     public constructor(props: PropsType) {
@@ -54,6 +58,10 @@ class TextField extends Component<PropsType, StateType> {
             focus: false,
             active: this.props.value !== '',
         });
+
+        if (this.props.onBlur !== undefined) {
+            this.props.onBlur();
+        }
     };
 
     public onChange = (event: ChangeEvent<HTMLInputElement>): void => {
