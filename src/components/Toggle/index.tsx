@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import trbl from '../../utility/trbl';
 import Box from '../Box';
+import Text from '../Text';
+import Icon from '../Icon';
 import StyledToggle, { StyledToggleSkin, StyledToggleWrapper } from './style';
 
 type StateType = {
@@ -12,13 +14,21 @@ type PropsType = {
     disabled?: boolean;
     error?: boolean;
     value: string;
-    label: string;
+    label?: string;
     name: string;
     id?: string;
-    changeHandler(change: { checked: boolean }): void;
+    onChange(change: { checked: boolean }): void;
+} & Partial<DefaultPropsType>;
+
+type DefaultPropsType = {
+    disabledIcon: boolean;
 };
 
 class Toggle extends Component<PropsType, StateType> {
+    public static defaultProps: DefaultPropsType = {
+        disabledIcon: true,
+    };
+
     public constructor(props: PropsType) {
         super(props);
 
@@ -28,7 +38,7 @@ class Toggle extends Component<PropsType, StateType> {
     }
 
     public handleChange = (): void => {
-        this.props.changeHandler({
+        this.props.onChange({
             checked: this.props.disabled ? this.props.checked : !this.props.checked,
         });
     };
@@ -61,10 +71,14 @@ class Toggle extends Component<PropsType, StateType> {
                         />
                     </StyledToggleSkin>
                 </Box>
+                <Text descriptive={this.props.disabled}>
+                    {this.props.disabledIcon && this.props.disabled && <Icon size="medium" icon="locked" />}{' '}
+                    {this.props.label}
+                </Text>
             </StyledToggleWrapper>
         );
     }
 }
 
 export default Toggle;
-export { PropsType, StateType };
+export { PropsType, DefaultPropsType, StateType };
