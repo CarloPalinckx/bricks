@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots FormRow Default 1`] = `
+<form>
+  <div
+    className="sc-bwzfXH mMgCW"
+  >
+    <div
+      className="sc-bwzfXH hTSTRQ"
+    >
+      <label>
+        <div
+          className="sc-bwzfXH eNMoVA"
+        >
+          <p
+            className="sc-bxivhb iBTcEE"
+          >
+            What is your name?
+          </p>
+        </div>
+        <p
+          className="sc-bxivhb kOPFRV"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti non quasi similique sint quae exercitationem molestiae aspernatur cum. Necessitatibus, corrupti veritatis. Placeat, tempora! Vitae rem, nobis rerum natus odit debitis.
+        </p>
+      </label>
+    </div>
+    <div
+      className="sc-bwzfXH bVPpYZ"
+    >
+      <div
+        className="sc-bwzfXH evgYKs"
+      >
+        <div
+          className="sc-bwzfXH eQZobS"
+        >
+          <div
+            className="sc-eNQAEJ lhLkZ"
+            onBlurCapture={[Function]}
+            onClick={[Function]}
+            onFocusCapture={[Function]}
+          >
+            <div
+              className="sc-ckVGcZ jnUSGE"
+            >
+              <span
+                className="sc-jKJlTe eFYypy"
+              >
+                Initials
+              </span>
+            </div>
+            <input
+              className="sc-dxgOiQ dToCqO"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="sc-bwzfXH bDiiqa"
+        >
+          <div
+            className="sc-eNQAEJ lhLkZ"
+            onBlurCapture={[Function]}
+            onClick={[Function]}
+            onFocusCapture={[Function]}
+          >
+            <div
+              className="sc-ckVGcZ jnUSGE"
+            >
+              <span
+                className="sc-jKJlTe eFYypy"
+              >
+                First name
+              </span>
+            </div>
+            <input
+              className="sc-dxgOiQ dToCqO"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="sc-bwzfXH bDiiqa"
+        >
+          <div
+            className="sc-eNQAEJ lhLkZ"
+            onBlurCapture={[Function]}
+            onClick={[Function]}
+            onFocusCapture={[Function]}
+          >
+            <div
+              className="sc-ckVGcZ jnUSGE"
+            >
+              <span
+                className="sc-jKJlTe eFYypy"
+              >
+                Surname
+              </span>
+            </div>
+            <input
+              className="sc-dxgOiQ dToCqO"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH mMgCW"
+  >
+    <div
+      className="sc-bwzfXH hTSTRQ"
+    >
+      <label>
+        <div
+          className="sc-bwzfXH eNMoVA"
+        >
+          <p
+            className="sc-bxivhb iBTcEE"
+          >
+            Where do you live?
+          </p>
+        </div>
+        <p
+          className="sc-bxivhb kOPFRV"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti non quasi similique sint quae exercitationem molestiae aspernatur cum. Necessitatibus, corrupti veritatis. Placeat, tempora! Vitae rem, nobis rerum natus odit debitis.
+        </p>
+      </label>
+    </div>
+    <div
+      className="sc-bwzfXH bVPpYZ"
+    >
+      <div
+        className="sc-bwzfXH evgYKs"
+      >
+        <div
+          className="sc-bwzfXH bDiiqa"
+        >
+          <div
+            className="sc-eNQAEJ lhLkZ"
+            onBlurCapture={[Function]}
+            onClick={[Function]}
+            onFocusCapture={[Function]}
+          >
+            <div
+              className="sc-ckVGcZ jnUSGE"
+            >
+              <span
+                className="sc-jKJlTe eFYypy"
+              >
+                Country
+              </span>
+            </div>
+            <input
+              className="sc-dxgOiQ dToCqO"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="sc-bwzfXH bDiiqa"
+        >
+          <div
+            className="sc-eNQAEJ lhLkZ"
+            onBlurCapture={[Function]}
+            onClick={[Function]}
+            onFocusCapture={[Function]}
+          >
+            <div
+              className="sc-ckVGcZ jnUSGE"
+            >
+              <span
+                className="sc-jKJlTe eFYypy"
+              >
+                City
+              </span>
+            </div>
+            <input
+              className="sc-dxgOiQ dToCqO"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH mMgCW"
+  >
+    <div
+      className="sc-bwzfXH hTSTRQ"
+    >
+      <label>
+        <div
+          className="sc-bwzfXH eNMoVA"
+        >
+          <p
+            className="sc-bxivhb iBTcEE"
+          >
+            Can a boolean only be either true or false?
+          </p>
+        </div>
+        <p
+          className="sc-bxivhb kOPFRV"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti non quasi similique sint quae exercitationem molestiae aspernatur cum. Necessitatibus, corrupti veritatis. Placeat, tempora! Vitae rem, nobis rerum natus odit debitis.
+        </p>
+      </label>
+    </div>
+    <div
+      className="sc-bwzfXH bVPpYZ"
+    >
+      <div
+        className="sc-bwzfXH hBjqMd"
+      >
+        <div
+          className="sc-bwzfXH bWjCs"
+        >
+          <div
+            className="sc-kgoBCf BEYlJ"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bwzfXH doEFQb"
+            >
+              <div
+                checked={true}
+                className="sc-kpOJdX byhVGz"
+              >
+                <input
+                  checked={true}
+                  className="sc-kGXeez sKBUe"
+                  name="bool"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="1"
+                />
+              </div>
+            </div>
+            <p
+              className="sc-bxivhb iBTcEE"
+            >
+              <label
+                htmlFor="bool"
+              >
+                True
+              </label>
+            </p>
+          </div>
+        </div>
+        <div
+          className="sc-bwzfXH bXwfcX"
+        >
+          <div
+            className="sc-kgoBCf BEYlJ"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bwzfXH doEFQb"
+            >
+              <div
+                checked={false}
+                className="sc-kpOJdX cLFjqe"
+              >
+                <input
+                  checked={false}
+                  className="sc-kGXeez sKBUe"
+                  name="bool"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="2"
+                />
+              </div>
+            </div>
+            <p
+              className="sc-bxivhb iBTcEE"
+            >
+              <label
+                htmlFor="bool"
+              >
+                False
+              </label>
+            </p>
+          </div>
+        </div>
+        <div
+          className="sc-bwzfXH bXwfcX"
+        >
+          <div
+            className="sc-kgoBCf BEYlJ"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bwzfXH doEFQb"
+            >
+              <div
+                checked={false}
+                className="sc-kpOJdX cLFjqe"
+              >
+                <input
+                  checked={false}
+                  className="sc-kGXeez sKBUe"
+                  name="bool"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="3"
+                />
+              </div>
+            </div>
+            <p
+              className="sc-bxivhb iBTcEE"
+            >
+              <label
+                htmlFor="bool"
+              >
+                Sometimes
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
