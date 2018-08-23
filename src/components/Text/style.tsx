@@ -4,8 +4,14 @@ import _T from '../../types/ThemeType';
 import styled, { withProps } from '../../utility/styled';
 import SeverityType from '../../types/SeverityType';
 
-type TextVariantStyleType = {
-    fontSize: string;
+type SizeStyleType = {
+    default: {
+        fontSize: string;
+        lineHeight: string;
+    };
+    compact: {
+        lineHeight: string;
+    };
 };
 
 type SeverityStyleType = {
@@ -19,9 +25,6 @@ type TextThemeType = {
         fontSize: string;
         fontWeight: string;
     };
-    descriptive: {
-        color: string;
-    };
     strong: {
         fontWeight: string;
     };
@@ -31,43 +34,48 @@ type TextThemeType = {
         error: SeverityStyleType;
         info: SeverityStyleType;
     };
-    small: TextVariantStyleType;
-    base: TextVariantStyleType;
-    large: TextVariantStyleType;
+    size: {
+        small: SizeStyleType;
+        base: SizeStyleType;
+        large: SizeStyleType;
+        extraLarge: SizeStyleType;
+    };
 };
 
-type TextPropsType = {
+type PropsType = {
     compact?: boolean;
     descriptive?: boolean;
     strong?: boolean;
-    variant?: 'small' | 'base' | 'large';
+    textSize?: 'small' | 'base' | 'large';
     textAlign?: 'left' | 'right' | 'center' | 'justify';
-    severity?: SeverityType | '';
+    severity?: SeverityType;
 };
 
-const StyledParagraph = withProps<TextPropsType, HTMLParagraphElement>(styled.p)`
-    color: ${({ descriptive, severity, theme }): string => {
-        if (descriptive !== undefined && descriptive) {
-            return theme.Text.descriptive.color;
-        }
+const StyledParagraph = withProps<PropsType, HTMLParagraphElement>(styled.p)`
+    ${({ textSize, theme, compact }): string => {
+        const sizeSet: SizeStyleType = textSize ? theme.Text.size[textSize] : theme.Text.size.base;
 
-        if (severity !== undefined && severity !== '') {
+        return `
+            font-size: ${sizeSet.default.fontSize};
+            line-height: ${compact ? sizeSet.compact.lineHeight : sizeSet.default.lineHeight};
+        `;
+    }}
+    color: ${({ severity, theme }): string => {
+        if (severity !== undefined && theme.Text.severity[severity] !== undefined) {
             return theme.Text.severity[severity].color;
         }
 
         return theme.Text.default.color;
     }}
     font-family: ${({ theme }): string => theme.Text.default.fontFamily};
-    font-size: ${({ variant, theme }): string => (variant ? theme.Text[variant].fontSize : theme.Text.base.fontSize)};
+    text-align: ${({ textAlign }): string => (textAlign ? textAlign : '')};
     font-weight: ${({ strong, theme }): string =>
         strong ? theme.Text.strong.fontWeight : theme.Text.default.fontWeight};
-    line-height: ${({ compact }): string => (compact ? '1.25' : '1.5')};
-    text-align: ${({ textAlign }): string => (textAlign ? textAlign : '')};
     margin: 0;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 `;
 
 const StyledSpan = StyledParagraph.withComponent('span');
 
-export { StyledSpan, StyledParagraph, TextThemeType, TextVariantStyleType, SeverityStyleType };
+export { StyledSpan, StyledParagraph, TextThemeType, SizeStyleType, SeverityStyleType };

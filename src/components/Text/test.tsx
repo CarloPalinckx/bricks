@@ -19,7 +19,7 @@ describe('Text', () => {
     });
 
     it('should render text with descriptive styling', () => {
-        const component = shallowWithTheme(<Text descriptive>Descriptive text</Text>);
+        const component = shallowWithTheme(<Text>Descriptive text</Text>);
 
         /* tslint:disable */
         (expect(toJson(component.dive())) as any).toHaveStyleRule('color', '#a6aab3');

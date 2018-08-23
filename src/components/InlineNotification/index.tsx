@@ -15,7 +15,7 @@ const InlineNotification: SFC<PropsType> = (props): JSX.Element => {
     const icon = props.icon !== undefined ? props.icon : SeverityIcons[props.severity];
 
     return (
-        <Text variant="small" severity={props.severity}>
+        <Text size="small" strong severity={props.severity}>
             <Box inline>
                 <Box inline margin={trbl(0, 3, 0, 0)}>
                     <Icon size="medium" icon={icon} />

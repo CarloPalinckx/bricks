@@ -163,7 +163,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                         )) || (
                             <Box alignItems="center" grow={1} onClick={this.open}>
                                 {(this.props.value !== '' && <Text>{selectedOption.label}</Text>) || (
-                                    <Text descriptive>{this.props.placeholder}</Text>
+                                    <Text severity="info">{this.props.placeholder}</Text>
                                 )}
                             </Box>
                         )}
@@ -204,7 +204,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                                                 this.handleChange(option.value);
                                             }}
                                         >
-                                            <Text descriptive={option.value === this.props.value}>
+                                            <Text severity={option.value === this.props.value ? 'info' : undefined}>
                                                 <Box margin={trbl(0, 3, 0, 0)} inline>
                                                     {option.value === this.props.value && (
                                                         <Icon size="small" icon="checkmark" />

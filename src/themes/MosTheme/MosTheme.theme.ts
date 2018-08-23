@@ -618,22 +618,48 @@ const theme: ThemeType = {
             fontSize,
             color: grey.base,
             fontFamily: bodyFont,
-            fontWeight: '400',
-        },
-        descriptive: {
-            color: grey.lighter3,
+            fontWeight: '300',
         },
         strong: {
             fontWeight: '700',
         },
-        small: {
-            fontSize: '12px',
-        },
-        base: {
-            fontSize: '14px',
-        },
-        large: {
-            fontSize: '16px',
+        size: {
+            small: {
+                default: {
+                    fontSize: '14px',
+                    lineHeight: '20px',
+                },
+                compact: {
+                    lineHeight: '16px',
+                },
+            },
+            base: {
+                default: {
+                    fontSize: '16px',
+                    lineHeight: '24px',
+                },
+                compact: {
+                    lineHeight: '20px',
+                },
+            },
+            large: {
+                default: {
+                    fontSize: '18px',
+                    lineHeight: '28px',
+                },
+                compact: {
+                    lineHeight: '22px',
+                },
+            },
+            extraLarge: {
+                default: {
+                    fontSize: '22px',
+                    lineHeight: '34px',
+                },
+                compact: {
+                    lineHeight: '28px',
+                },
+            },
         },
         severity: {
             error: { color: red.darker2 },

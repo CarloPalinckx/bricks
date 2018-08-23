@@ -5,10 +5,9 @@ import SeverityType from '../../types/SeverityType';
 
 type PropsType = StyledType & {
     compact?: boolean;
-    descriptive?: boolean;
     strong?: boolean;
     inline?: boolean;
-    variant?: 'small' | 'base' | 'large';
+    size?: 'small' | 'base' | 'large';
     textAlign?: 'left' | 'right' | 'center' | 'justify';
     severity?: SeverityType;
 };
@@ -18,8 +17,7 @@ const Text: StatelessComponent<PropsType> = (props): JSX.Element => {
 
     return (
         <Element
-            variant={props.variant}
-            descriptive={props.descriptive}
+            textSize={props.size}
             strong={props.strong}
             compact={props.compact}
             textAlign={props.textAlign}

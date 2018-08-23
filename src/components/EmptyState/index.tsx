@@ -23,7 +23,7 @@ const EmptyStateElement: StatelessComponent<EmptyStatePropsType> = (props): JSX.
             </Heading>
         </Box>
         <Box margin={trbl(6, 0, 12, 0)}>
-            <Text textAlign="center" descriptive>
+            <Text textAlign="center" severity="info">
                 {props.message}
             </Text>
         </Box>

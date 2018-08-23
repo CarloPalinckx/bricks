@@ -47,7 +47,7 @@ const Message: StatelessComponent<MessagePropsType> = (props): JSX.Element => {
                         <Text>
                             <span dangerouslySetInnerHTML={{ __html: props.message }} />
                         </Text>
-                        <Text descriptive>{props.date}</Text>
+                        <Text severity="info">{props.date}</Text>
                     </Box>
                     {props.action !== undefined && props.buttonLabel !== undefined && props.buttonLabel.length > 0 ? (
                         <Box
