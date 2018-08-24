@@ -686,6 +686,10 @@ const theme: ThemeType = {
     Tile: {
         borderColor: silver.darker4,
     },
+    Toaster: {
+        borderRadius: roundness.base,
+        backgroundColor: silver.lighter1,
+    },
     Toggle: {
         general: {
             background: silver.lighter1,
