@@ -13,7 +13,6 @@ type PropsType = {
     href?: string;
     disabled?: boolean;
     flat?: boolean;
-    color?: string;
     icon?: MediumPropsType['icon'];
     iconAlign?: 'right' | 'left';
     id?: string;
@@ -81,7 +80,6 @@ const Button: SFC<PropsType> = (props): JSX.Element => {
             type="button"
             disabled={props.disabled}
             flat={props.flat}
-            color={props.color}
             icon={props.icon}
             id={props.id}
         >

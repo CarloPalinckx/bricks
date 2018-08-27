@@ -9,6 +9,7 @@ import Contrast from '../Contrast';
 import Icon from '../Icon';
 import Box from '../Box';
 import { MediumIcons } from '../Icon/types';
+import withPropsCombinations from 'react-storybook-addon-props-combinations';
 
 /* tslint:disable */
 const mediumIconKeys = Object.keys(MediumIcons).filter(key => MediumIcons[key as any].match('<svg'));
@@ -78,4 +79,17 @@ storiesOf('Button', module)
                 </Box>
             </Contrast>
         );
-    });
+    })
+    .add(
+        'Combinations',
+        withPropsCombinations(Button, {
+            variant: ['primary', 'destructive', 'warning', 'secondary', 'plain'],
+            compact: [false, true],
+            title: ['Click here'],
+            href: [undefined, 'http://www.google.nl'],
+            disabled: [false, true],
+            flat: [false, true],
+            icon: [undefined, 'gear'],
+            iconAlign: [undefined, 'left', 'right'],
+        }),
+    );

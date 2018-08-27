@@ -8,3 +8,5 @@
 /reports
 /dist
 /.out
+/.test
+__diff-output__

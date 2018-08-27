@@ -1,5 +1,5 @@
 import { configure, addDecorator } from '@storybook/react';
-import themeDecorator from './decorators/themeDecorator';
+import themeDecorator from '../decorators/themeDecorator';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { setOptions } from '@storybook/addon-options';
 import { setDefaults } from 'react-storybook-addon-props-combinations';
@@ -20,7 +20,7 @@ function requireAll(requireContext) {
 }
 
 function loadStories() {
-    requireAll(require.context('../../src/components', true, /story\.(DontTest\.)?tsx?$/));
+    requireAll(require.context('../../../src/__tests__/visual', true, /tsx$/));
 }
 
 configure(loadStories, module);
