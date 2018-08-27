@@ -89,7 +89,6 @@
     "dev": "npm run watch",
     "test": "npm run test-unit",
     "test-unit": "jest --config=./config/jest/jest.config.json --testPathPattern=src/__tests__/unit",
-    "test-coverage": "jest --config=./config/jest/jest.config.json --coverage --runInBand --bail --testPathPattern=src/__tests__/unit",
     "test-visual": "jest --config=./config/jest/jest.config.json --testPathPattern=src/__tests__/visual/index.ts",
     "build": "rimraf ./dist && webpack --config ./config/webpack/webpack.config.js",
     "lint-fix": "tslint --fix --project ./config/typescript/tsconfig.json --config ./config/typescript/tslint.json ./src/**/*.{ts,tsx}",

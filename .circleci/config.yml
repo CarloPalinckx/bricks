@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-    - image: circleci/node:8.11.3
+    - image: circleci/node:8.11-stretch-browsers
   environment:
     CC_TEST_REPORTER_ID: 39ff6fab79be04ad2f3f4fe6d57d7665c761a8c0875f5f38c27624ed60ae3a22
   working_directory: ~/repo
@@ -21,6 +21,11 @@ jobs:
       - run: 
           name: Installing dependencies
           command: npm install --ignore-scripts
+      - run:
+          name: Setting up CodeClimate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
       - save_cache:
           paths:
             - node_modules
@@ -29,6 +34,7 @@ jobs:
           root: .
           paths:
             - .
+
   linting:
     <<: *defaults
     steps:
@@ -38,24 +44,33 @@ jobs:
       - run:
           name: Running linter
           command: npm run lint
-  test:
+
+  unit-tests:
     <<: *defaults
     steps:
       - attach_workspace:
           at: .
       - checkout
       - run:
-          name: Setting up CodeClimate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - run:
           name: Running unit tests
           command: |
             ./cc-test-reporter before-build
-            npm run test-coverage -- --coverageDirectory "./coverage"
-            ./cc-test-reporter after-build --coverage-input-type lcov
-  
+            npm run test-unit -- --coverage --coverageDirectory "./coverage"
+
+  regression-tests:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - checkout
+      - run:
+          name: Running regression tests
+          command: |
+            ls /usr/local/bin/
+            ./cc-test-reporter before-build
+            npm run build-test
+            npm run test-visual -- --coverage --coverageDirectory "./coverage"
+
   report-coverage:
     <<: *defaults
     steps:
@@ -63,16 +78,8 @@ jobs:
           at: .
       - checkout
       - run:
-          name: Setting up CodeClimate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - run:
-          name: Running unit tests
-          command: |
-            ./cc-test-reporter before-build
-            npm run test-coverage -- --coverageDirectory "./coverage"
-            ./cc-test-reporter after-build --coverage-input-type lcov
+          name: Report coverage
+          command: ./cc-test-reporter after-build --coverage-input-type lcov
 
   build:
     <<: *defaults
@@ -133,12 +140,26 @@ workflows:
               ignore: gh-pages
           requires:
             - setup
-      - test:
+      - unit-tests:
           filters:
             branches:
               ignore: gh-pages
           requires:
             - setup
+      - regression-tests:
+          filters:
+            branches:
+              ignore: gh-pages
+          requires:
+            - setup
+      - report-coverage:
+          filters:
+            branches:
+              ignore: gh-pages
+          requires:
+            - setup
+            - unit-tests
+            - regression-tests
       - build:
           filters:
             branches:

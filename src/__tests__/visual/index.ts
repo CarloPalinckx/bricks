@@ -20,5 +20,6 @@ initStoryshots({
         updatePassedSnapshot: true,
         fullPage: false,
         storybookUrl: `file://${__dirname}/../../../.test`,
+        chromeExecutablePath: '/usr/local/bin/chrome',
     }),
 });

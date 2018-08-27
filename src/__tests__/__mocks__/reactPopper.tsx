@@ -1,5 +1,3 @@
-import React from 'react';
-
 /* tslint:disable */
 
 const Manager = jest.fn((props: any): JSX.Element => props.children);
