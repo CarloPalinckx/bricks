@@ -479,6 +479,41 @@ const theme: ThemeType = {
         backdropColor: 'rgba(0,0,0,0.3)',
         borderRadius: roundness.base,
     },
+    MultiButton: {
+        window: {
+            backgroundColor: silver.lighter1,
+            secondaryColor: silver.base,
+            borderColor: silver.darker3,
+            borderRadius: roundness.base,
+            boxShadow: '0 2px 6px 0 rgba(0,0,0,0.10)',
+        },
+        button: {
+            common: {
+                active: {
+                    boxShadow: 'inset 0 -2px 0 0 rgba(0,0,0,0.20), 0 0 0 2px rgba(136,151,157,0.20)',
+                },
+                borderRadius: roundness.base,
+            },
+            primary: {
+                dividerColor: green.darker2,
+            },
+            secondary: {
+                dividerColor: silver.darker3,
+            },
+            warning: {
+                dividerColor: yellow.darker2,
+            },
+            destructive: {
+                dividerColor: red.darker2,
+            },
+            plain: {
+                dividerColor: silver.darker3,
+            },
+            disabled: {
+                dividerColor: silver.darker3,
+            },
+        },
+    },
     Notification: {
         common: {
             fontFamily: bodyFont,
