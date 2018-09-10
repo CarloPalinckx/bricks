@@ -151,3 +151,130 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
   </div>
 </div>
 `;
+
+exports[`Storyshots Modal Without closeAction 1`] = `
+<div
+  className="sc-jAaTju eFTTvg"
+>
+  <div
+    className="sc-cMljjf kvJCEw"
+  >
+    <div
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    >
+      <div
+        className="sc-jDwBTQ oOSwQ"
+      >
+        <div
+          className="sc-bwzfXH kpHVAA"
+        >
+          <div
+            className="sc-fjdhpX jskuQK"
+            role="heading"
+          >
+            Would you like me to be your role modal?
+          </div>
+        </div>
+        <div
+          className="sc-eHgmQL bNASzp"
+        >
+          <div
+            className="sc-cvbbAY hPPoNG"
+          >
+            <div
+              className="sc-jWBwVP jmLJxK"
+            />
+            <div
+              className="sc-bwzfXH drOqMq"
+            >
+              <p
+                className="sc-bxivhb iBTcEE"
+              >
+                
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut mi ligula. Phasellus tellus nulla,
+cursus sit amet dolor eu, sodales facilisis tortor. Maecenas sed arcu quis est pharetra molestie sed
+eu leo. Mauris consequat mauris et eros gravida vestibulum. Phasellus convallis ipsum quis nisl lacinia,
+a pulvinar est porta. Nunc tempus vulputate dapibus. In eget venenatis orci. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas finibus lorem et quam imperdiet,
+id vestibulum odio molestie. Curabitur euismod sit amet tortor et imperdiet. Nam a nisl quis lorem porta
+pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh. Mauris tempor libero purus, vitae lacinia
+felis hendrerit in. Vestibulum rhoncus vitae ipsum vel placerat.
+eu leo. Mauris consequat mauris et eros gravida vestibulum. Phasellus convallis ipsum quis nisl lacinia,
+a pulvinar est porta. Nunc tempus vulputate dapibus. In eget venenatis orci. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas finibus lorem et quam imperdiet,
+id vestibulum odio molestie. Curabitur euismod sit amet tortor et imperdiet. Nam a nisl quis lorem porta
+pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh. Mauris tempor libero purus, vitae lacinia
+felis hendrerit in. Vestibulum rhoncus vitae ipsum vel placerat.
+eu leo. Mauris consequat mauris et eros gravida vestibulum. Phasellus convallis ipsum quis nisl lacinia,
+a pulvinar est porta. Nunc tempus vulputate dapibus. In eget venenatis orci. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas finibus lorem et quam imperdiet,
+id vestibulum odio molestie. Curabitur euismod sit amet tortor et imperdiet. Nam a nisl quis lorem porta
+pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
+              </p>
+            </div>
+            <div
+              className="sc-brqgnP cWRNGt"
+            />
+          </div>
+        </div>
+        <div
+          className="sc-gZMcBi huJyDB"
+        >
+          <div
+            className="sc-bwzfXH bEpOqh"
+          >
+            <div
+              style={
+                Object {
+                  "flexGrow": 1,
+                }
+              }
+            >
+              <div
+                className="sc-bwzfXH bFmMmv"
+              >
+                <div
+                  className="sc-bwzfXH fuEFtX"
+                >
+                  <button
+                    className="sc-htoDjs ilyuMW"
+                    color={undefined}
+                    disabled={undefined}
+                    icon={undefined}
+                    id={undefined}
+                    onClick={[Function]}
+                    title="Activate"
+                    type="button"
+                  >
+                    Activate
+                  </button>
+                </div>
+                <div
+                  className="sc-bwzfXH fuEFtX"
+                >
+                  <button
+                    className="sc-htoDjs cMPsNt"
+                    color={undefined}
+                    disabled={undefined}
+                    icon={undefined}
+                    id={undefined}
+                    onClick={[Function]}
+                    title="Close"
+                    type="button"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

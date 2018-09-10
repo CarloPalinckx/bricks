@@ -27,19 +27,14 @@ class Modal extends Component<PropsType> {
         super(props);
     }
 
-    private closeAction = (): void => {
-        if (this.props.closeAction !== undefined) {
-            this.props.closeAction();
-        }
-    };
-
     public handleClickOutside = (event: Event): void => {
         if (
+            this.props.closeAction !== undefined &&
             this.props.show &&
             this.styledModalWrapperRef.contains(event.target as Node) &&
             !this.styledModalRef.contains(event.target as Node)
         ) {
-            this.closeAction();
+            this.props.closeAction();
         }
     };
 
@@ -76,17 +71,25 @@ class Modal extends Component<PropsType> {
                                     justifyContent="space-between"
                                 >
                                     <Heading hierarchy={2}>{this.props.title}</Heading>
-                                    <Box
-                                        margin={trbl(-12, -12, -6, 0)}
-                                        alignContent="center"
-                                        justifyContent="flex-end"
-                                        alignItems="center"
-                                        grow={0}
-                                    >
-                                        <Button variant="plain" flat title="close" action={this.closeAction} compact>
-                                            <Icon size="small" icon="close" />
-                                        </Button>
-                                    </Box>
+                                    {this.props.closeAction !== undefined && (
+                                        <Box
+                                            margin={trbl(-12, -12, -6, 0)}
+                                            alignContent="center"
+                                            justifyContent="flex-end"
+                                            alignItems="center"
+                                            grow={0}
+                                        >
+                                            <Button
+                                                variant="plain"
+                                                flat
+                                                title="close"
+                                                action={this.props.closeAction}
+                                                compact
+                                            >
+                                                <Icon size="small" icon="close" />
+                                            </Button>
+                                        </Box>
+                                    )}
                                 </Box>
                                 <ScrollBox>
                                     <Box padding={breakpoint === 'small' ? trbl(0, 24, 24, 24) : trbl(0, 36, 36, 36)}>

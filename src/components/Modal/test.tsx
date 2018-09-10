@@ -97,10 +97,12 @@ describe('Modal', () => {
 
     it('should not break when no closeAction is provided', () => {
         const component = mountWithTheme(<Modal show={true} title="Foo" />);
-        const closeButton = component.find(Button).first();
+        const wrapper = component.find(StyledModalWrapper).first();
+
         const fn = (): void => {
-            closeButton.simulate('click');
+            wrapper.simulate('click');
         };
+
         expect(fn).not.toThrow();
     });
 
