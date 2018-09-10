@@ -1,7 +1,11 @@
 import { default as _R } from 'react';
-import { StyledComponentClass as _S } from 'styled-components';
+import { StyledComponentClass as _S, css } from 'styled-components';
 import _T from '../../types/ThemeType';
 import styled, { withProps } from '../../utility/styled';
+
+/* tslint:disable */
+const styles = require('simplebar/dist/simplebar.min.css').toString();
+/* tslint:enable */
 
 type ScrollBoxThemeType = {
     scrollbar: {
@@ -12,6 +16,20 @@ type ScrollBoxThemeType = {
 type effectPropsType = {
     show: boolean;
 };
+
+// prettier-ignore
+const simplebarStyles = css`
+    ${styles}
+`;
+
+// prettier-ignore
+const StyledWrapper = styled.div`
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+
+    ${simplebarStyles}
+`;
 
 const StyledScrollBox = styled.div`
     position: relative;
@@ -56,4 +74,4 @@ const StyledBottom = withProps<effectPropsType, HTMLDivElement>(styled.div)`
 `;
 
 export default StyledScrollBox;
-export { ScrollBoxThemeType, StyledBottom, StyledTop };
+export { StyledWrapper, ScrollBoxThemeType, StyledBottom, StyledTop };

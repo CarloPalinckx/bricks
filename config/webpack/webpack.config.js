@@ -25,6 +25,20 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
+                loader: 'babel-loader',
+                options: {
+                    plugins: [
+                        [
+                            'babel-plugin-styled-components',
+                            {
+                                ssr: true,
+                            },
+                        ],
+                    ],
+                },
+            },
+            {
+                test: /\.tsx?$/,
                 loader: 'ts-loader',
                 options: {
                     onlyCompileBundledFiles: true,
@@ -33,7 +47,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: 'css-loader',
             },
             {
                 test: /^.*(?<!\.color)\.svg$/,
