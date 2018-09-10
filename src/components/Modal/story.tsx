@@ -27,21 +27,39 @@ tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas finib
 id vestibulum odio molestie. Curabitur euismod sit amet tortor et imperdiet. Nam a nisl quis lorem porta
 pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.`;
 
-storiesOf('Modal', module).add('Default', () => {
-    return (
-        <Modal
-            show={boolean('show', true)}
-            size={select('size', ['small', 'medium', 'large'], 'large')}
-            title="Would you like me to be your role modal?"
-            closeAction={(): boolean => confirm('You are now closing this modal, do you wish to continue?')}
-            renderFixed={(): JSX.Element => (
-                <ButtonGroup>
-                    <Button variant="primary" title="Activate" />
-                    <Button variant="plain" title="Close" />
-                </ButtonGroup>
-            )}
-        >
-            <Text>{text('contents', demoContent)}</Text>
-        </Modal>
-    );
-});
+storiesOf('Modal', module)
+    .add('Default', () => {
+        return (
+            <Modal
+                show={boolean('show', true)}
+                size={select('size', ['small', 'medium', 'large'], 'large')}
+                title="Would you like me to be your role modal?"
+                closeAction={(): boolean => confirm('You are now closing this modal, do you wish to continue?')}
+                renderFixed={(): JSX.Element => (
+                    <ButtonGroup>
+                        <Button variant="primary" title="Activate" />
+                        <Button variant="plain" title="Close" />
+                    </ButtonGroup>
+                )}
+            >
+                <Text>{text('contents', demoContent)}</Text>
+            </Modal>
+        );
+    })
+    .add('Without closeAction', () => {
+        return (
+            <Modal
+                show={boolean('show', true)}
+                size={select('size', ['small', 'medium', 'large'], 'large')}
+                title="Would you like me to be your role modal?"
+                renderFixed={(): JSX.Element => (
+                    <ButtonGroup>
+                        <Button variant="primary" title="Activate" />
+                        <Button variant="plain" title="Close" />
+                    </ButtonGroup>
+                )}
+            >
+                <Text>{text('contents', demoContent)}</Text>
+            </Modal>
+        );
+    });
