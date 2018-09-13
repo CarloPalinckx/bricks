@@ -4,11 +4,13 @@ import Box from '../Box';
 import FoldOut from '../FoldOut';
 import ScrollBox from '../ScrollBox';
 import Option from './Option';
-import { StyledWrapper, StyledInput, StyledWindow } from './style';
+import { StyledWrapper, StyledInput, StyledWindow, StyledPlaceholder } from './style';
 import Text from '../Text';
 import trbl from '../../utility/trbl';
 import Icon from '../Icon';
 import { Button } from '../../index';
+import { withTheme } from 'styled-components';
+import ThemeType from '../../types/ThemeType';
 
 type OptionBase = {
     value: string;
@@ -22,10 +24,12 @@ type StateType = {
 };
 
 type PropsType<GenericOption extends OptionBase> = {
+    theme: ThemeType;
     placeholder?: string;
     value: string;
     options: Array<GenericOption>;
     emptyText: string;
+    disabled?: boolean;
     onChange(value: string): void;
     renderOption?(option: GenericOption): JSX.Element;
 };
@@ -68,8 +72,10 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
     };
 
     private open = (): void => {
-        this.handleInput('');
-        this.setState({ isOpen: true });
+        if (!this.props.disabled) {
+            this.handleInput('');
+            this.setState({ isOpen: true });
+        }
     };
 
     private filterOptions = (): ReadonlyArray<GenericOption> => {
@@ -79,6 +85,10 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
     };
 
     public componentDidUpdate(prevProps: PropsType<GenericOption>, prevState: StateType): void {
+        if (prevState.isOpen && this.props.disabled) {
+            this.setState({ isOpen: false });
+        }
+
         if (this.inputRef.current !== null && !prevState.isOpen && this.state.isOpen) {
             this.inputRef.current.focus();
         }
@@ -143,7 +153,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                 onKeyDownCapture={this.handleKeyPress}
                 tabIndex={0}
             >
-                <StyledInput>
+                <StyledInput disabled={!this.props.disabled ? false : this.props.disabled}>
                     <Box alignItems="stretch">
                         {(this.state.isOpen && (
                             <>
@@ -163,7 +173,9 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                         )) || (
                             <Box alignItems="center" grow={1} onClick={this.open}>
                                 {(this.props.value !== '' && <Text>{selectedOption.label}</Text>) || (
-                                    <Text descriptive>{this.props.placeholder}</Text>
+                                    <Text descriptive>
+                                        <StyledPlaceholder>{this.props.placeholder}</StyledPlaceholder>
+                                    </Text>
                                 )}
                             </Box>
                         )}
@@ -173,8 +185,13 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                             variant="secondary"
                             title={this.state.isOpen ? 'close' : 'open'}
                             action={this.state.isOpen ? this.close : this.open}
+                            disabled={this.props.disabled}
                         >
-                            <Icon icon={this.state.isOpen ? 'chevronUp' : 'chevronDown'} size="small" />
+                            <Icon
+                                icon={this.state.isOpen ? 'chevronUp' : 'chevronDown'}
+                                size="small"
+                                color={this.props.disabled ? this.props.theme.Select.disabled.chevron : undefined}
+                            />
                         </Button>
                     </Box>
                 </StyledInput>
@@ -228,5 +245,5 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
     }
 }
 
-export default Select;
+export default withTheme(Select);
 export { PropsType, StateType, OptionBase };

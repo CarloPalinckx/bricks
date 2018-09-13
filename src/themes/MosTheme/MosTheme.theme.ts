@@ -615,6 +615,11 @@ const theme: ThemeType = {
         placeholder: {
             color: silver.darker4,
         },
+        disabled: {
+            chevron: grey.lighter2,
+            color: grey.lighter2,
+            background: '#f5f6f7 repeating-linear-gradient( -45deg, #f0f1f2, #f0f1f2 10px, transparent 10px, transparent 20px )',
+        }
     },
     Skeleton: {
         common: {

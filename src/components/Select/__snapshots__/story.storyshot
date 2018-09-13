@@ -2,12 +2,13 @@
 
 exports[`Storyshots Select Default 1`] = `
 <div
-  className="sc-gisBJw gYSeeQ"
+  className="sc-kjoXOD jELVFZ"
   onKeyDownCapture={[Function]}
   tabIndex={0}
 >
   <div
-    className="sc-cHGsZl gklxHg"
+    className="sc-TOsTZ cnlTxH"
+    disabled={false}
   >
     <div
       className="sc-bwzfXH jlwOxs"
@@ -19,13 +20,17 @@ exports[`Storyshots Select Default 1`] = `
         <p
           className="sc-bxivhb kOPFRV"
         >
-          Search a value
+          <span
+            className="sc-gisBJw bCwECJ"
+          >
+            Search a value
+          </span>
         </p>
       </div>
       <button
         className="sc-htoDjs TzVGU"
         color={undefined}
-        disabled={undefined}
+        disabled={false}
         icon={undefined}
         id={undefined}
         onClick={[Function]}
@@ -47,7 +52,7 @@ exports[`Storyshots Select Default 1`] = `
   </div>
   <MockPortal>
     <div
-      className="sc-kjoXOD dISCKh"
+      className="sc-cHGsZl zDQN"
     >
       <div
         className="sc-eHgmQL bNASzp"

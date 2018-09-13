@@ -28,6 +28,11 @@ type SelectThemeType = {
     placeholder: {
         color: string;
     };
+    disabled: {
+        chevron: string;
+        color: string;
+        background: string;
+    };
 };
 
 type WrapperProps = {
@@ -36,8 +41,13 @@ type WrapperProps = {
 
 const INNER_OFFSET: number = 6;
 
+const StyledPlaceholder = styled.span`
+    color: ${({ theme }): string => theme.Select.disabled.color};
+`;
+
 const StyledWrapper = withProps<WrapperProps, HTMLDivElement>(styled.div)`
     transition: all .3s;
+    width: 100%;
     outline: none;
     display: inline-block;
     background: ${({ theme }): string => theme.Select.common.backgroundColor};
@@ -45,7 +55,7 @@ const StyledWrapper = withProps<WrapperProps, HTMLDivElement>(styled.div)`
     border-radius: ${({ theme }): string => theme.Select.common.borderRadius};
 
     &:focus {
-        box-shadow: ${({ theme }): string => theme.Select.wrapper.focus.boxShadow}
+        box-shadow: ${({ theme }): string => theme.Select.wrapper.focus.boxShadow};
     }
 
     &:before {
@@ -78,6 +88,10 @@ type WindowProps = {
     rect?: ClientRect;
 };
 
+type InputProps = {
+    disabled: boolean;
+};
+
 const StyledWindow = withProps<WindowProps, HTMLDivElement>(styled.div)`
     box-sizing: border-box;
     position: absolute;
@@ -98,13 +112,17 @@ const StyledWindow = withProps<WindowProps, HTMLDivElement>(styled.div)`
     z-index: 1000;
 `;
 
-const StyledInput = styled.div`
+const StyledInput = withProps<InputProps>(styled.div)`
     box-sizing: border-box;
     width: 100%;
     padding: 0 0 0 12px;
     border: solid 1px ${({ theme }): string => theme.Select.input.borderColor};
-    background: ${({ theme }): string => theme.Select.input.background};
+    background: ${({ theme, disabled }): string =>
+        disabled
+            ? theme.Select.disabled.background
+            : theme.Select.input.background};
     border-radius: ${({ theme }): string => theme.Select.common.borderRadius};
+    opacity: ${({ disabled }): string => (disabled ? '0.7' : '1')};
 
     input {
         appearance: none;
@@ -122,4 +140,4 @@ const StyledInput = styled.div`
     }
 `;
 
-export { StyledWrapper, StyledInput, StyledWindow, SelectThemeType };
+export { StyledWrapper, StyledInput, StyledWindow, SelectThemeType, StyledPlaceholder };
