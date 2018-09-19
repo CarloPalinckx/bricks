@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots WithRaised Default 1`] = `
+<div
+  className="sc-jnlKLf dfgKYj"
+>
+  <div
+    className="sc-bwzfXH hycOAw"
+  >
+    <div
+      className="sc-fjdhpX jPMeup"
+      role="heading"
+    >
+      Level 
+      1
+    </div>
+  </div>
+</div>
+`;

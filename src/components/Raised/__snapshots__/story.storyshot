@@ -1,19 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Raised Default 1`] = `
+exports[`Storyshots Raised ⚠️ Default 1`] = `
 <div
-  className="sc-bwzfXH gCBYeZ"
+  className="sc-gisBJw ccPELE"
 >
   <div
-    className="sc-gisBJw ccPELE"
+    className="sc-fjdhpX jskuQK"
+    role="heading"
   >
-    <div
-      className="sc-fjdhpX jskuQK"
-      role="heading"
-    >
-      Level 
-      0
-    </div>
+    Level 
+    0
   </div>
 </div>
 `;

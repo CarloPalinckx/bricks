@@ -8,6 +8,7 @@ import SeverityType, { SeverityIcons } from '../../types/SeverityType';
 import trbl from '../../utility/trbl';
 import TransitionAnimation from '../TransitionAnimation';
 import BreakpointProvider from '../BreakpointProvider';
+import withRaised from '../WithRaised';
 
 type PropsType = {
     title: string;
@@ -41,13 +42,15 @@ const Toaster: SFC<PropsType> = (props): JSX.Element => {
         return 'primary';
     };
 
+    const RaisedToaster = withRaised(StyledToaster);
+
     return (
         <TransitionAnimation show={props.isOpen} animation="zoom">
             <BreakpointProvider breakpoints={{ small: 0, medium: 375, large: 800 }}>
                 {(breakpoint): JSX.Element => (
-                    <StyledToasterWrapper>
-                        <Box margin={trbl(6, 24)}>
-                            <StyledToaster severity={props.severity}>
+                    <Box margin={trbl(6, 24)}>
+                        <StyledToasterWrapper>
+                            <RaisedToaster level={2} severity={props.severity}>
                                 {breakpoint !== 'small' && (
                                     <Box alignSelf="flex-start" margin={trbl(18, 6, 18, 18)}>
                                         <Text inline severity={props.severity}>
@@ -86,9 +89,9 @@ const Toaster: SFC<PropsType> = (props): JSX.Element => {
                                         <Icon size="small" icon="close" />
                                     </Button>
                                 </Box>
-                            </StyledToaster>
-                        </Box>
-                    </StyledToasterWrapper>
+                            </RaisedToaster>
+                        </StyledToasterWrapper>
+                    </Box>
                 )}
             </BreakpointProvider>
         </TransitionAnimation>
