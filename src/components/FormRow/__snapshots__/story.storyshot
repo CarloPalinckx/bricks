@@ -39,12 +39,14 @@ exports[`Storyshots FormRow Default 1`] = `
           >
             <div
               className="sc-eNQAEJ lhLkZ"
+              disabled={undefined}
               onBlurCapture={[Function]}
               onClick={[Function]}
               onFocusCapture={[Function]}
             >
               <div
-                className="sc-ckVGcZ jnUSGE"
+                className="sc-ckVGcZ kdxLRP"
+                disabled={undefined}
               >
                 <span
                   className="sc-jKJlTe eFYypy"
@@ -53,7 +55,8 @@ exports[`Storyshots FormRow Default 1`] = `
                 </span>
               </div>
               <input
-                className="sc-dxgOiQ iyMjck"
+                className="sc-dxgOiQ iSQIum"
+                disabled={undefined}
                 id={undefined}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -68,12 +71,14 @@ exports[`Storyshots FormRow Default 1`] = `
           >
             <div
               className="sc-eNQAEJ lhLkZ"
+              disabled={undefined}
               onBlurCapture={[Function]}
               onClick={[Function]}
               onFocusCapture={[Function]}
             >
               <div
-                className="sc-ckVGcZ jnUSGE"
+                className="sc-ckVGcZ kdxLRP"
+                disabled={undefined}
               >
                 <span
                   className="sc-jKJlTe eFYypy"
@@ -82,7 +87,8 @@ exports[`Storyshots FormRow Default 1`] = `
                 </span>
               </div>
               <input
-                className="sc-dxgOiQ iyMjck"
+                className="sc-dxgOiQ iSQIum"
+                disabled={undefined}
                 id={undefined}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -98,12 +104,14 @@ exports[`Storyshots FormRow Default 1`] = `
         >
           <div
             className="sc-eNQAEJ lhLkZ"
+            disabled={undefined}
             onBlurCapture={[Function]}
             onClick={[Function]}
             onFocusCapture={[Function]}
           >
             <div
-              className="sc-ckVGcZ jnUSGE"
+              className="sc-ckVGcZ kdxLRP"
+              disabled={undefined}
             >
               <span
                 className="sc-jKJlTe eFYypy"
@@ -112,7 +120,8 @@ exports[`Storyshots FormRow Default 1`] = `
               </span>
             </div>
             <input
-              className="sc-dxgOiQ iyMjck"
+              className="sc-dxgOiQ iSQIum"
+              disabled={undefined}
               id={undefined}
               onBlur={[Function]}
               onChange={[Function]}
@@ -159,12 +168,14 @@ exports[`Storyshots FormRow Default 1`] = `
         >
           <div
             className="sc-eNQAEJ lhLkZ"
+            disabled={undefined}
             onBlurCapture={[Function]}
             onClick={[Function]}
             onFocusCapture={[Function]}
           >
             <div
-              className="sc-ckVGcZ jnUSGE"
+              className="sc-ckVGcZ kdxLRP"
+              disabled={undefined}
             >
               <span
                 className="sc-jKJlTe eFYypy"
@@ -173,7 +184,8 @@ exports[`Storyshots FormRow Default 1`] = `
               </span>
             </div>
             <input
-              className="sc-dxgOiQ iyMjck"
+              className="sc-dxgOiQ iSQIum"
+              disabled={undefined}
               id={undefined}
               onBlur={[Function]}
               onChange={[Function]}
@@ -188,12 +200,14 @@ exports[`Storyshots FormRow Default 1`] = `
         >
           <div
             className="sc-eNQAEJ lhLkZ"
+            disabled={undefined}
             onBlurCapture={[Function]}
             onClick={[Function]}
             onFocusCapture={[Function]}
           >
             <div
-              className="sc-ckVGcZ jnUSGE"
+              className="sc-ckVGcZ kdxLRP"
+              disabled={undefined}
             >
               <span
                 className="sc-jKJlTe eFYypy"
@@ -202,7 +216,8 @@ exports[`Storyshots FormRow Default 1`] = `
               </span>
             </div>
             <input
-              className="sc-dxgOiQ iyMjck"
+              className="sc-dxgOiQ iSQIum"
+              disabled={undefined}
               id={undefined}
               onBlur={[Function]}
               onChange={[Function]}
@@ -391,12 +406,14 @@ exports[`Storyshots FormRow No Descriptions 1`] = `
         >
           <div
             className="sc-eNQAEJ lhLkZ"
+            disabled={undefined}
             onBlurCapture={[Function]}
             onClick={[Function]}
             onFocusCapture={[Function]}
           >
             <div
-              className="sc-ckVGcZ jnUSGE"
+              className="sc-ckVGcZ kdxLRP"
+              disabled={undefined}
             >
               <span
                 className="sc-jKJlTe eFYypy"
@@ -405,7 +422,8 @@ exports[`Storyshots FormRow No Descriptions 1`] = `
               </span>
             </div>
             <input
-              className="sc-dxgOiQ iyMjck"
+              className="sc-dxgOiQ iSQIum"
+              disabled={undefined}
               id={undefined}
               onBlur={[Function]}
               onChange={[Function]}
@@ -443,12 +461,14 @@ exports[`Storyshots FormRow No Descriptions 1`] = `
         >
           <div
             className="sc-eNQAEJ lhLkZ"
+            disabled={undefined}
             onBlurCapture={[Function]}
             onClick={[Function]}
             onFocusCapture={[Function]}
           >
             <div
-              className="sc-ckVGcZ jnUSGE"
+              className="sc-ckVGcZ kdxLRP"
+              disabled={undefined}
             >
               <span
                 className="sc-jKJlTe eFYypy"
@@ -457,7 +477,8 @@ exports[`Storyshots FormRow No Descriptions 1`] = `
               </span>
             </div>
             <input
-              className="sc-dxgOiQ iyMjck"
+              className="sc-dxgOiQ iSQIum"
+              disabled={undefined}
               id={undefined}
               onBlur={[Function]}
               onChange={[Function]}
