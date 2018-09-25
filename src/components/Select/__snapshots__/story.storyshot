@@ -52,7 +52,7 @@ exports[`Storyshots Select Custom rendering 1`] = `
   </div>
   <MockPortal>
     <div
-      className="sc-cJSrbW rQyzh"
+      className="sc-cJSrbW fNzhpc"
     >
       <div
         className="sc-brqgnP jEhxYZ"
@@ -335,7 +335,7 @@ exports[`Storyshots Select Default 1`] = `
   </div>
   <MockPortal>
     <div
-      className="sc-cJSrbW rQyzh"
+      className="sc-cJSrbW fNzhpc"
     >
       <div
         className="sc-brqgnP jEhxYZ"

@@ -21,6 +21,7 @@ type StateType = {
     input: string;
     isOpen: boolean;
     optionPointer: number;
+    inputHeight: number | undefined;
 };
 
 type PropsType<GenericOption extends OptionBase> = {
@@ -36,6 +37,7 @@ type PropsType<GenericOption extends OptionBase> = {
 };
 class Select<GenericOption extends OptionBase> extends Component<PropsType<GenericOption>, StateType> {
     private readonly inputRef: RefObject<HTMLInputElement>;
+    private inputWrapperRef: HTMLDivElement;
     private wrapperRef: HTMLDivElement;
     private windowRef: HTMLDivElement;
 
@@ -47,6 +49,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
             isOpen: false,
             input: props.value,
             optionPointer: -1,
+            inputHeight: undefined,
         };
     }
 
@@ -92,6 +95,12 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
 
         if (this.inputRef.current !== null && !prevState.isOpen && this.state.isOpen) {
             this.inputRef.current.focus();
+        }
+
+        const inputHeight = this.inputWrapperRef.getBoundingClientRect().height;
+
+        if (inputHeight !== prevState.inputHeight) {
+            this.setState({ inputHeight });
         }
     }
 
@@ -153,7 +162,10 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                 onKeyDownCapture={this.handleKeyPress}
                 tabIndex={0}
             >
-                <StyledInput disabled={!this.props.disabled ? false : this.props.disabled}>
+                <StyledInput
+                    disabled={!this.props.disabled ? false : this.props.disabled}
+                    innerRef={(ref): void => (this.inputWrapperRef = ref)}
+                >
                     <Box alignItems="stretch">
                         {(this.state.isOpen && (
                             <>
@@ -214,6 +226,7 @@ class Select<GenericOption extends OptionBase> extends Component<PropsType<Gener
                                 ? this.wrapperRef.getBoundingClientRect()
                                 : undefined
                         }
+                        inputHeight={this.state.inputHeight}
                     >
                         <ScrollBox autoHideScrollBar={false} showInsetShadow={false}>
                             <FoldOut isOpen={this.state.isOpen}>
