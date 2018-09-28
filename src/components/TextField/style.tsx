@@ -19,14 +19,6 @@ type TextFieldThemeType = {
             background: string;
         };
     };
-    active: {
-        common: {
-            color: string;
-        };
-        affix: {
-            color: string;
-        };
-    };
     focus: {
         borderColor: string;
         boxShadow: string;
@@ -42,7 +34,6 @@ type AffixProps = {
 };
 
 type WrapperProps = {
-    active: boolean;
     focus: boolean;
     disabled?: boolean;
     feedback?: {
