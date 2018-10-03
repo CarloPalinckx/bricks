@@ -1,7 +1,10 @@
 ### This PR:
 
-proposed release: [`major`|`minor`|`patch`]
+[issue description]
+- or -
 resolves #[resolved issue number]
+
+proposed release: [`major`|`minor`|`patch`]
 
 **Checklist** 🛡
 - [ ] I have exported my addition from `src/index.ts` (check if not applicable)
