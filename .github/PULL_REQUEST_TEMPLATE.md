@@ -1,7 +1,7 @@
 ### This PR:
 
 [issue description]
-- or -
+-- or --
 resolves #[resolved issue number]
 
 proposed release: [`major`|`minor`|`patch`]
