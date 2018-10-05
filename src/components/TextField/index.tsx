@@ -5,10 +5,12 @@ import InlineNotification from '../InlineNotification';
 import Box from '../Box';
 import { StyledInput, StyledWrapper, StyledAffix, StyledAffixWrapper } from './style';
 import withCurrencyFormatting, { WithCurrencyFormattingType } from './formatters/withCurrencyFormatting';
+import withNumberFormatting, { WithNumberFormattingType } from './formatters/withNumberFormatting';
 
 type PropsType = {
     value: string;
     name: string;
+    type?: string;
     id?: string;
     feedback?: {
         severity: SeverityType;
@@ -29,6 +31,7 @@ type StateType = {
 
 class TextField extends Component<PropsType, StateType> {
     public static Currency: WithCurrencyFormattingType = withCurrencyFormatting(TextField);
+    public static Number: WithNumberFormattingType = withNumberFormatting(TextField);
 
     private inputRef: HTMLInputElement;
 
@@ -78,7 +81,7 @@ class TextField extends Component<PropsType, StateType> {
                         </StyledAffixWrapper>
                     )}
                     <StyledInput
-                        type="text"
+                        type={this.props.type ? this.props.type : 'text'}
                         name={this.props.name}
                         disabled={this.props.disabled}
                         value={this.props.value}

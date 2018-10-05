@@ -103,7 +103,6 @@ const withCurrencyFormatting = (Wrapped: ComponentType<TextFieldPropsType>): Com
 
         private handleChange = (value: string, event: ChangeEvent<HTMLInputElement>): void => {
             this.props.onChange(this.parse('out', value));
-
             const target = event.target;
             const selectionStart = target.selectionStart as number;
             const newInputLength = this.parse('in', value).length;
@@ -144,7 +143,6 @@ const withCurrencyFormatting = (Wrapped: ComponentType<TextFieldPropsType>): Com
         public render(): JSX.Element {
             const wrappedProps = {
                 ...this.props,
-                type: 'text',
                 value: this.state.value,
                 prefix: this.state.currencyAlignment === 'left' ? this.state.currency : undefined,
                 suffix: this.state.currencyAlignment === 'right' ? this.state.currency : undefined,
