@@ -2,7 +2,7 @@ import React from 'react';
 import Toggle from '.';
 import Icon from '../Icon';
 import { mosTheme } from '../../themes/MosTheme';
-import { mountWithTheme } from '../../utility/styled/testing';
+import { mountWithTheme } from '../../utility/testing/styled_components';
 import Styledtoggle, { StyledToggleSkin, StyledToggleWrapper } from './style';
 
 describe('Toggle', () => {

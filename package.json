@@ -57,6 +57,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "intl": "^1.2.5",
     "jest": "^22.4.0",
+    "jest-puppeteer": "^3.4.0",
     "jest-styled-components": "^5.0.0",
     "prettier": "^1.12.1",
     "progress-bar-webpack-plugin": "^1.10.0",
@@ -90,7 +91,7 @@
   },
   "scripts": {
     "dev": "npm run watch",
-    "test": "jest --config=./config/jest/jest.config.json",
+    "test": "JEST_PUPPETEER_CONFIG=./config/jest/puppeteer.config.js HEADLESS=false jest --config=./config/jest/jest.config.json",
     "test-coverage": "jest --config=./config/jest/jest.config.json --coverage --runInBand --bail",
     "build": "rimraf ./dist && webpack --config ./config/webpack/webpack.config.js",
     "lint-fix": "tslint --fix --project ./config/typescript/tsconfig.json --config ./config/typescript/tslint.json ./src/**/*.{ts,tsx}",

@@ -3,7 +3,7 @@ import React from 'react';
 import ScrollBar from 'simplebar';
 import ScrollBox from '.';
 import MosTheme from '../../themes/MosTheme';
-import { mountWithTheme } from '../../utility/styled/testing';
+import { mountWithTheme } from '../../utility/testing/styled_components';
 import { StyledBottom, StyledTop } from './style';
 
 let scrollBarOptions = {};

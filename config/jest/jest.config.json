@@ -61,5 +61,6 @@
         "simplebar/dist/simplebar.min.css": "<rootDir>/config/jest/__mocks__/simplebarCss.ts",
         "react-popper": "<rootDir>/config/jest/__mocks__/reactPopper.tsx",
         "react-beautiful-dnd": "<rootDir>/config/jest/__mocks__/reactBeautifulDnd.tsx"
-    }
+    },
+    "preset": "jest-puppeteer"
 }

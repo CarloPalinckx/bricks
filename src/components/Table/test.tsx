@@ -1,7 +1,7 @@
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Table from '.';
-import { mountWithTheme } from '../../utility/styled/testing';
+import { mountWithTheme } from '../../utility/testing/styled_components';
 import Cell from './Cell';
 import { SubscriptionConsumer, SubscriptionProvider } from '../../utility/SubscriptionContext';
 import Checkbox from '../Checkbox';

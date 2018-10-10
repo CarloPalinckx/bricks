@@ -1,5 +1,5 @@
 import React from 'react';
-import { mountWithTheme } from '../../utility/styled/testing';
+import { mountWithTheme } from '../../utility/testing/styled_components';
 import Toaster from './';
 import Button from '../Button';
 
