@@ -5,7 +5,6 @@ import Badge, { BadgePropsType } from '.';
 
 storiesOf('Badge', module).add('Default', () => {
     return (
-        // <Badge severity={select('severity', ['success', 'warning', 'error', 'info'], 'success') as BadgePropsType['severity']}>
         <Badge severity={select('severity', ['success', 'warning', 'error', 'info'], 'success') as BadgePropsType['severity']}>
             {text('text', '1')}
         </Badge>
