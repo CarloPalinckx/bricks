@@ -21,7 +21,12 @@ type TextFieldThemeType = {
     };
     focus: {
         borderColor: string;
-        boxShadow: string;
+    };
+    severity: {
+        error: { boxShadow: string };
+        success: { boxShadow: string };
+        info: { boxShadow: string };
+        warning: { boxShadow: string };
     };
     disabled: {
         color: string;
@@ -36,10 +41,7 @@ type AffixProps = {
 type WrapperProps = {
     focus: boolean;
     disabled?: boolean;
-    feedback?: {
-        severity: SeverityType;
-        message: string;
-    };
+    severity: SeverityType;
 };
 
 const StyledInput = withProps<WrapperProps, HTMLInputElement>(styled.input)`
@@ -48,7 +50,6 @@ const StyledInput = withProps<WrapperProps, HTMLInputElement>(styled.input)`
     background: ${({ theme, disabled }): string =>
         disabled ? theme.TextField.disabled.background : theme.TextField.idle.common.background};
     font-size: inherit;
-    display: block;
     padding: 6px 12px;
     line-height: 1.572;
     outline: none;
@@ -84,23 +85,22 @@ const StyledAffix = styled.span`
 
 const StyledWrapper = withProps<WrapperProps, HTMLDivElement>(styled.div)`
     transition: border-color 100ms, box-shadow 100ms;
-    border: solid 1px ${({ focus, theme, disabled }): string =>
-        focus && !disabled ? theme.TextField.focus.borderColor : theme.TextField.idle.common.borderColor};
-    box-shadow: ${({ focus, theme, disabled }): string => (focus && !disabled ? theme.TextField.focus.boxShadow : '')};
     font-size: ${({ theme }): string => theme.TextField.idle.common.fontSize};
     font-family: ${({ theme }): string => theme.TextField.idle.common.fontFamily};
     border-radius: ${({ theme }): string => theme.TextField.idle.common.borderRadius};
     display: flex;
-    position: relative;
     cursor: text;
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
 
-    ${({ feedback, theme, focus }): string =>
-        feedback !== undefined && feedback.severity !== 'info' && !focus
-            ? `border: solid 1px ${theme.Text.severity[feedback.severity].color};`
-            : ''};
+    ${({ focus, severity, theme }): string =>
+        focus
+            ? `border: solid 1px ${theme.Text.severity[severity].color}`
+            : `border: solid 1px ${theme.TextField.idle.common.borderColor}`};
+
+    ${({ focus, disabled, severity, theme }): string =>
+        focus && !disabled ? `box-shadow: ${theme.TextField.severity[severity].boxShadow}` : ''};
 
     * {
         cursor: text;
