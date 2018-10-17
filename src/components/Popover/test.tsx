@@ -2,7 +2,7 @@ import toJson from 'enzyme-to-json';
 import React from 'react';
 import { Popper, Reference } from 'react-popper';
 import Popover from '.';
-import { shallowWithTheme } from '../../utility/styled/testing';
+import { shallowWithTheme, mountWithTheme } from '../../utility/styled/testing';
 import TransitionAnimation from '../TransitionAnimation';
 import { PopoverAnchor, PopoverArrow, PopoverBackground } from './style';
 
@@ -86,6 +86,36 @@ describe('Popover', () => {
                 enabled: false,
             },
         });
+    });
+
+    it('should close when clicked outside the popover window', () => {
+        const callbackMap: { [key: string]: Function } = {};
+
+        document.addEventListener = jest.fn((event, callback) => (callbackMap[event] = callback));
+
+        const component = mountWithTheme(
+            <Popover isOpen={true} distance={6} renderContent={(): string => 'Mock content'} />,
+        );
+
+        callbackMap.mousedown({
+            target: document.createElement('div'),
+        });
+
+        component.update();
+
+        expect(component.state('isOpen')).toBe(false);
+    });
+
+    it('adds and removes eventListeners', () => {
+        const component = mountWithTheme(
+            <Popover isOpen={true} distance={6} renderContent={(): string => 'Mock content'} />,
+        );
+        component.unmount();
+
+        /* tslint:disable */
+        expect((global as any).addEventListener).toBeCalled();
+        expect((global as any).removeEventListener).toBeCalled();
+        /* tslint:enable */
     });
 });
 
