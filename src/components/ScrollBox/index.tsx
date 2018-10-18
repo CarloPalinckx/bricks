@@ -85,7 +85,7 @@ class ScrollBox extends Component<PropsType, StateType> {
         return (
             <StyledWrapper>
                 <StyledScrollBox
-                    innerRef={(ref): void => {
+                    ref={(ref: any): void => {
                         this.contentRef = ref;
                     }}
                 >

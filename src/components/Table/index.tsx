@@ -74,7 +74,9 @@ class Table extends Component<PropsType, StateType> {
                         <DragDropContext onDragEnd={this.dragEndHandler}>
                             <Droppable droppableId="droppable">
                                 {({ innerRef }): JSX.Element => (
-                                    <StyledTable innerRef={innerRef}>{children}</StyledTable>
+                                    <StyledTable ref={innerRef as string & ((instance: HTMLTableElement) => '')}>
+                                        {children}
+                                    </StyledTable>
                                 )}
                             </Droppable>
                         </DragDropContext>
@@ -111,7 +113,10 @@ class Table extends Component<PropsType, StateType> {
                                                 );
 
                                                 if (!event.shiftKey || this.state.selectionStart === -1) {
-                                                    this.setState({ selectionStart: indexOfCheckedItem, toggleAction });
+                                                    this.setState({
+                                                        selectionStart: indexOfCheckedItem,
+                                                        toggleAction,
+                                                    });
                                                 } else {
                                                     const itemsInRange = this.getItemsInRange(
                                                         this.props.rows,

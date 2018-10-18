@@ -33,7 +33,6 @@ exports[`Storyshots Modal Default 1`] = `
               className="sc-htoDjs TzVGU"
               color={undefined}
               disabled={undefined}
-              icon={undefined}
               id={undefined}
               onClick={[Function]}
               title="close"
@@ -117,7 +116,6 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                     className="sc-htoDjs ilyuMW"
                     color={undefined}
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Activate"
@@ -133,7 +131,6 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                     className="sc-htoDjs cMPsNt"
                     color={undefined}
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Close"
@@ -244,7 +241,6 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                     className="sc-htoDjs ilyuMW"
                     color={undefined}
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Activate"
@@ -260,7 +256,6 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                     className="sc-htoDjs cMPsNt"
                     color={undefined}
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Close"

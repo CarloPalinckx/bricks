@@ -172,7 +172,7 @@ class Select<GenericOptionType extends OptionBaseType> extends Component<PropsTy
 
         return (
             <StyledWrapper
-                innerRef={(ref): void => {
+                ref={(ref: any): void => {
                     this.wrapperRef = ref;
                 }}
                 isDisabled={this.props.disabled}
@@ -186,7 +186,7 @@ class Select<GenericOptionType extends OptionBaseType> extends Component<PropsTy
                     isOpen={this.state.isOpen}
                     hasFocus={this.state.hasFocus}
                     disabled={!this.props.disabled ? false : this.props.disabled}
-                    innerRef={(ref): void => (this.inputWrapperRef = ref)}
+                    ref={(ref: any): void => (this.inputWrapperRef = ref)}
                 >
                     <Box alignItems="stretch">
                         {(this.state.isOpen && (
@@ -236,7 +236,7 @@ class Select<GenericOptionType extends OptionBaseType> extends Component<PropsTy
                 </StyledInput>
                 {createPortal(
                     <StyledWindow
-                        innerRef={(ref): void => {
+                        ref={(ref: any): void => {
                             this.windowRef = ref;
                         }}
                         isOpen={this.state.isOpen}

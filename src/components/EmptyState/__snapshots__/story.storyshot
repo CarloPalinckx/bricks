@@ -80,7 +80,6 @@ exports[`Storyshots EmptyState With button (as children) 1`] = `
       className="sc-htoDjs ilyuMW"
       color={undefined}
       disabled={undefined}
-      icon={undefined}
       id={undefined}
       onClick={[Function]}
       title="Add filter"

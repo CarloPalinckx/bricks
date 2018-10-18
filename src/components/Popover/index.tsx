@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Manager, Popper, PopperChildrenProps, Reference, ReferenceChildrenProps } from 'react-popper';
+import { Manager, Popper, PopperChildrenProps, Reference, ReferenceChildrenProps, RefHandler } from 'react-popper';
 import TransitionAnimation from '../TransitionAnimation';
 import { PopoverAnchor, PopoverArrow, PopoverBackground, PopoverContent, PopoverWindow } from './style';
 
@@ -110,7 +110,10 @@ class Popover extends Component<PropsType, StateType> {
                                     if (ref) this.anchorRef = ref;
                                 }}
                             >
-                                <PopoverAnchor innerRef={ref} stretch={this.props.stretch}>
+                                <PopoverAnchor
+                                    ref={ref as string & ((instance: HTMLDivElement) => undefined)}
+                                    stretch={this.props.stretch}
+                                >
                                     {this.props.children}
                                 </PopoverAnchor>
                             </div>
@@ -126,21 +129,14 @@ class Popover extends Component<PropsType, StateType> {
                             <Popper
                                 positionFixed={this.props.fixed !== undefined ? this.props.fixed : false}
                                 placement={this.props.placement !== undefined ? this.props.placement : 'bottom'}
-                                modifiers={{
-                                    offset: {
-                                        offset: this.mapOffset(this.props),
-                                    },
-                                    flip: {
-                                        enabled: false,
-                                    },
-                                }}
+                                modifiers={{ offset: { offset: this.mapOffset(this.props) }, flip: { enabled: false } }}
                             >
                                 {({ ref, style, placement, arrowProps }: PopperChildrenProps): JSX.Element => (
-                                    <PopoverWindow innerRef={ref} style={style}>
+                                    <PopoverWindow ref={ref as any} style={style}>
                                         <PopoverContent>{this.props.renderContent()}</PopoverContent>
                                         <PopoverBackground />
                                         <PopoverArrow
-                                            innerRef={arrowProps.ref}
+                                            ref={arrowProps.ref as any}
                                             style={arrowProps.style}
                                             placement={placement}
                                         />

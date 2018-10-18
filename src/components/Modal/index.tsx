@@ -50,7 +50,7 @@ class Modal extends Component<PropsType> {
         return (
             <StyledModalWrapper
                 show={this.props.show}
-                innerRef={(ref): void => {
+                ref={(ref: any): void => {
                     this.styledModalWrapperRef = ref;
                 }}
             >
@@ -59,7 +59,7 @@ class Modal extends Component<PropsType> {
                         {(breakpoint): JSX.Element => (
                             <StyledModal
                                 modalSize={this.props.size !== undefined ? this.props.size : 'large'}
-                                innerRef={(ref): void => {
+                                ref={(ref: any): void => {
                                     this.styledModalRef = ref;
                                 }}
                             >

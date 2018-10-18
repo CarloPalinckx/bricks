@@ -72,7 +72,7 @@ class Row extends Component<PropsType, StateType> {
                                             focus={hasFocus}
                                             onMouseEnter={this.handleMouseEnter}
                                             onMouseLeave={this.handleMouseLeave}
-                                            innerRef={provided.innerRef}
+                                            ref={provided.innerRef as any}
                                             {...provided.draggableProps}
                                         >
                                             <Cell

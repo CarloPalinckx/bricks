@@ -8,7 +8,7 @@ import theme from '../../themes/MosTheme/MosTheme.theme';
 const {
     default: styled,
     css,
-    injectGlobal,
+    createGlobalStyle,
     keyframes,
     ThemeProvider,
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<ThemeType>;
@@ -47,7 +47,7 @@ const mountWithTheme = (component: JSX.Element): ReactWrapper => {
 
 export {
     css,
-    injectGlobal,
+    createGlobalStyle,
     keyframes,
     ThemeProvider,
     StyledType,

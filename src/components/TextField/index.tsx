@@ -82,7 +82,7 @@ class TextField extends Component<PropsType, StateType> {
                         onChange={this.onChange}
                         onFocus={this.handleFocus}
                         onBlur={this.handleBlur}
-                        innerRef={(ref): void => {
+                        ref={(ref: any): void => {
                             this.inputRef = ref;
                             if (this.props.extractRef !== undefined) this.props.extractRef(ref);
                         }}

@@ -6,7 +6,7 @@ import ThemeType from '../../types/ThemeType';
 const {
     default: styled,
     css,
-    injectGlobal,
+    createGlobalStyle,
     keyframes,
     ThemeProvider,
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<ThemeType>;
@@ -25,5 +25,5 @@ function withProps<T, U extends HTMLElement = HTMLElement>(
     return styledFunction;
 }
 
-export { css, injectGlobal, keyframes, ThemeProvider, StyledType, StyledFunction, withProps };
+export { css, createGlobalStyle, keyframes, ThemeProvider, StyledType, StyledFunction, withProps };
 export default styled;
