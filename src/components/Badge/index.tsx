@@ -14,7 +14,6 @@ type BadgeThemeType = {
         success: VariantStyleType;
         warning: VariantStyleType;
         info: VariantStyleType;
-        [key: string]: VariantStyleType;
     };
 };
 
@@ -39,4 +38,4 @@ const StyledBadge = withProps<BadgePropsType>(styled.div)`
 `;
 
 export default StyledBadge;
-export { BadgePropsType , BadgeThemeType };
+export { BadgePropsType, BadgeThemeType };
