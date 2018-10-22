@@ -9,6 +9,9 @@ type BadgePropsType = {
 };
 
 type BadgeThemeType = {
+    default: {
+        color: string;
+    };
     severity: {
         error: VariantStyleType;
         success: VariantStyleType;
@@ -19,7 +22,6 @@ type BadgeThemeType = {
 
 type VariantStyleType = {
     backgroundColor: string;
-    color: string;
 };
 
 const StyledBadge = withProps<BadgePropsType>(styled.div)`
@@ -33,7 +35,7 @@ const StyledBadge = withProps<BadgePropsType>(styled.div)`
     font-family: ${({ theme }): string => theme.Text.default.fontFamily};
     font-size: 12px;
     line-height: 1;
-    color: ${({ theme, severity }): string => !severity ? theme.Badge.severity.error.color : theme.Badge.severity[severity].color};
+    color: ${({ theme }): string => theme.Badge.default.color};
     white-space: nowrap;
 `;
 
