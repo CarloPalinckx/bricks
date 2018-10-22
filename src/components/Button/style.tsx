@@ -116,13 +116,11 @@ const StyledButton = withProps<ButtonPropsType>(styled.button)`
                 color: ${theme.Button[variant][subVariant].hover.color};
                 background-color: ${theme.Button[variant][subVariant].hover.backgroundColor};
                 text-decoration: ${theme.Button[variant][subVariant].hover.textDecoration};
-                ${flat ? 'transform: scale(1.1);' : ''}
                 ${!flat ? `border-color: ${theme.Button[variant].regular.hover.borderColor}` : ''};
                 ${!flat ? `box-shadow: ${theme.Button[variant].regular.hover.boxShadow}` : ''};
             }
 
             &:focus {
-
                 ${
                     !flat
                         ? `
