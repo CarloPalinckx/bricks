@@ -75,10 +75,8 @@ class TextField extends Component<PropsType, StateType> {
                         type={this.props.type ? this.props.type : 'text'}
                         name={this.props.name}
                         disabled={this.props.disabled}
-                        severity={this.props.feedback ? this.props.feedback.severity : 'success'}
                         value={this.props.value}
                         id={this.props.id}
-                        focus={this.state.focus}
                         onChange={this.onChange}
                         onFocus={this.handleFocus}
                         onBlur={this.handleBlur}
