@@ -2,13 +2,13 @@
 
 exports[`Storyshots Spacer ⚠️  With margin 1`] = `
 <div
-  className="sc-dNLxif cRIUiY"
+  className="sc-jqCOkK eSGjvK"
 >
   <div
-    className="sc-cIShpX kMTbMS"
+    className="sc-kafWEX jYWYEz"
   >
     <p
-      className="sc-bxivhb kFVWeI"
+      className="sc-bxivhb iyjEP"
     >
       This has a margin.
     </p>
@@ -18,13 +18,13 @@ exports[`Storyshots Spacer ⚠️  With margin 1`] = `
 
 exports[`Storyshots Spacer ⚠️  With padding 1`] = `
 <div
-  className="sc-cIShpX kMTbMS"
+  className="sc-kafWEX jYWYEz"
 >
   <div
-    className="sc-dNLxif kXdeJR"
+    className="sc-jqCOkK jMfdRS"
   >
     <p
-      className="sc-bxivhb kFVWeI"
+      className="sc-bxivhb iyjEP"
     >
       This has padding.
     </p>

@@ -2,7 +2,7 @@
 
 exports[`Storyshots Toaster Default 1`] = `
 <div
-  className="sc-iRbamj csmlRs"
+  className="sc-csuQGl bUWxJa"
 >
   <div
     style={
@@ -12,19 +12,19 @@ exports[`Storyshots Toaster Default 1`] = `
     }
   >
     <div
-      className="sc-hEsumM fWopcp"
+      className="sc-ktHwxA eyzkfw"
     >
       <div
         className="sc-bwzfXH cbcpsK"
       >
         <div
-          className="sc-ktHwxA uqqxR"
+          className="sc-cIShpX JlkMn"
         >
           <div
             className="sc-bwzfXH jQmHZh"
           >
             <span
-              className="sc-ifAKCX chsNTs"
+              className="sc-ifAKCX eCQSHy"
             >
               <span
                 aria-hidden={true}
@@ -45,12 +45,12 @@ exports[`Storyshots Toaster Default 1`] = `
               className="sc-bwzfXH gaQYSB"
             >
               <p
-                className="sc-bxivhb ildJSL"
+                className="sc-bxivhb jKBUfU"
               >
                 Thought provoking we must stand.
               </p>
               <p
-                className="sc-bxivhb kFVWeI"
+                className="sc-bxivhb iyjEP"
               >
                 Game-changer problem-solvers; state of play invest, synergy uplift we must stand up ideate social intrapreneurship.
               </p>
@@ -60,10 +60,8 @@ exports[`Storyshots Toaster Default 1`] = `
             className="sc-bwzfXH bQfpwP"
           >
             <button
-              className="sc-htoDjs flaPve"
-              color={undefined}
+              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
               disabled={undefined}
-              icon={undefined}
               id={undefined}
               onClick={[Function]}
               title="close"
@@ -90,7 +88,7 @@ exports[`Storyshots Toaster Default 1`] = `
 
 exports[`Storyshots Toaster With action button 1`] = `
 <div
-  className="sc-iRbamj csmlRs"
+  className="sc-csuQGl bUWxJa"
 >
   <div
     style={
@@ -100,19 +98,19 @@ exports[`Storyshots Toaster With action button 1`] = `
     }
   >
     <div
-      className="sc-hEsumM fWopcp"
+      className="sc-ktHwxA eyzkfw"
     >
       <div
         className="sc-bwzfXH cbcpsK"
       >
         <div
-          className="sc-ktHwxA jmlPUn"
+          className="sc-cIShpX fXuOPW"
         >
           <div
             className="sc-bwzfXH jQmHZh"
           >
             <span
-              className="sc-ifAKCX hURNXo"
+              className="sc-ifAKCX hbrmCj"
             >
               <span
                 aria-hidden={true}
@@ -133,12 +131,12 @@ exports[`Storyshots Toaster With action button 1`] = `
               className="sc-bwzfXH gaQYSB"
             >
               <p
-                className="sc-bxivhb ildJSL"
+                className="sc-bxivhb jKBUfU"
               >
                 Overcome injustice.
               </p>
               <p
-                className="sc-bxivhb kFVWeI"
+                className="sc-bxivhb iyjEP"
               >
                 Global low-hanging fruit, collaborative consumption segmentation mobilize support. Problem-solvers cultivate, best practices, shared unit of.
               </p>
@@ -147,10 +145,8 @@ exports[`Storyshots Toaster With action button 1`] = `
               className="sc-bwzfXH kWLDUa"
             >
               <button
-                className="sc-htoDjs gCmkyb"
-                color={undefined}
+                className="sc-VigVT cZkyFH sc-htoDjs ifkBJX"
                 disabled={undefined}
-                icon={undefined}
                 id={undefined}
                 onClick={[Function]}
                 title="Hello"
@@ -164,10 +160,8 @@ exports[`Storyshots Toaster With action button 1`] = `
             className="sc-bwzfXH bQfpwP"
           >
             <button
-              className="sc-htoDjs flaPve"
-              color={undefined}
+              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
               disabled={undefined}
-              icon={undefined}
               id={undefined}
               onClick={[Function]}
               title="close"

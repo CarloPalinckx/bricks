@@ -2,14 +2,14 @@
 
 exports[`Storyshots Select Custom rendering 1`] = `
 <div
-  className="sc-ksYbfQ ciLspu"
+  className="sc-kvZOFW eQqvSJ"
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDownCapture={[Function]}
   tabIndex={0}
 >
   <div
-    className="sc-frDJqD clOnjY"
+    className="sc-jbKcbu kRXdhR"
     disabled={false}
   >
     <div
@@ -23,17 +23,15 @@ exports[`Storyshots Select Custom rendering 1`] = `
           className="sc-bwzfXH fsbcIX"
         >
           <p
-            className="sc-bxivhb kTaguW"
+            className="sc-bxivhb cswGnm"
           >
             Make a selection
           </p>
         </div>
       </div>
       <button
-        className="sc-htoDjs flaPve"
-        color={undefined}
+        className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
         disabled={false}
-        icon={undefined}
         id={undefined}
         onClick={[Function]}
         title="open"
@@ -54,13 +52,13 @@ exports[`Storyshots Select Custom rendering 1`] = `
   </div>
   <MockPortal>
     <div
-      className="sc-hmzhuo kGOZIp"
+      className="sc-hqyNC enESuX"
     >
       <div
-        className="sc-cMljjf dUfgXO"
+        className="sc-gPEVay jzUlKR"
       >
         <div
-          className="sc-jAaTju iVnhyn"
+          className="sc-iRbamj iHxIYy"
         >
           <div
             data-test="bricks-select-collapse"
@@ -72,7 +70,7 @@ exports[`Storyshots Select Custom rendering 1`] = `
             }
           >
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -93,12 +91,12 @@ exports[`Storyshots Select Custom rendering 1`] = `
                     className="sc-bwzfXH bQfpwP"
                   >
                     <p
-                      className="sc-bxivhb kFVWeI"
+                      className="sc-bxivhb iyjEP"
                     >
                       Bar A
                     </p>
                     <p
-                      className="sc-bxivhb kTaguW"
+                      className="sc-bxivhb cswGnm"
                     >
                       Lorem ipsum dolor sit amet.
                     </p>
@@ -107,7 +105,7 @@ exports[`Storyshots Select Custom rendering 1`] = `
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -128,12 +126,12 @@ exports[`Storyshots Select Custom rendering 1`] = `
                     className="sc-bwzfXH bQfpwP"
                   >
                     <p
-                      className="sc-bxivhb kFVWeI"
+                      className="sc-bxivhb iyjEP"
                     >
                       Foo B
                     </p>
                     <p
-                      className="sc-bxivhb kTaguW"
+                      className="sc-bxivhb cswGnm"
                     >
                       Lorem ipsum dolor sit amet.
                     </p>
@@ -142,7 +140,7 @@ exports[`Storyshots Select Custom rendering 1`] = `
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -163,12 +161,12 @@ exports[`Storyshots Select Custom rendering 1`] = `
                     className="sc-bwzfXH bQfpwP"
                   >
                     <p
-                      className="sc-bxivhb kFVWeI"
+                      className="sc-bxivhb iyjEP"
                     >
                       Bar C
                     </p>
                     <p
-                      className="sc-bxivhb kTaguW"
+                      className="sc-bxivhb cswGnm"
                     >
                       Lorem ipsum dolor sit amet.
                     </p>
@@ -177,7 +175,7 @@ exports[`Storyshots Select Custom rendering 1`] = `
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -198,12 +196,12 @@ exports[`Storyshots Select Custom rendering 1`] = `
                     className="sc-bwzfXH bQfpwP"
                   >
                     <p
-                      className="sc-bxivhb kFVWeI"
+                      className="sc-bxivhb iyjEP"
                     >
                       Foo D
                     </p>
                     <p
-                      className="sc-bxivhb kTaguW"
+                      className="sc-bxivhb cswGnm"
                     >
                       Lorem ipsum dolor sit amet.
                     </p>
@@ -212,7 +210,7 @@ exports[`Storyshots Select Custom rendering 1`] = `
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -233,12 +231,12 @@ exports[`Storyshots Select Custom rendering 1`] = `
                     className="sc-bwzfXH bQfpwP"
                   >
                     <p
-                      className="sc-bxivhb kFVWeI"
+                      className="sc-bxivhb iyjEP"
                     >
                       Bar E
                     </p>
                     <p
-                      className="sc-bxivhb kTaguW"
+                      className="sc-bxivhb cswGnm"
                     >
                       Lorem ipsum dolor sit amet.
                     </p>
@@ -247,7 +245,7 @@ exports[`Storyshots Select Custom rendering 1`] = `
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -268,12 +266,12 @@ exports[`Storyshots Select Custom rendering 1`] = `
                     className="sc-bwzfXH bQfpwP"
                   >
                     <p
-                      className="sc-bxivhb kFVWeI"
+                      className="sc-bxivhb iyjEP"
                     >
                       Bar F
                     </p>
                     <p
-                      className="sc-bxivhb kTaguW"
+                      className="sc-bxivhb cswGnm"
                     >
                       Lorem ipsum dolor sit amet.
                     </p>
@@ -291,14 +289,14 @@ exports[`Storyshots Select Custom rendering 1`] = `
 
 exports[`Storyshots Select Default 1`] = `
 <div
-  className="sc-ksYbfQ ciLspu"
+  className="sc-kvZOFW eQqvSJ"
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDownCapture={[Function]}
   tabIndex={0}
 >
   <div
-    className="sc-frDJqD clOnjY"
+    className="sc-jbKcbu kRXdhR"
     disabled={false}
   >
     <div
@@ -309,20 +307,18 @@ exports[`Storyshots Select Default 1`] = `
         onClick={[Function]}
       >
         <p
-          className="sc-bxivhb kTaguW"
+          className="sc-bxivhb cswGnm"
         >
           <span
-            className="sc-cJSrbW hkmhZo"
+            className="sc-frDJqD dRWFVn"
           >
             Search a value
           </span>
         </p>
       </div>
       <button
-        className="sc-htoDjs flaPve"
-        color={undefined}
+        className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
         disabled={false}
-        icon={undefined}
         id={undefined}
         onClick={[Function]}
         title="open"
@@ -343,13 +339,13 @@ exports[`Storyshots Select Default 1`] = `
   </div>
   <MockPortal>
     <div
-      className="sc-hmzhuo kGOZIp"
+      className="sc-hqyNC enESuX"
     >
       <div
-        className="sc-cMljjf dUfgXO"
+        className="sc-gPEVay jzUlKR"
       >
         <div
-          className="sc-jAaTju iVnhyn"
+          className="sc-iRbamj iHxIYy"
         >
           <div
             data-test="bricks-select-collapse"
@@ -361,7 +357,7 @@ exports[`Storyshots Select Default 1`] = `
             }
           >
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -371,16 +367,16 @@ exports[`Storyshots Select Default 1`] = `
                 <span
                   className="sc-htpNat kTMegb"
                 >
-                  <span
-                    className="sc-ifAKCX cdTTkb"
+                  <p
+                    className="sc-bxivhb iyjEP"
                   >
                     Bar A
-                  </span>
+                  </p>
                 </span>
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -390,16 +386,16 @@ exports[`Storyshots Select Default 1`] = `
                 <span
                   className="sc-htpNat kTMegb"
                 >
-                  <span
-                    className="sc-ifAKCX cdTTkb"
+                  <p
+                    className="sc-bxivhb iyjEP"
                   >
                     Foo B
-                  </span>
+                  </p>
                 </span>
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -409,16 +405,16 @@ exports[`Storyshots Select Default 1`] = `
                 <span
                   className="sc-htpNat kTMegb"
                 >
-                  <span
-                    className="sc-ifAKCX cdTTkb"
+                  <p
+                    className="sc-bxivhb iyjEP"
                   >
                     Bar C
-                  </span>
+                  </p>
                 </span>
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -428,16 +424,16 @@ exports[`Storyshots Select Default 1`] = `
                 <span
                   className="sc-htpNat kTMegb"
                 >
-                  <span
-                    className="sc-ifAKCX cdTTkb"
+                  <p
+                    className="sc-bxivhb iyjEP"
                   >
                     Foo D
-                  </span>
+                  </p>
                 </span>
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -447,16 +443,16 @@ exports[`Storyshots Select Default 1`] = `
                 <span
                   className="sc-htpNat kTMegb"
                 >
-                  <span
-                    className="sc-ifAKCX cdTTkb"
+                  <p
+                    className="sc-bxivhb iyjEP"
                   >
                     Bar E
-                  </span>
+                  </p>
                 </span>
               </div>
             </div>
             <div
-              className="sc-kgAjT hIDSch"
+              className="sc-hmzhuo bqzUyU"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
@@ -466,11 +462,11 @@ exports[`Storyshots Select Default 1`] = `
                 <span
                   className="sc-htpNat kTMegb"
                 >
-                  <span
-                    className="sc-ifAKCX cdTTkb"
+                  <p
+                    className="sc-bxivhb iyjEP"
                   >
                     Bar F
-                  </span>
+                  </p>
                 </span>
               </div>
             </div>

@@ -110,10 +110,15 @@ const StyledWrapper = withProps<WrapperProps, HTMLDivElement>(styled.div)`
     width: 100%;
     box-sizing: border-box;
 
+    ${({ focus, severity, theme }): string =>
+        focus
+            ? `border: solid 1px ${theme.Text.severity[severity]}`
+            : `border: solid 1px ${theme.TextField.idle.common.borderColor}`};
+
     ${({ focus, disabled, severity, theme }): string =>
         focus && !disabled
             ? `
-            border: solid 1px ${theme.Text.severity[severity].color}
+            border: solid 1px ${theme.Text.severity[severity]}
             box-shadow: ${theme.TextField.severity[severity].boxShadow}
             `
             : `border: solid 1px ${theme.TextField.idle.common.borderColor}`};

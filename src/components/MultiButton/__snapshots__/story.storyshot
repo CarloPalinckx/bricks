@@ -9,16 +9,14 @@ exports[`Storyshots MultiButton Default 1`] = `
   >
     <div>
       <div
-        className="sc-hzDkRC gbbQih"
+        className="sc-fMiknA iFqQZY"
       >
         <div
           className="sc-bwzfXH cAZkVZ"
         >
           <button
-            className="sc-Rmtcm dhDgko sc-htoDjs eHXLyg"
-            color={undefined}
+            className="sc-jhAzac hKxugw sc-VigVT jpssvu sc-htoDjs ifkBJX"
             disabled={undefined}
-            icon={undefined}
             id={undefined}
             onClick={[Function]}
             title="Default action"
@@ -31,10 +29,8 @@ exports[`Storyshots MultiButton Default 1`] = `
             </span>
           </button>
           <button
-            className="sc-bRBYWo iBpAcT sc-htoDjs bcNitD"
-            color={undefined}
+            className="sc-fBuWsC hQPLTh sc-VigVT fGIQgf sc-htoDjs ifkBJX"
             disabled={undefined}
-            icon={undefined}
             id={undefined}
             onClick={[Function]}
             title="chevron"

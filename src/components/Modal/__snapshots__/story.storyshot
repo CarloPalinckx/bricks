@@ -2,10 +2,10 @@
 
 exports[`Storyshots Modal Default 1`] = `
 <div
-  className="sc-jlyJG gBxUkk"
+  className="sc-Rmtcm psENA"
 >
   <div
-    className="sc-iRbamj csmlRs"
+    className="sc-csuQGl bUWxJa"
   >
     <div
       style={
@@ -15,13 +15,13 @@ exports[`Storyshots Modal Default 1`] = `
       }
     >
       <div
-        className="sc-gipzik kNtMSr"
+        className="sc-bRBYWo crvFYk"
       >
         <div
           className="sc-bwzfXH jTCciZ"
         >
           <div
-            className="sc-fjdhpX jskuQK"
+            className="sc-kAzzGY eEgZSF"
             role="heading"
           >
             Would you like me to be your role modal?
@@ -30,10 +30,8 @@ exports[`Storyshots Modal Default 1`] = `
             className="sc-bwzfXH ghdkBw"
           >
             <button
-              className="sc-htoDjs flaPve"
-              color={undefined}
+              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
               disabled={undefined}
-              icon={undefined}
               id={undefined}
               onClick={[Function]}
               title="close"
@@ -53,19 +51,19 @@ exports[`Storyshots Modal Default 1`] = `
           </div>
         </div>
         <div
-          className="sc-cMljjf dUfgXO"
+          className="sc-gPEVay jzUlKR"
         >
           <div
-            className="sc-jAaTju iVnhyn"
+            className="sc-iRbamj iHxIYy"
           >
             <div
-              className="sc-jDwBTQ bqIkRG"
+              className="sc-jlyJG gtxcUz"
             />
             <div
               className="sc-bwzfXH fiOUi"
             >
               <p
-                className="sc-bxivhb kFVWeI"
+                className="sc-bxivhb iyjEP"
               >
                 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut mi ligula. Phasellus tellus nulla,
@@ -90,12 +88,12 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
               </p>
             </div>
             <div
-              className="sc-gPEVay gkJgPo"
+              className="sc-gipzik hhjjOC"
             />
           </div>
         </div>
         <div
-          className="sc-gZMcBi huJyDB"
+          className="sc-jTzLTM hDWBpv"
         >
           <div
             className="sc-bwzfXH hWtStI"
@@ -114,10 +112,8 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                   className="sc-bwzfXH jHAPPC"
                 >
                   <button
-                    className="sc-htoDjs fAnDzT"
-                    color={undefined}
+                    className="sc-VigVT eYHbkk sc-htoDjs ifkBJX"
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Activate"
@@ -130,10 +126,8 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                   className="sc-bwzfXH jHAPPC"
                 >
                   <button
-                    className="sc-htoDjs gKbNMP"
-                    color={undefined}
+                    className="sc-VigVT iNFlqA sc-htoDjs ifkBJX"
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Close"
@@ -154,10 +148,10 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
 
 exports[`Storyshots Modal Without closeAction 1`] = `
 <div
-  className="sc-jlyJG gBxUkk"
+  className="sc-Rmtcm psENA"
 >
   <div
-    className="sc-iRbamj csmlRs"
+    className="sc-csuQGl bUWxJa"
   >
     <div
       style={
@@ -167,32 +161,32 @@ exports[`Storyshots Modal Without closeAction 1`] = `
       }
     >
       <div
-        className="sc-gipzik kNtMSr"
+        className="sc-bRBYWo crvFYk"
       >
         <div
           className="sc-bwzfXH jTCciZ"
         >
           <div
-            className="sc-fjdhpX jskuQK"
+            className="sc-kAzzGY eEgZSF"
             role="heading"
           >
             Would you like me to be your role modal?
           </div>
         </div>
         <div
-          className="sc-cMljjf dUfgXO"
+          className="sc-gPEVay jzUlKR"
         >
           <div
-            className="sc-jAaTju iVnhyn"
+            className="sc-iRbamj iHxIYy"
           >
             <div
-              className="sc-jDwBTQ bqIkRG"
+              className="sc-jlyJG gtxcUz"
             />
             <div
               className="sc-bwzfXH fiOUi"
             >
               <p
-                className="sc-bxivhb kFVWeI"
+                className="sc-bxivhb iyjEP"
               >
                 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut mi ligula. Phasellus tellus nulla,
@@ -217,12 +211,12 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
               </p>
             </div>
             <div
-              className="sc-gPEVay gkJgPo"
+              className="sc-gipzik hhjjOC"
             />
           </div>
         </div>
         <div
-          className="sc-gZMcBi huJyDB"
+          className="sc-jTzLTM hDWBpv"
         >
           <div
             className="sc-bwzfXH hWtStI"
@@ -241,10 +235,8 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                   className="sc-bwzfXH jHAPPC"
                 >
                   <button
-                    className="sc-htoDjs fAnDzT"
-                    color={undefined}
+                    className="sc-VigVT eYHbkk sc-htoDjs ifkBJX"
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Activate"
@@ -257,10 +249,8 @@ pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.
                   className="sc-bwzfXH jHAPPC"
                 >
                   <button
-                    className="sc-htoDjs gKbNMP"
-                    color={undefined}
+                    className="sc-VigVT iNFlqA sc-htoDjs ifkBJX"
                     disabled={undefined}
-                    icon={undefined}
                     id={undefined}
                     onClick={[Function]}
                     title="Close"

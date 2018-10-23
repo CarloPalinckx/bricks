@@ -3,7 +3,7 @@
 exports[`Storyshots ErrorBoundary Default 1`] = `
 <div>
   <p
-    className="sc-bxivhb kFVWeI"
+    className="sc-bxivhb iyjEP"
   >
     This does not have an error.
   </p>

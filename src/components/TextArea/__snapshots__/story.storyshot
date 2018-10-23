@@ -2,11 +2,11 @@
 
 exports[`Storyshots TextArea Default 1`] = `
 <div
-  className="sc-jnlKLf apVHT"
+  className="sc-fYxtnH eFvAtj"
   disabled={false}
 >
   <textarea
-    className="sc-fYxtnH jhoHNc"
+    className="sc-tilXH elROLH"
     disabled={false}
     id={undefined}
     name="description"
@@ -20,11 +20,11 @@ exports[`Storyshots TextArea Default 1`] = `
 exports[`Storyshots TextArea With Feedback 1`] = `
 Array [
   <div
-    className="sc-jnlKLf dmuqIl"
+    className="sc-fYxtnH iRejUR"
     disabled={false}
   >
     <textarea
-      className="sc-fYxtnH jhoHNc"
+      className="sc-tilXH elROLH"
       disabled={false}
       id={undefined}
       name="description"
@@ -37,7 +37,7 @@ Array [
     className="sc-bwzfXH gKGSfm"
   >
     <p
-      className="sc-bxivhb gWsGB"
+      className="sc-bxivhb eiZPPq"
     >
       <span
         className="sc-htpNat frObKr"

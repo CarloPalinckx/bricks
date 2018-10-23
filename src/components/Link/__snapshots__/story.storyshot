@@ -2,10 +2,10 @@
 
 exports[`Storyshots Link Action with child element 1`] = `
 <p
-  className="sc-bxivhb kFVWeI"
+  className="sc-bxivhb iyjEP"
 >
   <button
-    className="sc-eHgmQL iyuPGH"
+    className="sc-brqgnP VfSNy"
     onClick={[Function]}
     title="Google search"
     type="button"
@@ -19,10 +19,10 @@ exports[`Storyshots Link Action with child element 1`] = `
 
 exports[`Storyshots Link Default 1`] = `
 <p
-  className="sc-bxivhb kFVWeI"
+  className="sc-bxivhb iyjEP"
 >
   <a
-    className="sc-hSdWYo MukmX"
+    className="sc-jWBwVP xxeXK"
     href="http://www.google.com"
     target="_self"
     title="Google search"
