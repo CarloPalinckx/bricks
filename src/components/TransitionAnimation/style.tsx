@@ -4,11 +4,15 @@ import _T from '../../types/ThemeType';
 import styled from '../../utility/styled';
 import fade from './animations/fade';
 import zoom from './animations/zoom';
+import slideUp from './animations/slideUp';
+import slideDown from './animations/slideDown';
+import slideLeft from './animations/slideLeft';
+import slideRight from './animations/slideRight';
 
 type AnimationStateType = 'entering' | 'entered' | 'exiting' | 'exited';
 
 type StyledPropsType = {
-    animation: 'zoom' | 'fade';
+    animation: 'zoom' | 'fade' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight';
     state: AnimationStateType;
 };
 
@@ -17,6 +21,14 @@ const StyledAnimation = styled.div`
         switch (animation) {
             case 'zoom':
                 return zoom(state);
+            case 'slideUp':
+                return slideUp(state);
+            case 'slideDown':
+                return slideDown(state);
+            case 'slideLeft':
+                return slideLeft(state);
+            case 'slideRight':
+                return slideRight(state);
             default:
                 return fade(state);
         }

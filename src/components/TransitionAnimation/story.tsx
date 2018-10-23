@@ -17,10 +17,16 @@ storiesOf('TransitionAnimation', module).add('Default', () => {
     const show = boolean('show', true);
 
     return (
-        <Box direction="column" alignItems="center">
+        <Box direction="column">
             <TransitionAnimation
                 show={show}
-                animation={select('animation', ['zoom', 'fade'], 'zoom') as PropsType['animation']}
+                animation={
+                    select(
+                        'animation',
+                        ['zoom', 'fade', 'slideDown', 'slideUp', 'slideLeft', 'slideRight'],
+                        'zoom',
+                    ) as PropsType['animation']
+                }
             >
                 <StyledDiv>
                     <Heading>Lorem ipsum</Heading>
