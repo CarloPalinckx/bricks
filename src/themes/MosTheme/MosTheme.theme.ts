@@ -57,8 +57,23 @@ const roundness = {
 
 const theme: ThemeType = {
     Badge: {
-        backgroundColor: red.base,
-        color: silver.lighter1,
+        default: {
+            color: silver.lighter1,
+        },
+        severity: {
+            success: {
+                backgroundColor: green.darker1,
+            },
+            warning: {
+                backgroundColor: yellow.darker1,
+            },
+            error: {
+                backgroundColor: red.base,
+            },
+            info: {
+                backgroundColor: grey.lighter2,
+            },
+        },
     },
     Button: {
         common: {

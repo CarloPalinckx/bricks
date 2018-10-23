@@ -1,6 +1,12 @@
-import { text } from '@storybook/addon-knobs/react';
+import { text, select } from '@storybook/addon-knobs/react';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import Badge from '.';
+import Badge, { BadgePropsType } from '.';
 
-storiesOf('Badge', module).add('Default', () => <Badge>{text('text', '1')}</Badge>);
+storiesOf('Badge', module).add('Default', () => {
+    return (
+        <Badge severity={select('severity', ['success', 'warning', 'error', 'info'], 'success') as BadgePropsType['severity']}>
+            {text('text', '1')}
+        </Badge>
+    );
+});
