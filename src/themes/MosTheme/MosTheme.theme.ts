@@ -640,6 +640,7 @@ const theme: ThemeType = {
         default: {
             color: grey.base,
         },
+
         variant: {
             small: {
                 fontFamily: bodyFont,
