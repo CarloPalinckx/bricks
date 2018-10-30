@@ -9,6 +9,8 @@ type RadioButtonPropsType = {
 
 type RadioButtonSkinPropsType = {
     checked: boolean;
+    disabled?: boolean;
+    error?: boolean;
     elementFocus: boolean;
 };
 
@@ -18,13 +20,23 @@ type RadioButtonThemeType = {
         borderColor: string;
         backgroundColor: string;
     };
+    idleDisabled: {
+        background: string;
+    };
     active: {
         boxShadow: string;
         borderColor: string;
-        backgroundColor: string;
+        background: string;
+    };
+    activeDisabled: {
+        boxShadow: string;
+        background: string;
     };
     focus: {
         boxShadow: string;
+    };
+    error: {
+        borderColor: string;
     };
 };
 
@@ -45,13 +57,45 @@ const StyledRadioButtonSkin = withProps<RadioButtonSkinPropsType, HTMLDivElement
     border-radius: 100%;
     transition: box-shadow 100ms, border 100ms;
     background-color: ${({ theme }): string => theme.RadioButton.idle.backgroundColor};
-    border: 1px solid ${({ theme, checked }): string =>
-        checked ? theme.RadioButton.active.borderColor : theme.RadioButton.idle.borderColor};
+    background: ${({ theme, checked, disabled }): string => {
+        if (checked && disabled) {
+            return theme.RadioButton.activeDisabled.background;
+        } else if (!checked && disabled) {
+            return theme.RadioButton.idleDisabled.background;
+        } else if (checked) {
+            return theme.RadioButton.active.background;
+        }
 
-    box-shadow: ${({ theme, elementFocus, checked }): string => `
-        ${elementFocus ? theme.RadioButton.focus.boxShadow : theme.RadioButton.idle.boxShadow},
-        inset ${checked ? theme.RadioButton.active.boxShadow : theme.RadioButton.idle.boxShadow}
+        return '';
+    }};
+    border: 1px solid ${({ theme, checked, error }): string =>
+        error
+            ? theme.RadioButton.error.borderColor
+            : checked
+                ? theme.RadioButton.active.borderColor
+                : theme.RadioButton.idle.borderColor};
+
+    box-shadow: ${({ theme, elementFocus, checked, disabled }): string =>
+        `
+        ${elementFocus ? theme.RadioButton.focus.boxShadow : theme.RadioButton.idle.boxShadow}
     `};
+    position: relative;
+
+    ${({ theme, checked }): string =>
+        checked
+            ? `&::after {
+                    border-radius: 100%;
+                    width: 6px;
+                    height: 6px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    content: '';
+                    background-color: ${theme.RadioButton.idle.backgroundColor};
+                    z-index: 99999;
+                }`
+            : ''}
 `;
 
 export default StyledRadioButton;
