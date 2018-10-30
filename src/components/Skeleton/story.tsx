@@ -3,6 +3,7 @@ import React, { SFC } from 'react';
 import Skeleton from '.';
 import { boolean, number, text } from '@storybook/addon-knobs';
 import Text from '../Text';
+
 type DemoPropsType = {
     loading?: boolean;
     element: string;

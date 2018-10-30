@@ -62,7 +62,7 @@ class RadioButton extends Component<PropsType, StateType> {
                         />
                     </StyledRadioButtonSkin>
                 </Box>
-                <Text descriptive={this.props.disabled}>
+                <Text>
                     <Box inline direction="row" align-items="center">
                         {this.props.disabled && (
                             <Box inline margin={trbl(0, 12, 0, 0)}>

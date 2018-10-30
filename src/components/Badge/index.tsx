@@ -35,7 +35,7 @@ const StyledBadge = withProps<BadgePropsType>(styled.div)`
     border-radius: 9px;
     background: ${({ theme, severity }): string =>
         !severity ? theme.Badge.severity.error.backgroundColor : theme.Badge.severity[severity].backgroundColor};
-    font-family: ${({ theme }): string => theme.Text.default.fontFamily};
+    font-family: ${({ theme }): string => theme.Text.variant.small.fontFamily};
     font-size: 12px;
     line-height: 1;
     color: ${({ theme }): string => theme.Badge.default.color};
