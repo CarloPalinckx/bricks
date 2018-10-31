@@ -12,13 +12,13 @@ exports[`Storyshots Toaster Default 1`] = `
     }
   >
     <div
-      className="sc-ktHwxA eyzkfw"
+      className="sc-hEsumM fWopcp"
     >
       <div
         className="sc-bwzfXH cbcpsK"
       >
         <div
-          className="sc-cIShpX JlkMn"
+          className="sc-ktHwxA uqqxR"
         >
           <div
             className="sc-bwzfXH jQmHZh"
@@ -98,13 +98,13 @@ exports[`Storyshots Toaster With action button 1`] = `
     }
   >
     <div
-      className="sc-ktHwxA eyzkfw"
+      className="sc-hEsumM fWopcp"
     >
       <div
         className="sc-bwzfXH cbcpsK"
       >
         <div
-          className="sc-cIShpX fXuOPW"
+          className="sc-ktHwxA jmlPUn"
         >
           <div
             className="sc-bwzfXH jQmHZh"
