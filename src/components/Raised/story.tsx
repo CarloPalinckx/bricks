@@ -5,7 +5,7 @@ import Box from '../Box';
 import Raised, { RaisedPropsType } from './style';
 import Heading from '../Heading';
 
-storiesOf('Raised', module).add('Default', () => {
+storiesOf('Primitives/Raised', module).add('Default', () => {
     const level = select('Level', [0, 1, 2], 0) as RaisedPropsType['level'];
 
     return (

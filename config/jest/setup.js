@@ -1,9 +1,8 @@
-/// <reference path="../../src/declarations/global.d.ts" />
-
-import intl from 'intl';
+const intl = require('intl');
 
 const orginalError = console.error;
 const orginalWarn = console.warn;
+/* tslint:disable-next-line */
 const orginalLog = console.log;
 
 global.addEventListener = jest.fn();

@@ -282,6 +282,6 @@ class DemoComponent extends Component<PropsType, StateType> {
     }
 }
 
-storiesOf('FormRow', module)
+storiesOf('Compositional/FormRow', module)
     .add('Default', () => <DemoComponent descriptions={true} />)
     .add('No Descriptions', () => <DemoComponent descriptions={false} />);

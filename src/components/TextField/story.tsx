@@ -79,12 +79,12 @@ class Demo extends Component<DemoPropsType, DemoStateType> {
     }
 }
 
-storiesOf('TextField', module).add('Default', () => <Demo withFeedback={false} />);
-storiesOf('TextField', module).add('With Feedback', () => <Demo withFeedback />);
-storiesOf('TextField', module).add('With Number formatting', () => (
+storiesOf('Primitives/TextField', module).add('Default', () => <Demo withFeedback={false} />);
+storiesOf('Primitives/TextField', module).add('With Feedback', () => <Demo withFeedback />);
+storiesOf('Primitives/TextField', module).add('With Number formatting', () => (
     <Demo withFeedback={false} formatter="withNumber" />
 ));
-storiesOf('TextField', module).add('With Currency formatting', () => (
+storiesOf('Primitives/TextField', module).add('With Currency formatting', () => (
     <Demo
         formatter="withCurrency"
         withFeedback={false}

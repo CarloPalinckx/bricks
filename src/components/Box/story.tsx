@@ -26,7 +26,7 @@ const directionOptions = ['row', 'row-reverse', 'column', 'column-reverse'];
 
 const positionOptions = ['static', 'relative', 'fixed', 'absolute'];
 
-storiesOf('Box', module).add('Default', () => {
+storiesOf('Primitives/Box', module).add('Default', () => {
     const items: Array<JSX.Element> = [];
 
     for (let i = 0; i < 6; i++) {

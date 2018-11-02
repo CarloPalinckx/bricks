@@ -34,4 +34,4 @@ class Demo extends Component<{}, StateType> {
     }
 }
 
-storiesOf('Toggle', module).add('Default', () => <Demo />);
+storiesOf('Primitives/Toggle', module).add('Default', () => <Demo />);

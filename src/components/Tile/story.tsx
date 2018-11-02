@@ -5,7 +5,7 @@ import Tile from '.';
 import Heading from '../Heading';
 import trbl from '../../utility/trbl';
 
-storiesOf('Tile', module).add('Default', () => {
+storiesOf('Primitives/Tile', module).add('Default', () => {
     return (
         <Box width="100%">
             <Tile>

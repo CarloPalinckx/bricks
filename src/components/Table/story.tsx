@@ -86,6 +86,6 @@ class Demo extends Component<PropsType, StateType> {
     }
 }
 
-storiesOf('Table', module).add('Default', () => {
+storiesOf('Primitives/Table', module).add('Default', () => {
     return <Demo selectable={boolean('selectable', false)} draggable={boolean('draggable', true)} />;
 });

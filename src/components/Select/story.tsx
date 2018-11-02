@@ -161,7 +161,7 @@ class CustomRenderDemo extends Component<PropsType, StateType> {
 }
 /*tslint:enable*/
 
-storiesOf('Select', module)
+storiesOf('Primitives/Select', module)
     .add('Default', () => {
         return <Demo />;
     })

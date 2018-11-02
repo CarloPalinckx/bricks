@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Toaster, { PropsType } from '.';
 
-storiesOf('Toaster', module).add('Default', () => (
+storiesOf('Primitives/Toaster', module).add('Default', () => (
     <Toaster
         isOpen={boolean('show', true)}
         severity={select('severity', ['success', 'warning', 'error', 'info'], 'info') as PropsType['severity']}
@@ -16,7 +16,7 @@ storiesOf('Toaster', module).add('Default', () => (
     />
 ));
 
-storiesOf('Toaster', module).add('With action button', () => (
+storiesOf('Primitives/Toaster', module).add('With action button', () => (
     <Toaster
         icon="cash"
         action={(): boolean => confirm('I love pressing F5, its so refreshing')}

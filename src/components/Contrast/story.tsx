@@ -5,7 +5,7 @@ import trbl from '../../utility/trbl';
 import Button from '../Button';
 import Box from '../Box';
 
-storiesOf('Contrast', module).add('Default', () => (
+storiesOf('Compositional/Contrast', module).add('Default', () => (
     <>
         <Contrast>
             <Box padding={trbl(12)}>

@@ -32,5 +32,7 @@ const Demo: SFC<DemoPropsType> = ({ element, loading }): JSX.Element => {
     }
 };
 
-storiesOf('Skeleton', module).add('Text', () => <Demo element="Text" loading={boolean('loading', true)} />);
-storiesOf('Skeleton', module).add('Button', () => <Demo element="Button" loading={boolean('loading', true)} />);
+storiesOf('Primitives/Skeleton', module).add('Text', () => <Demo element="Text" loading={boolean('loading', true)} />);
+storiesOf('Primitives/Skeleton', module).add('Button', () => (
+    <Demo element="Button" loading={boolean('loading', true)} />
+));

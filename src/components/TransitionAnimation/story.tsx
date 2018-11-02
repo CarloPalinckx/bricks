@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
     text-align: center;
 `;
 
-storiesOf('TransitionAnimation', module).add('Default', () => {
+storiesOf('Primitives/TransitionAnimation', module).add('Default', () => {
     const show = boolean('show', true);
 
     return (

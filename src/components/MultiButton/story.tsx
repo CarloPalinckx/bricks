@@ -75,4 +75,4 @@ const Demo: SFC = (): JSX.Element => {
     /* tslint:enable */
 };
 
-storiesOf('MultiButton', module).add('Default', () => <Demo />);
+storiesOf('Primitives/MultiButton', module).add('Default', () => <Demo />);

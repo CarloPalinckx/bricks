@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Text from '../Text';
 
-storiesOf('Branch', module).add('Default', () => {
+storiesOf('Utilities/Branch', module).add('Default', () => {
     return (
         <Branch
             condition={boolean('condition', true)}

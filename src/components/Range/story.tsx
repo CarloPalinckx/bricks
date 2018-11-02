@@ -25,4 +25,4 @@ class Demo extends Component<{}, { value: RangeType }> {
     }
 }
 
-storiesOf('Range', module).add('Default', () => <Demo />);
+storiesOf('Primitives/Range', module).add('Default', () => <Demo />);

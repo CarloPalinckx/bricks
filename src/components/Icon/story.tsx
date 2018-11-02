@@ -13,15 +13,13 @@ const mediumIconKeys = Object.keys(MediumIcons).filter(key => MediumIcons[key as
 const largeIconKeys = Object.keys(LargeIcons).filter(key => LargeIcons[key as any].match('<svg'));
 /* tslint:enable */
 
-storiesOf('Icon', module)
+storiesOf('Primitives/Icon', module)
     .add('Small icons', () => {
         const iconColor = color('fill', '#000');
 
         /* tslint:disable */
         return (
             <Box wrap margin={trbl(12)}>
-                xxx
-                {console.log(SmallIcons)}
                 {smallIconKeys.map(icon => (
                     <Box basis={'33.333333%'} alignItems={'center'} margin={trbl(12, 0)} key={icon}>
                         <Icon color={iconColor} size="small" icon={icon as any} />

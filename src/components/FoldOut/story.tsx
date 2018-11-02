@@ -69,4 +69,4 @@ class DemoComponent extends Component<{}, StateType> {
     }
 }
 
-storiesOf('FoldOut', module).add('With a toggle', () => <DemoComponent />);
+storiesOf('Primitives/FoldOut', module).add('With a toggle', () => <DemoComponent />);

@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const Visualizer = require('webpack-visualizer-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const WebpackBar = require('webpackbar');
+const PeerDepsExternalsPlugin = require('peer-deps-externals-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -14,16 +15,14 @@ module.exports = {
     },
     output: {
         filename: 'index.js',
-        path: __dirname + '/../../dist',
+        path: __dirname + '/dist',
         library: 'bricks',
         libraryTarget: 'umd',
         umdNamedDefine: true,
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
-    },
-    optimization: {
-        minimize: true,
+        modules: ['node_modules'],
     },
     module: {
         rules: [
@@ -46,7 +45,6 @@ module.exports = {
                 loader: 'ts-loader',
                 options: {
                     onlyCompileBundledFiles: true,
-                    configFile: __dirname + '/../typescript/tsconfig.json',
                 },
             },
             {
@@ -73,25 +71,19 @@ module.exports = {
             { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
         ],
     },
-    externals: {
-        '@types/react': '@types/react',
-        '@types/react-dom': '@types/react-dom',
-        react: 'react',
-        'react-dom': 'react-dom',
-        'styled-components': 'styled-components',
-    },
     plugins: [
+        new PeerDepsExternalsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
         }),
         new WebpackBar(),
         new Visualizer({
-            filename: '../reports/webpack/statistics-circle.html',
+            filename: 'reports/webpack/statistics-circle.html',
         }),
         new BundleAnalyzerPlugin({
             analyzerMode: 'static',
             openAnalyzer: false,
-            reportFilename: '../reports/webpack/statistics-tree.html',
+            reportFilename: 'reports/webpack/statistics-tree.html',
         }),
     ],
 };

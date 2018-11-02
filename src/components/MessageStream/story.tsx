@@ -65,4 +65,4 @@ const messagesMock: Array<MessagePropsType> = [
     },
 ];
 
-storiesOf('MessageStream', module).add('Default', () => <MessageStream messages={messagesMock} />);
+storiesOf('Primitives/MessageStream', module).add('Default', () => <MessageStream messages={messagesMock} />);

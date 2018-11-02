@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { boolean, text, select } from '@storybook/addon-knobs/react';
-=======
-import { boolean, text } from '@storybook/addon-knobs';
->>>>>>> 2faf552... Updated to storybook 4 alpha
+import { boolean, text, select } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Modal from '.';
@@ -31,18 +27,20 @@ tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas finib
 id vestibulum odio molestie. Curabitur euismod sit amet tortor et imperdiet. Nam a nisl quis lorem porta
 pharetra. Duis sed magna vel odio ullamcorper gravida eu et nibh.`;
 
-storiesOf('Modal', module)
+storiesOf('Primitives/Modal', module)
     .add('Default', () => {
+        const closeAction = (): void => alert('This could trigger an action that closes the modal.');
+
         return (
             <Modal
                 show={boolean('show', true)}
                 size={select('size', ['small', 'medium', 'large'], 'large')}
                 title="Would you like me to be your role modal?"
-                closeAction={(): boolean => confirm('You are now closing this modal, do you wish to continue?')}
+                closeAction={closeAction}
                 renderFixed={(): JSX.Element => (
                     <ButtonGroup>
                         <Button variant="primary" title="Activate" />
-                        <Button variant="plain" title="Close" />
+                        <Button variant="plain" title="Close" action={closeAction} />
                     </ButtonGroup>
                 )}
             >

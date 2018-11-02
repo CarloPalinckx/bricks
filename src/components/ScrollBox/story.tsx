@@ -104,6 +104,6 @@ class Demo extends Component<{}, DemoStateType> {
     }
 }
 
-storiesOf('ScrollBox', module).add('Default', () => {
+storiesOf('Primitives/ScrollBox', module).add('Default', () => {
     return <Demo />;
 });

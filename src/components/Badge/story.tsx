@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Badge, { BadgePropsType } from '.';
 
-storiesOf('Badge', module).add('Default', () => {
+storiesOf('Primitives/Badge', module).add('Default', () => {
     return (
         <Badge
             severity={

@@ -4,7 +4,7 @@ import React from 'react';
 import ErrorBoundary from '.';
 import Text from '../Text';
 
-storiesOf('ErrorBoundary', module).add('Default', () => {
+storiesOf('Utilities/ErrorBoundary', module).add('Default', () => {
     const hasError = select('hasError', ['true', 'false'], 'false');
 
     return (

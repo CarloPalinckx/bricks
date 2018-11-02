@@ -64,7 +64,7 @@ class Demo extends Component<PropsType, StateType> {
     }
 }
 
-storiesOf('Popover', module)
+storiesOf('Primitives/Popover', module)
     .add('Default', () => (
         /* tslint:disable */
         <Demo

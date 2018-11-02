@@ -5,7 +5,7 @@ import InlineNotification from '.';
 import SeverityType from '../../types/SeverityType';
 import Link from '../Link';
 
-storiesOf('InlineNotification', module)
+storiesOf('Primitives/InlineNotification', module)
     .add('Default', () => (
         <InlineNotification
             message="Something is wrong!"

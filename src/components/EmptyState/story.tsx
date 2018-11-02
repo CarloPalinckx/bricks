@@ -5,7 +5,7 @@ import EmptyState, { EmptyStatePropsType } from '.';
 import Box from '../Box';
 import Button from '../Button';
 
-storiesOf('EmptyState', module)
+storiesOf('Primitives/EmptyState', module)
     .add('Default', () => {
         const title = text('Title', 'No filters applied') as EmptyStatePropsType['title'];
         const message = text('Message', '..A tumbleweed passes by') as EmptyStatePropsType['message'];
