@@ -38,7 +38,7 @@ exports[`Storyshots FormRow Default 1`] = `
             className="sc-bwzfXH kxsXCq"
           >
             <div
-              className="sc-iAyFgw eiyliz"
+              className="sc-iAyFgw SgyWC"
               disabled={undefined}
             >
               <div
@@ -76,7 +76,7 @@ exports[`Storyshots FormRow Default 1`] = `
             className="sc-bwzfXH fkLxMw"
           >
             <div
-              className="sc-iAyFgw eiyliz"
+              className="sc-iAyFgw SgyWC"
               disabled={undefined}
             >
               <div
@@ -115,7 +115,7 @@ exports[`Storyshots FormRow Default 1`] = `
           className="sc-bwzfXH hoLhPq"
         >
           <div
-            className="sc-iAyFgw eiyliz"
+            className="sc-iAyFgw SgyWC"
             disabled={undefined}
           >
             <div
@@ -185,7 +185,7 @@ exports[`Storyshots FormRow Default 1`] = `
           className="sc-bwzfXH hoLhPq"
         >
           <div
-            className="sc-iAyFgw eiyliz"
+            className="sc-iAyFgw SgyWC"
             disabled={undefined}
           >
             <div
@@ -223,7 +223,7 @@ exports[`Storyshots FormRow Default 1`] = `
           className="sc-bwzfXH hoLhPq"
         >
           <div
-            className="sc-iAyFgw eiyliz"
+            className="sc-iAyFgw SgyWC"
             disabled={undefined}
           >
             <div
@@ -450,7 +450,7 @@ exports[`Storyshots FormRow No Descriptions 1`] = `
           className="sc-bwzfXH iFjvZT"
         >
           <div
-            className="sc-iAyFgw eiyliz"
+            className="sc-iAyFgw SgyWC"
             disabled={undefined}
           >
             <div
@@ -511,7 +511,7 @@ exports[`Storyshots FormRow No Descriptions 1`] = `
           className="sc-bwzfXH iFjvZT"
         >
           <div
-            className="sc-iAyFgw eiyliz"
+            className="sc-iAyFgw SgyWC"
             disabled={undefined}
           >
             <div

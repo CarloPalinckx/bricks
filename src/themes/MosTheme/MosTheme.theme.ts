@@ -76,15 +76,23 @@ const theme: ThemeType = {
         severity: {
             success: {
                 backgroundColor: green.darker1,
+                color: silver.lighter1,
+                fontFamily: bodyFont,
             },
             warning: {
                 backgroundColor: yellow.darker1,
+                color: silver.lighter1,
+                fontFamily: bodyFont,
             },
             error: {
                 backgroundColor: red.base,
+                color: silver.lighter1,
+                fontFamily: bodyFont,
             },
             info: {
                 backgroundColor: grey.lighter2,
+                color: silver.lighter1,
+                fontFamily: bodyFont,
             },
         },
     },
@@ -640,7 +648,6 @@ const theme: ThemeType = {
         default: {
             color: grey.base,
         },
-
         variant: {
             small: {
                 fontFamily: bodyFont,
