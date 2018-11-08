@@ -1,9 +1,9 @@
-import { configure, addDecorator } from '@storybook/react';
-import themeDecorator from './decorators/themeDecorator';
-import { withKnobs } from '@storybook/addon-knobs';
-import { setOptions } from '@storybook/addon-options';
-import { configureViewport } from '@storybook/addon-viewport';
-import { themes } from '@storybook/components';
+const { configure, addDecorator } = require('@storybook/react');
+const themeDecorator = require('./decorators/themeDecorator');
+const { withKnobs } = require('@storybook/addon-knobs');
+const { setOptions } = require('@storybook/addon-options');
+const { configureViewport } = require('@storybook/addon-viewport');
+const { themes } = require('@storybook/components');
 
 configureViewport();
 

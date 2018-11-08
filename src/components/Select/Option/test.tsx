@@ -1,7 +1,6 @@
 import React from 'react';
 import { mountWithTheme } from '../../../utility/styled/testing';
 import Option from '.';
-import toJson from 'enzyme-to-json';
 
 describe('Option', () => {
     it('should render', () => {
@@ -19,6 +18,6 @@ describe('Option', () => {
             />,
         );
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 });

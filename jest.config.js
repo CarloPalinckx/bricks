@@ -1,12 +1,22 @@
 module.exports = {
     globals: {
         'ts-jest': {
-            tsConfig: 'tsconfig.json',
+            babelConfig: {
+                presets: ['@babel/preset-env', '@babel/preset-react'],
+                plugins: [
+                    'require-context-hook',
+                    [
+                        'babel-plugin-styled-components',
+                        {
+                            ssr: true,
+                        },
+                    ],
+                ],
+            },
         },
     },
-    preset: 'ts-jest',
-    testEnvironment: 'node',
-    setupTestFrameworkScriptFile: './config/jest/setupFramework.js',
+    preset: 'ts-jest/presets/js-with-babel',
+    setupTestFrameworkScriptFile: './.jest/setupFramework.js',
     coverageDirectory: './reports/jest',
     coverageThreshold: {
         src: {
@@ -28,16 +38,17 @@ module.exports = {
         '!src/utility/styled/*',
         '!src/utility/SubscriptionContext/index.tsx',
     ],
-    setupFiles: ['./config/jest/setup.js'],
+    setupFiles: ['<rootDir>/.jest/setup.js'],
+    snapshotSerializers: ['enzyme-to-json/serializer'],
     moduleNameMapper: {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-            '<rootDir>/config/jest/__mocks__/fileMock.js',
-        '\\.(css)$': '<rootDir>/config/jest/__mocks__/cssMock.js',
-        'resize-observer-polyfill': '<rootDir>/config/jest/__mocks__/resizeObserverPolyfill.ts',
-        simplebar: '<rootDir>/config/jest/__mocks__/simplebar.ts',
-        'react-input-range': '<rootDir>/config/jest/__mocks__/reactInputRange.tsx',
-        'simplebar/dist/simplebar.min.css': '<rootDir>/config/jest/__mocks__/simplebarCss.ts',
-        'react-popper': '<rootDir>/config/jest/__mocks__/reactPopper.tsx',
-        'react-beautiful-dnd': '<rootDir>/config/jest/__mocks__/reactBeautifulDnd.tsx',
+            '<rootDir>/.jest/__mocks__/fileMock.js',
+        '\\.(css)$': '<rootDir>/.jest/__mocks__/cssMock.js',
+        'resize-observer-polyfill': '<rootDir>/.jest/__mocks__/resizeObserverPolyfill.ts',
+        simplebar: '<rootDir>/.jest/__mocks__/simplebar.ts',
+        'react-input-range': '<rootDir>/.jest/__mocks__/reactInputRange.tsx',
+        'simplebar/dist/simplebar.min.css': '<rootDir>/.jest/__mocks__/simplebarCss.ts',
+        'react-popper': '<rootDir>/.jest/__mocks__/reactPopper.tsx',
+        'react-beautiful-dnd': '<rootDir>/.jest/__mocks__/reactBeautifulDnd.tsx',
     },
 };

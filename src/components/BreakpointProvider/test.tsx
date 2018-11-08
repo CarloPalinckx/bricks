@@ -22,13 +22,11 @@ describe('BreakpointProvider component', () => {
     it('executes the render prop with a large breakpoint', () => {
         const renderMock = jest.fn();
 
-        renderer
-            .create(<BreakpointProvider breakpoints={breakpoints}>{renderMock}</BreakpointProvider>, {
-                createNodeMock: (): Object => ({
-                    offsetWidth: 900,
-                }),
-            })
-            .toJSON();
+        renderer.create(<BreakpointProvider breakpoints={breakpoints}>{renderMock}</BreakpointProvider>, {
+            createNodeMock: (): Object => ({
+                offsetWidth: 900,
+            }),
+        });
 
         expect(renderMock).toBeCalledWith('large');
     });

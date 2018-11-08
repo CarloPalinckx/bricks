@@ -1,3 +1,4 @@
+require('babel-plugin-require-context-hook/register')();
 const intl = require('intl');
 
 const orginalError = console.error;

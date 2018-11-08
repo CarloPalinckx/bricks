@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import React from 'react';
 import { Popper, Reference } from 'react-popper';
 import Popover from '.';
@@ -15,8 +14,8 @@ describe('Popover', () => {
 
         expect(popper.prop('placement')).toEqual('bottom');
         expect(popper.prop('positionFixed')).toEqual(false);
-        expect(toJson(popper.dive())).toMatchSnapshot();
-        expect(toJson(reference.dive())).toMatchSnapshot();
+        expect(popper.dive()).toMatchSnapshot();
+        expect(reference.dive()).toMatchSnapshot();
     });
 
     it('should render closed', () => {
@@ -141,7 +140,7 @@ describe('PopoverBackground', () => {
     it('should render with defaults', () => {
         const component = shallowWithTheme(<PopoverBackground />);
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 });
 
@@ -149,13 +148,13 @@ describe('PopoverAnchor', () => {
     it('should render inline', () => {
         const component = shallowWithTheme(<PopoverAnchor />);
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     it('should render block', () => {
         const component = shallowWithTheme(<PopoverAnchor stretch={true} />);
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 });
 
@@ -163,24 +162,24 @@ describe('PopoverArrow', () => {
     it('should render at the bottom with shadow', () => {
         const component = shallowWithTheme(<PopoverArrow placement="bottom" shadow />);
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     it('should render at the top', () => {
         const component = shallowWithTheme(<PopoverArrow placement="top" />);
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     it('should render on the left', () => {
         const component = shallowWithTheme(<PopoverArrow placement="left" />);
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     it('should render on the right', () => {
         const component = shallowWithTheme(<PopoverArrow placement="right" />);
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 });
