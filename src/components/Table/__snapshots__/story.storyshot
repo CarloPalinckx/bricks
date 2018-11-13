@@ -8,16 +8,22 @@ exports[`Storyshots Table Default 1`] = `
     <thead>
       <tr>
         <th
-          className="sc-gGBfsJ iDxcWn"
+          className="sc-gGBfsJ dQTmPb"
         />
         <th
-          className="sc-gGBfsJ iDxcWn"
+          className="sc-gGBfsJ cFFkdF"
+          onClick={[Function]}
         >
           <div
-            className="sc-bwzfXH jXZncb"
+            className="sc-bwzfXH eLVXDi"
           >
             <p
               className="sc-bxivhb jKBUfU"
+            >
+              Product ID
+            </p>
+            <p
+              className="sc-bxivhb cswGnm"
             >
               <span
                 aria-hidden={true}
@@ -29,48 +35,86 @@ exports[`Storyshots Table Default 1`] = `
                 }
                 role="img"
               />
-                Custom Header A
             </p>
           </div>
         </th>
         <th
-          className="sc-gGBfsJ iDxcWn"
+          className="sc-gGBfsJ dQTmPb"
+          onClick={undefined}
         >
           <div
-            className="sc-bwzfXH jXZncb"
+            className="sc-bwzfXH eLVXDi"
           >
             <p
               className="sc-bxivhb jKBUfU"
             >
-              Header B
+              Image
             </p>
           </div>
         </th>
         <th
-          className="sc-gGBfsJ ktnWVM"
+          className="sc-gGBfsJ cFFkdF"
+          onClick={[Function]}
         >
           <div
-            className="sc-bwzfXH keAoja"
+            className="sc-bwzfXH eLVXDi"
           >
             <p
               className="sc-bxivhb jKBUfU"
             >
-              Header C
+              Name
+            </p>
+            <p
+              className="sc-bxivhb cswGnm"
+            >
+              <span
+                aria-hidden={true}
+                className="sc-iwsKbI jSMqMr"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "test-file-stub",
+                  }
+                }
+                role="img"
+              />
             </p>
           </div>
         </th>
         <th
-          className="sc-gGBfsJ bMrbd"
+          className="sc-gGBfsJ cFFkdF"
+          onClick={[Function]}
         >
           <div
-            className="sc-bwzfXH eFkGjS"
+            className="sc-bwzfXH eLVXDi"
           >
             <p
               className="sc-bxivhb jKBUfU"
             >
-              Actions
+              Price
+            </p>
+            <p
+              className="sc-bxivhb cswGnm"
+            >
+              <span
+                aria-hidden={true}
+                className="sc-iwsKbI jSMqMr"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "test-file-stub",
+                  }
+                }
+                role="img"
+              />
             </p>
           </div>
+        </th>
+        <th
+          className="sc-gGBfsJ kBXkDD"
+          onClick={undefined}
+        >
+          <div
+            className="sc-bwzfXH hYEfgS"
+          />
         </th>
       </tr>
     </thead>
@@ -111,7 +155,7 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              A1
+              61651323
             </p>
           </div>
         </td>
@@ -126,22 +170,37 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              B1
+              🥝
             </p>
           </div>
         </td>
         <td
-          className="sc-uJMKN jySXDc"
+          className="sc-uJMKN dBBHdG"
           onBlur={undefined}
           onFocus={undefined}
         >
           <div
-            className="sc-bwzfXH keAoja"
+            className="sc-bwzfXH jXZncb"
           >
             <p
               className="sc-bxivhb iyjEP"
             >
-              C1
+              Kiwi
+            </p>
+          </div>
+        </td>
+        <td
+          className="sc-uJMKN dBBHdG"
+          onBlur={undefined}
+          onFocus={undefined}
+        >
+          <div
+            className="sc-bwzfXH jXZncb"
+          >
+            <p
+              className="sc-bxivhb iyjEP"
+            >
+              0.8
             </p>
           </div>
         </td>
@@ -153,25 +212,6 @@ exports[`Storyshots Table Default 1`] = `
           <div
             className="sc-bwzfXH eFkGjS"
           >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
             <button
               className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
               disabled={undefined}
@@ -230,7 +270,7 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              A2
+              61651320
             </p>
           </div>
         </td>
@@ -245,22 +285,37 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              B2
+              🍍
             </p>
           </div>
         </td>
         <td
-          className="sc-uJMKN jySXDc"
+          className="sc-uJMKN dBBHdG"
           onBlur={undefined}
           onFocus={undefined}
         >
           <div
-            className="sc-bwzfXH keAoja"
+            className="sc-bwzfXH jXZncb"
           >
             <p
               className="sc-bxivhb iyjEP"
             >
-              C2
+              Pineapple
+            </p>
+          </div>
+        </td>
+        <td
+          className="sc-uJMKN dBBHdG"
+          onBlur={undefined}
+          onFocus={undefined}
+        >
+          <div
+            className="sc-bwzfXH jXZncb"
+          >
+            <p
+              className="sc-bxivhb iyjEP"
+            >
+              3.5
             </p>
           </div>
         </td>
@@ -272,25 +327,6 @@ exports[`Storyshots Table Default 1`] = `
           <div
             className="sc-bwzfXH eFkGjS"
           >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
             <button
               className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
               disabled={undefined}
@@ -349,7 +385,7 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              A3
+              61651322
             </p>
           </div>
         </td>
@@ -364,22 +400,37 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              B3
+              🍇
             </p>
           </div>
         </td>
         <td
-          className="sc-uJMKN jySXDc"
+          className="sc-uJMKN dBBHdG"
           onBlur={undefined}
           onFocus={undefined}
         >
           <div
-            className="sc-bwzfXH keAoja"
+            className="sc-bwzfXH jXZncb"
           >
             <p
               className="sc-bxivhb iyjEP"
             >
-              C3
+              Grapes
+            </p>
+          </div>
+        </td>
+        <td
+          className="sc-uJMKN dBBHdG"
+          onBlur={undefined}
+          onFocus={undefined}
+        >
+          <div
+            className="sc-bwzfXH jXZncb"
+          >
+            <p
+              className="sc-bxivhb iyjEP"
+            >
+              2.3
             </p>
           </div>
         </td>
@@ -391,25 +442,6 @@ exports[`Storyshots Table Default 1`] = `
           <div
             className="sc-bwzfXH eFkGjS"
           >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
             <button
               className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
               disabled={undefined}
@@ -468,7 +500,7 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              A4
+              61651321
             </p>
           </div>
         </td>
@@ -483,22 +515,37 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              B4
+              🍌
             </p>
           </div>
         </td>
         <td
-          className="sc-uJMKN jySXDc"
+          className="sc-uJMKN dBBHdG"
           onBlur={undefined}
           onFocus={undefined}
         >
           <div
-            className="sc-bwzfXH keAoja"
+            className="sc-bwzfXH jXZncb"
           >
             <p
               className="sc-bxivhb iyjEP"
             >
-              C4
+              Banana
+            </p>
+          </div>
+        </td>
+        <td
+          className="sc-uJMKN dBBHdG"
+          onBlur={undefined}
+          onFocus={undefined}
+        >
+          <div
+            className="sc-bwzfXH jXZncb"
+          >
+            <p
+              className="sc-bxivhb iyjEP"
+            >
+              1.2
             </p>
           </div>
         </td>
@@ -510,25 +557,6 @@ exports[`Storyshots Table Default 1`] = `
           <div
             className="sc-bwzfXH eFkGjS"
           >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
             <button
               className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
               disabled={undefined}
@@ -587,7 +615,7 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              A5
+              61651324
             </p>
           </div>
         </td>
@@ -602,22 +630,37 @@ exports[`Storyshots Table Default 1`] = `
             <p
               className="sc-bxivhb iyjEP"
             >
-              B5
+              🍋
             </p>
           </div>
         </td>
         <td
-          className="sc-uJMKN jySXDc"
+          className="sc-uJMKN dBBHdG"
           onBlur={undefined}
           onFocus={undefined}
         >
           <div
-            className="sc-bwzfXH keAoja"
+            className="sc-bwzfXH jXZncb"
           >
             <p
               className="sc-bxivhb iyjEP"
             >
-              C5
+              Lemon
+            </p>
+          </div>
+        </td>
+        <td
+          className="sc-uJMKN dBBHdG"
+          onBlur={undefined}
+          onFocus={undefined}
+        >
+          <div
+            className="sc-bwzfXH jXZncb"
+          >
+            <p
+              className="sc-bxivhb iyjEP"
+            >
+              0.7
             </p>
           </div>
         </td>
@@ -629,620 +672,6 @@ exports[`Storyshots Table Default 1`] = `
           <div
             className="sc-bwzfXH eFkGjS"
           >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-            <button
-              className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="delete"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="sc-bbmXgH UAivp"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <td
-          className="sc-uJMKN hxNtGJ"
-          onBlur={[Function]}
-          onFocus={[Function]}
-        >
-          <p
-            className="sc-bxivhb cswGnm"
-          >
-            <span
-              aria-hidden={true}
-              className="sc-iwsKbI jSMqMr"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "test-file-stub",
-                }
-              }
-              role="img"
-            />
-          </p>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              A6
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              B6
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN jySXDc"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH keAoja"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              C6
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN iaFvXn"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH eFkGjS"
-          >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-            <button
-              className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="delete"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="sc-bbmXgH UAivp"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <td
-          className="sc-uJMKN hxNtGJ"
-          onBlur={[Function]}
-          onFocus={[Function]}
-        >
-          <p
-            className="sc-bxivhb cswGnm"
-          >
-            <span
-              aria-hidden={true}
-              className="sc-iwsKbI jSMqMr"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "test-file-stub",
-                }
-              }
-              role="img"
-            />
-          </p>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              A7
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              B7
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN jySXDc"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH keAoja"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              C7
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN iaFvXn"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH eFkGjS"
-          >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-            <button
-              className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="delete"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="sc-bbmXgH UAivp"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <td
-          className="sc-uJMKN hxNtGJ"
-          onBlur={[Function]}
-          onFocus={[Function]}
-        >
-          <p
-            className="sc-bxivhb cswGnm"
-          >
-            <span
-              aria-hidden={true}
-              className="sc-iwsKbI jSMqMr"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "test-file-stub",
-                }
-              }
-              role="img"
-            />
-          </p>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              A8
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              B8
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN jySXDc"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH keAoja"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              C8
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN iaFvXn"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH eFkGjS"
-          >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-            <button
-              className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="delete"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="sc-bbmXgH UAivp"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <td
-          className="sc-uJMKN hxNtGJ"
-          onBlur={[Function]}
-          onFocus={[Function]}
-        >
-          <p
-            className="sc-bxivhb cswGnm"
-          >
-            <span
-              aria-hidden={true}
-              className="sc-iwsKbI jSMqMr"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "test-file-stub",
-                }
-              }
-              role="img"
-            />
-          </p>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              A9
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              B9
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN jySXDc"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH keAoja"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              C9
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN iaFvXn"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH eFkGjS"
-          >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-            <button
-              className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="delete"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="sc-bbmXgH UAivp"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <td
-          className="sc-uJMKN hxNtGJ"
-          onBlur={[Function]}
-          onFocus={[Function]}
-        >
-          <p
-            className="sc-bxivhb cswGnm"
-          >
-            <span
-              aria-hidden={true}
-              className="sc-iwsKbI jSMqMr"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "test-file-stub",
-                }
-              }
-              role="img"
-            />
-          </p>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              A10
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN dBBHdG"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH jXZncb"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              B10
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN jySXDc"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH keAoja"
-          >
-            <p
-              className="sc-bxivhb iyjEP"
-            >
-              C10
-            </p>
-          </div>
-        </td>
-        <td
-          className="sc-uJMKN iaFvXn"
-          onBlur={undefined}
-          onFocus={undefined}
-        >
-          <div
-            className="sc-bwzfXH eFkGjS"
-          >
-            <button
-              className="sc-gqjmRU gIKjDZ sc-htoDjs ifkBJX"
-              disabled={undefined}
-              id={undefined}
-              onClick={[Function]}
-              title="edit"
-              type="button"
-            >
-              <span
-                aria-hidden={true}
-                className="sc-iwsKbI jSMqMr"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "test-file-stub",
-                  }
-                }
-                role="img"
-              />
-            </button>
             <button
               className="sc-gqjmRU cgYUcH sc-htoDjs ifkBJX"
               disabled={undefined}
