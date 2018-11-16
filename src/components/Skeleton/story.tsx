@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/react';
 import React, { SFC } from 'react';
 import Skeleton from '.';
-import { boolean, number } from '@storybook/addon-knobs';
+import { boolean, number, text } from '@storybook/addon-knobs';
 import Text from '../Text';
 import Button from '../Button';
-
+import EmptyState from '../EmptyState';
 type DemoPropsType = {
-    loading: boolean;
+    loading?: boolean;
     element: string;
 };
 
@@ -23,14 +23,21 @@ const Demo: SFC<DemoPropsType> = ({ element, loading }): JSX.Element => {
                 <Text>thinking to further the overall value proposition.</Text>
             </>
         );
-    } else {
+    } else if (element === 'Button') {
         if (loading) {
             return <Skeleton.Button width={number('width', 139)} />;
         }
 
         return <Button title="The button has loaded" variant="primary" />;
+    } else {
+        if (loading) {
+            return <Skeleton.Rect width={text('width', '800px')} height={text('height', '600px')} />;
+        }
+
+        return <EmptyState title="Loaded!" message="If you are reading this, you wasting your time." />;
     }
 };
 
 storiesOf('Skeleton', module).add('Text', () => <Demo element="Text" loading={boolean('loading', true)} />);
-storiesOf('Skeleton', module).add('Button', () => <Demo element="Button" loading={boolean('loading', true)} />);
+storiesOf('Skeleton', module).add('Rect', () => <Demo element="Rect" loading={boolean('loading', true)} />);
+storiesOf('Skeleton', module).add('Button ⚠️', () => <Demo element="Button" loading={boolean('loading', true)} />);
