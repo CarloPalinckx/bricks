@@ -40,9 +40,19 @@ exports[`Storyshots Toaster Default 1`] = `
           </div>
           <div
             className="sc-bwzfXH kKctzU"
+            style={
+              Object {
+                "display": "",
+              }
+            }
           >
             <div
-              className="sc-bwzfXH gaQYSB"
+              className="sc-bwzfXH coslWR"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
             >
               <p
                 className="sc-bxivhb ildJSL"
@@ -128,9 +138,19 @@ exports[`Storyshots Toaster With action button 1`] = `
           </div>
           <div
             className="sc-bwzfXH kKctzU"
+            style={
+              Object {
+                "display": "",
+              }
+            }
           >
             <div
-              className="sc-bwzfXH gaQYSB"
+              className="sc-bwzfXH coslWR"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
             >
               <p
                 className="sc-bxivhb ildJSL"
@@ -158,6 +178,104 @@ exports[`Storyshots Toaster With action button 1`] = `
               >
                 Hello
               </button>
+            </div>
+          </div>
+          <div
+            className="sc-bwzfXH bQfpwP"
+          >
+            <button
+              className="sc-htoDjs flaPve"
+              color={undefined}
+              disabled={undefined}
+              icon={undefined}
+              id={undefined}
+              onClick={[Function]}
+              title="close"
+              type="button"
+            >
+              <span
+                aria-hidden={true}
+                className="sc-iwsKbI MOBcS"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "test-file-stub",
+                  }
+                }
+                role="img"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toaster With auto dismiss 1`] = `
+<div
+  className="sc-iRbamj csmlRs"
+>
+  <div
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <div
+      className="sc-hEsumM fWopcp"
+    >
+      <div
+        className="sc-bwzfXH cbcpsK"
+      >
+        <div
+          className="sc-ktHwxA cFzZDw"
+        >
+          <div
+            className="sc-bwzfXH jQmHZh"
+          >
+            <span
+              className="sc-ifAKCX bhMPgu"
+            >
+              <span
+                aria-hidden={true}
+                className="sc-iwsKbI jSMqMr"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "test-file-stub",
+                  }
+                }
+                role="img"
+              />
+            </span>
+          </div>
+          <div
+            className="sc-bwzfXH kKctzU"
+            style={
+              Object {
+                "display": "",
+              }
+            }
+          >
+            <div
+              className="sc-bwzfXH coslWR"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
+            >
+              <p
+                className="sc-bxivhb ildJSL"
+              >
+                Thought provoking we must stand.
+              </p>
+              <p
+                className="sc-bxivhb kFVWeI"
+              >
+                You can read this now, but soon you won't.
+              </p>
             </div>
           </div>
           <div
