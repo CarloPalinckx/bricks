@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 (ReactDOM as any).createPortal = (node: any): any => React.createElement('MockPortal', null, node);
 /* tslint:enable */
 
-jest.mock('./utility/calculateRandomPercentage', (): Function => (): number => 70);
+jest.mock('./utility/_calculateRandomPercentage', (): Function => (): number => 70);
 
 initStoryshots({
     configPath: './config/storybook',

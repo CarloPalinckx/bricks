@@ -2,7 +2,7 @@ import toJson from 'enzyme-to-json';
 import React from 'react';
 import { Popper, Reference } from 'react-popper';
 import Popover from '.';
-import { shallowWithTheme, mountWithTheme } from '../../utility/styled/testing';
+import { shallowWithTheme, mountWithTheme } from '../../utility/_styled/testing';
 import TransitionAnimation from '../TransitionAnimation';
 import { PopoverAnchor, PopoverArrow, PopoverBackground } from './style';
 
@@ -89,6 +89,30 @@ describe('Popover', () => {
     });
 
     it('should close when clicked outside the popover window', () => {
+        const clickMock = jest.fn();
+        const callbackMap: { [key: string]: Function } = {};
+
+        document.addEventListener = jest.fn((event, callback) => (callbackMap[event] = callback));
+
+        const component = mountWithTheme(
+            <Popover
+                isOpen={true}
+                distance={6}
+                onClickOutside={clickMock}
+                renderContent={(): string => 'Mock content'}
+            />,
+        );
+
+        callbackMap.mousedown({
+            target: document.createElement('div'),
+        });
+
+        component.update();
+
+        expect(clickMock).toHaveBeenCalled();
+    });
+
+    it('should not break when onClickOutside is undefined and there is clicked outside the popover window', () => {
         const callbackMap: { [key: string]: Function } = {};
 
         document.addEventListener = jest.fn((event, callback) => (callbackMap[event] = callback));
@@ -102,8 +126,6 @@ describe('Popover', () => {
         });
 
         component.update();
-
-        expect(component.state('isOpen')).toBe(false);
     });
 
     it('should not break when clicked outside the closed popover', () => {

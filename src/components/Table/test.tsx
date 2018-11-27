@@ -1,9 +1,9 @@
-/// <reference path="../../declarations/global.d.ts" />
+/// <reference path="../../_declarations/global.d.ts" />
 /* tslint:disable:max-file-line-count */
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Table from '.';
-import { mountWithTheme } from '../../utility/styled/testing';
+import { mountWithTheme } from '../../utility/_styled/testing';
 import Cell from './Cell';
 import Checkbox from '../Checkbox';
 import Icon from '../Icon';
