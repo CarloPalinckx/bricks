@@ -201,4 +201,52 @@ describe('withCurrencyFormatting', () => {
 
         expect(fn).not.toThrow();
     });
+
+    it('should not allow negative input when disableNegative prop is true', () => {
+        const changeMock = jest.fn();
+        const CurrencyField = withCurrencyFormatting(TextField);
+
+        const component = mountWithTheme(
+            <CurrencyField
+                disableNegative={true}
+                name=""
+                value={19.12}
+                locale="nl-NL"
+                currency="EUR"
+                onChange={changeMock}
+            />,
+        );
+
+        component.find('input').simulate('change', {
+            target: {
+                value: '-19.12',
+            },
+        });
+
+        expect(component.find('input').prop('value')).toEqual('19.12');
+    });
+
+    it('should allow negative input when disableNegative prop is false', () => {
+        const changeMock = jest.fn();
+        const CurrencyField = withCurrencyFormatting(TextField);
+
+        const component = mountWithTheme(
+            <CurrencyField
+                disableNegative={false}
+                name=""
+                value={19.12}
+                locale="nl-NL"
+                currency="EUR"
+                onChange={changeMock}
+            />,
+        );
+
+        component.find('input').simulate('change', {
+            target: {
+                value: '-19.12',
+            },
+        });
+
+        expect(component.find('input').prop('value')).toEqual('-19.12');
+    });
 });

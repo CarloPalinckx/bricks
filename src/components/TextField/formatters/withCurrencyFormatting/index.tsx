@@ -7,6 +7,7 @@ type PropsType = Pick<TextFieldPropsType, Exclude<keyof TextFieldPropsType, Omit
     value: number;
     locale: string;
     currency: string;
+    disableNegative?: boolean;
     onChange(value: number): void;
 };
 
@@ -55,7 +56,11 @@ const withCurrencyFormatting = (Wrapped: ComponentType<TextFieldPropsType>): Com
         private parse(direction: 'in', value: string): string;
         private parse(direction: 'out', value: string): number;
         private parse(direction: 'in' | 'out', value: string): string | number {
-            const stripped = value.replace(new RegExp(`[^0-9${this.state.decimalSeperator}]`, 'g'), '');
+            const negatedValues = this.props.disableNegative
+                ? `[^0-9${this.state.decimalSeperator}]`
+                : `[^\-0-9${this.state.decimalSeperator}]`;
+
+            const stripped = value.replace(new RegExp(negatedValues, 'g'), '');
 
             if (direction === 'out') {
                 const parsed = parseFloat(stripped.replace(this.state.decimalSeperator, '.'));
@@ -130,9 +135,15 @@ const withCurrencyFormatting = (Wrapped: ComponentType<TextFieldPropsType>): Com
         };
 
         public componentDidUpdate(prevProps: PropsType): void {
-            if (prevProps.currency !== this.props.currency || prevProps.locale !== this.props.locale) {
+            if (
+                prevProps.currency !== this.props.currency ||
+                prevProps.locale !== this.props.locale ||
+                prevProps.disableNegative !== this.props.disableNegative
+            ) {
                 this.setFormatter(this.props.locale, this.props.currency);
-                this.setState({ value: this.format(this.state.value) });
+                this.setState({ value: this.format(this.state.value) }, () =>
+                    this.props.onChange(parseInt(this.state.value, 0)),
+                );
             }
         }
 
