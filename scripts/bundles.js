@@ -6,69 +6,74 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const config = {
-    "publicPath": "/",
-    "publicDir": "dist",
-    "publicStaticPath": "/",
-    "publicStaticDir": "dist",
-  }
-  
-const configureBabelLoader = (browserlist) => {
-  return [{
-    test: /\.tsx?$/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: [
-          ['env', {
-            debug: true,
-            modules: false,
-            useBuiltIns: true,
-            targets: {
-              browsers: browserlist,
-            },
-          }],
-        ],
-        plugins: [
-            [
-                'babel-plugin-styled-components',
-                {
-                    ssr: true,
+    publicPath: '/',
+    publicDir: 'dist',
+    publicStaticPath: '/',
+    publicStaticDir: 'dist',
+};
+
+const configureBabelLoader = browserlist => {
+    return [
+        {
+            test: /\.tsx?$/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        [
+                            'env',
+                            {
+                                debug: true,
+                                modules: false,
+                                useBuiltIns: true,
+                                targets: {
+                                    browsers: browserlist,
+                                },
+                            },
+                        ],
+                    ],
+                    plugins: [
+                        [
+                            'babel-plugin-styled-components',
+                            {
+                                ssr: true,
+                            },
+                        ],
+                    ],
                 },
-            ],
-        ],
-      },
-    },
-  },
-  {
-    test: /\.tsx?$/,
-    loader: 'ts-loader',
-    options: {
-        onlyCompileBundledFiles: true,
-        configFile: __dirname + '/../config/typescript/tsconfig.json',
-    },
-  },
-  {
-    test: /\.css$/,
-    use: 'css-loader',
-  },
-  {
-    test: /^.*(?<!\.color)\.svg$/,
-    loader: 'svg-inline-loader',
-    options: {
-        removeTags: true,
-        removingTags: ['title', 'desc', 'defs', 'style'],
-        removingTagAttrs: ['class'],
-    },
-  },
-  {
-    test: /\.color\.svg$/,
-    loader: 'svg-inline-loader',
-    options: {
-        classPrefix: true,
-        removeTags: false,
-    },
-  },
-  { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }];
+            },
+        },
+        {
+            test: /\.tsx?$/,
+            loader: 'ts-loader',
+            options: {
+                onlyCompileBundledFiles: true,
+                configFile: __dirname + '/../config/typescript/tsconfig.json',
+            },
+        },
+        {
+            test: /\.css$/,
+            use: 'css-loader',
+        },
+        {
+            test: /^.*(?<!\.color)\.svg$/,
+            loader: 'svg-inline-loader',
+            options: {
+                removeTags: true,
+                removingTags: ['title', 'desc', 'defs', 'style'],
+                removingTagAttrs: ['class'],
+            },
+        },
+        {
+            test: /\.color\.svg$/,
+            loader: 'svg-inline-loader',
+            options: {
+                classPrefix: true,
+                removeTags: false,
+            },
+        },
+        { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
+    ];
 };
 
 const baseConfig = {
@@ -106,58 +111,65 @@ const baseConfig = {
 };
 
 const modernConfig = Object.assign({}, baseConfig, {
-  output: {
-    path: path.resolve(__dirname, '..', config.publicDir),
-    publicPath: '/',
-    filename: '[name]index.mjs',
-  },
-  module: {
-    rules: 
-      configureBabelLoader([
-        // The last two versions of each browser, excluding versions
-        // that don't support <script type="module">.
-        'last 2 Chrome versions', 'not Chrome < 60',
-        'last 2 Safari versions', 'not Safari < 10.1',
-        'last 2 iOS versions', 'not iOS < 10.3',
-        'last 2 Firefox versions', 'not Firefox < 54',
-        'last 2 Edge versions', 'not Edge < 15',
-      ]),
-    
-  },
+    output: {
+        /* 
+        "filename: [name]index.js" is a workaround to name all output files: 'index.js'. 
+        When you just fill in 'index.js' without the prefix '[name]', webpack will throw an error: "Multiple assets emit to the same filename index.js"
+        */
+        filename: '[name]index.mjs',
+        path: __dirname + '/../../lib',
+        library: 'bricks',
+        libraryTarget: 'umd',
+        umdNamedDefine: true,
+    },
+    module: {
+        rules: configureBabelLoader([
+            // The last two versions of each browser, excluding versions
+            // that don't support <script type="module">.
+            'last 2 Chrome versions',
+            'not Chrome < 60',
+            'last 2 Safari versions',
+            'not Safari < 10.1',
+            'last 2 iOS versions',
+            'not iOS < 10.3',
+            'last 2 Firefox versions',
+            'not Firefox < 54',
+            'last 2 Edge versions',
+            'not Edge < 15',
+        ]),
+    },
 });
+
 const legacyConfig = Object.assign({}, baseConfig, {
-  output: {
-    path: path.resolve(__dirname, '..', config.publicDir),
-    publicPath: '/',
-    filename: '[name]index.es5.js',
-  },
-  module: {
-    rules: 
-      configureBabelLoader([
-        '> 1%',
-        'last 2 versions',
-        'Firefox ESR',
-      ])
-    ,
-  },
+    output: {
+        path: path.resolve(__dirname, '..', config.publicDir),
+        publicPath: '/',
+        filename: '[name]index.es5.js',
+    },
+    module: {
+        rules: configureBabelLoader(['> 1%', 'last 2 versions', 'Firefox ESR']),
+    },
 });
-const createCompiler = (config) => {
-  const compiler = webpack(config);
-  return () => {
-    return new Promise((resolve, reject) => {
-      compiler.run((err, stats) => {
-        if (err) return reject(err);
-        console.log(stats.toString({colors: true}) + '\n');
-        resolve();
-      });
-    });
-  };
+
+const createCompiler = config => {
+    const compiler = webpack(config);
+    return () => {
+        return new Promise((resolve, reject) => {
+            compiler.run((err, stats) => {
+                if (err) return reject(err);
+                console.log(stats.toString({ colors: true }) + '\n');
+                resolve();
+            });
+        });
+    };
 };
+
 const compileModernBundle = createCompiler(modernConfig);
 const compileLegacyBundle = createCompiler(legacyConfig);
+
 module.exports = async () => {
-  console.log('Compiling modern bundle...');
-  await compileModernBundle();
-  console.log('Compiling legacy bundle...');
-  await compileLegacyBundle();
+    console.log('Compiling modern bundle...');
+    await compileModernBundle();
+    console.log('Compiling legacy bundle...');
+    await compileLegacyBundle();
 };
