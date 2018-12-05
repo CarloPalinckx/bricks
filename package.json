@@ -97,6 +97,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "build-now": "build-storybook -c ./config/storybook -o /public",
     "build-storybook": "build-storybook -c ./config/storybook -o .out",
+    "build-multibundle": "node scripts/build.js",
     "cs-fix": "prettier --write ./src/**/*.{ts,tsx}",
     "cs": "prettier --list-different ./src/**/*.{ts,tsx}",
     "prepare": "npm run build"

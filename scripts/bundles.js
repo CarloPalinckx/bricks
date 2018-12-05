@@ -1,6 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const entry = require('../../scripts/entry');
+const entry = require('./entry');
+const PeerDepsExternalsPlugin = require('peer-deps-externals-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const Visualizer = require('webpack-visualizer-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const config = {
     "publicPath": "/",
     "publicDir": "dist",
@@ -9,7 +13,7 @@ const config = {
   }
   
 const configureBabelLoader = (browserlist) => {
-  return {
+  return [{
     test: /\.tsx?$/,
     use: {
       loader: 'babel-loader',
@@ -34,8 +38,39 @@ const configureBabelLoader = (browserlist) => {
         ],
       },
     },
-  };
+  },
+  {
+    test: /\.tsx?$/,
+    loader: 'ts-loader',
+    options: {
+        onlyCompileBundledFiles: true,
+        configFile: __dirname + '/../config/typescript/tsconfig.json',
+    },
+  },
+  {
+    test: /\.css$/,
+    use: 'css-loader',
+  },
+  {
+    test: /^.*(?<!\.color)\.svg$/,
+    loader: 'svg-inline-loader',
+    options: {
+        removeTags: true,
+        removingTags: ['title', 'desc', 'defs', 'style'],
+        removingTagAttrs: ['class'],
+    },
+  },
+  {
+    test: /\.color\.svg$/,
+    loader: 'svg-inline-loader',
+    options: {
+        classPrefix: true,
+        removeTags: false,
+    },
+  },
+  { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }];
 };
+
 const baseConfig = {
     devtool: 'source-map',
     entry,
@@ -47,50 +82,37 @@ const baseConfig = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
     },
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                loader: 'ts-loader',
-                options: {
-                    onlyCompileBundledFiles: true,
-                    configFile: __dirname + '/../typescript/tsconfig.json',
-                },
-            },
-            {
-                test: /\.css$/,
-                use: 'css-loader',
-            },
-            {
-                test: /^.*(?<!\.color)\.svg$/,
-                loader: 'svg-inline-loader',
-                options: {
-                    removeTags: true,
-                    removingTags: ['title', 'desc', 'defs', 'style'],
-                    removingTagAttrs: ['class'],
-                },
-            },
-            {
-                test: /\.color\.svg$/,
-                loader: 'svg-inline-loader',
-                options: {
-                    classPrefix: true,
-                    removeTags: false,
-                },
-            },
-            { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
-        ],
-    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'env/',
+            minChunks: 2,
+        }),
+        new UglifyJSPlugin({
+            sourceMap: true,
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production'),
+        }),
+        new Visualizer({
+            filename: '../reports/webpack/statistics-circle.html',
+        }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            openAnalyzer: false,
+            reportFilename: '../reports/webpack/statistics-tree.html',
+        }),
+        new PeerDepsExternalsPlugin(),
+    ],
 };
+
 const modernConfig = Object.assign({}, baseConfig, {
   output: {
     path: path.resolve(__dirname, '..', config.publicDir),
     publicPath: '/',
     filename: '[name]index.mjs',
   },
-  plugins: configurePlugins(),
   module: {
-    rules: [
+    rules: 
       configureBabelLoader([
         // The last two versions of each browser, excluding versions
         // that don't support <script type="module">.
@@ -100,7 +122,7 @@ const modernConfig = Object.assign({}, baseConfig, {
         'last 2 Firefox versions', 'not Firefox < 54',
         'last 2 Edge versions', 'not Edge < 15',
       ]),
-    ],
+    
   },
 });
 const legacyConfig = Object.assign({}, baseConfig, {
@@ -109,37 +131,15 @@ const legacyConfig = Object.assign({}, baseConfig, {
     publicPath: '/',
     filename: '[name]index.es5.js',
   },
-  plugins: configurePlugins(),
   module: {
-    rules: [
+    rules: 
       configureBabelLoader([
         '> 1%',
         'last 2 versions',
         'Firefox ESR',
-      ]),
-    ],
+      ])
+    ,
   },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'env/',
-        minChunks: 2,
-    }),
-    new UglifyJSPlugin({
-        sourceMap: true,
-    }),
-    new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
-    new Visualizer({
-        filename: '../reports/webpack/statistics-circle.html',
-    }),
-    new BundleAnalyzerPlugin({
-        analyzerMode: 'static',
-        openAnalyzer: false,
-        reportFilename: '../reports/webpack/statistics-tree.html',
-    }),
-    new PeerDepsExternalsPlugin(),
-],
 });
 const createCompiler = (config) => {
   const compiler = webpack(config);
@@ -156,6 +156,8 @@ const createCompiler = (config) => {
 const compileModernBundle = createCompiler(modernConfig);
 const compileLegacyBundle = createCompiler(legacyConfig);
 module.exports = async () => {
+  console.log('Compiling modern bundle...');
   await compileModernBundle();
+  console.log('Compiling legacy bundle...');
   await compileLegacyBundle();
 };
