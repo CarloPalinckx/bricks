@@ -65,7 +65,7 @@ const baseConfig = {
 
 const modernConfig = Object.assign({}, baseConfig, {
     output: {
-        filename: '[name]index.mjs',
+        filename: '[name]index.es2015.js',
         path: __dirname + '/../lib',
         library: 'bricks',
         libraryTarget: 'umd',
