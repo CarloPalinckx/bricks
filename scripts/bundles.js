@@ -65,7 +65,7 @@ const baseConfig = {
 
 const modernConfig = Object.assign({}, baseConfig, {
     output: {
-        filename: '[name]index.es2015.js',
+        filename: '[name]modern.js',
         path: __dirname + '/../lib',
         library: 'bricks',
         libraryTarget: 'umd',
@@ -133,7 +133,7 @@ const modernConfig = Object.assign({}, baseConfig, {
 
 const legacyConfig = Object.assign({}, baseConfig, {
     output: {
-        filename: '[name]index.es5.js',
+        filename: '[name]index.js',
         path: __dirname + '/../lib',
         library: 'bricks',
         libraryTarget: 'umd',

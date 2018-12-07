@@ -102,7 +102,7 @@
     "prepare": "npm run build"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "repository": {
     "type": "git",
