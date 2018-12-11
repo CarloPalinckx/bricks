@@ -12,13 +12,13 @@ exports[`Storyshots Toaster Default 1`] = `
     }
   >
     <div
-      className="sc-hEsumM fWopcp"
+      className="sc-kafWEX gQICCX"
     >
       <div
         className="sc-bwzfXH bYUsuW"
       >
         <div
-          className="sc-ktHwxA uqqxR"
+          className="sc-feJyhm MlcFc"
         >
           <div
             className="sc-bwzfXH fdKFCl"
@@ -110,13 +110,13 @@ exports[`Storyshots Toaster With action button 1`] = `
     }
   >
     <div
-      className="sc-hEsumM fWopcp"
+      className="sc-kafWEX gQICCX"
     >
       <div
         className="sc-bwzfXH bYUsuW"
       >
         <div
-          className="sc-ktHwxA jmlPUn"
+          className="sc-feJyhm canpuv"
         >
           <div
             className="sc-bwzfXH fdKFCl"
@@ -224,13 +224,13 @@ exports[`Storyshots Toaster With auto dismiss 1`] = `
     }
   >
     <div
-      className="sc-hEsumM fWopcp"
+      className="sc-kafWEX gQICCX"
     >
       <div
         className="sc-bwzfXH bYUsuW"
       >
         <div
-          className="sc-ktHwxA cFzZDw"
+          className="sc-feJyhm djFdBN"
         >
           <div
             className="sc-bwzfXH fdKFCl"
