@@ -25,6 +25,7 @@ storiesOf('Button', module)
                         'primary',
                     ) as PropsType['variant']
                 }
+                loading={boolean('loading', false)}
                 title={text('title', 'Click me')}
                 disabled={boolean('disabled', false)}
                 flat={boolean('flat', false)}

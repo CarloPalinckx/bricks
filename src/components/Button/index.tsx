@@ -3,27 +3,29 @@ import StyledButton, { StyledAnchor } from './style';
 import Icon, { MediumPropsType } from '../Icon';
 import Box from '../Box';
 import trbl from '../../utility/trbl';
+import Spinner from '../Spinner';
 
 type PropsType = {
-    className?: string;
-    compact?: boolean;
-    title: string;
-    variant: 'primary' | 'destructive' | 'warning' | 'secondary' | 'plain';
-    target?: HTMLAnchorElement['target'];
-    href?: string;
-    disabled?: boolean;
-    flat?: boolean;
-    color?: string;
-    icon?: MediumPropsType['icon'];
-    iconAlign?: 'right' | 'left';
     id?: string;
+    title: string;
+    href?: string;
+    color?: string;
+    flat?: boolean;
+    compact?: boolean;
+    loading?: boolean;
+    disabled?: boolean;
+    className?: string;
+    iconAlign?: 'right' | 'left';
+    icon?: MediumPropsType['icon'];
+    target?: HTMLAnchorElement['target'];
+    variant: 'primary' | 'destructive' | 'warning' | 'secondary' | 'plain';
     action?(): void;
 };
 
 type ButtonContentsType = {
+    title: PropsType['title'];
     icon?: PropsType['icon'];
     iconAlign?: PropsType['iconAlign'];
-    title: PropsType['title'];
 };
 
 const ButtonContents: FunctionComponent<ButtonContentsType> = (props): JSX.Element => (
@@ -54,6 +56,7 @@ const Button: FunctionComponent<PropsType> = (props): JSX.Element => {
     if (isLink) {
         return (
             <StyledAnchor
+                loading={props.loading}
                 variant={props.variant}
                 compact={props.compact}
                 title={props.title}
@@ -64,30 +67,43 @@ const Button: FunctionComponent<PropsType> = (props): JSX.Element => {
                 flat={props.flat}
                 id={props.id}
             >
-                <ButtonContents title={props.title} icon={props.icon} iconAlign={props.iconAlign}>
-                    {props.children}
-                </ButtonContents>
+                {(props.loading === true && (
+                    <Box minHeight="21px" minWidth="21px">
+                        <Spinner color={props.flat || props.variant === 'plain' ? '#000' : '#fff'} />
+                    </Box>
+                )) || (
+                    <ButtonContents title={props.title} icon={props.icon} iconAlign={props.iconAlign}>
+                        {props.children}
+                    </ButtonContents>
+                )}
             </StyledAnchor>
         );
     }
 
     return (
         <StyledButton
-            variant={props.variant}
-            compact={props.compact}
-            title={props.title}
-            className={props.className}
-            onClick={clickAction}
             type="button"
-            disabled={props.disabled}
+            id={props.id}
+            icon={props.icon}
             flat={props.flat}
             color={props.color}
-            icon={props.icon}
-            id={props.id}
+            title={props.title}
+            onClick={clickAction}
+            loading={props.loading}
+            variant={props.variant}
+            compact={props.compact}
+            disabled={props.disabled}
+            className={props.className}
         >
-            <ButtonContents title={props.title} icon={props.icon} iconAlign={props.iconAlign}>
-                {props.children}
-            </ButtonContents>
+            {(props.loading === true && (
+                <Box minHeight="21px" minWidth="21px">
+                    <Spinner color={props.flat || props.variant === 'plain' ? '#000' : '#fff'} />
+                </Box>
+            )) || (
+                <ButtonContents title={props.title} icon={props.icon} iconAlign={props.iconAlign}>
+                    {props.children}
+                </ButtonContents>
+            )}
         </StyledButton>
     );
 };

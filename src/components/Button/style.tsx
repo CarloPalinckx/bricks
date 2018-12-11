@@ -74,6 +74,7 @@ type ButtonThemeType = {
 };
 
 type ButtonPropsType = {
+    loading?: PropsType['loading'];
     compact?: PropsType['compact'];
     flat?: PropsType['flat'];
     variant: PropsType['variant'];
@@ -88,17 +89,18 @@ const StyledButton = withProps<ButtonPropsType>(styled.button)`
     appearance: none;
     user-select: none;
     position: relative;
+    border-style: solid;
     text-decoration: none;
     display: inline-block;
     transform: translateZ(0) translate3d(0, 0, 0);
     transition: transform 0.1s, background 0.3s, color 0.3s, box-shadow 0.1s, border 0.3s;
-    padding: ${({ compact }): string => (compact ? '11px 12px' : '11px 24px')};
-    font-family: ${({ theme }): string => theme.Button.common.fontFamily};
     font-size: ${({ theme }): string => theme.Button.common.fontSize};
-    border-radius: ${({ theme }): string => theme.Button.common.borderRadius};
-    border-width: ${({ theme }): string => theme.Button.common.borderWidth};
     font-weight: ${({ theme }): string => theme.Button.common.fontWeight};
-    border-style: solid;
+    font-family: ${({ theme }): string => theme.Button.common.fontFamily};
+    border-width: ${({ theme }): string => theme.Button.common.borderWidth};
+    border-radius: ${({ theme }): string => theme.Button.common.borderRadius};
+    padding: ${({ loading, compact }): string =>
+        loading ? `${compact ? '6px 24px' : '6px 36px'}` : `${compact ? '11px 12px' : '11px 24px'}`};
 
     ${({ icon }): string => (icon !== undefined ? 'display: flex; align-items: center;' : '')}
 
