@@ -104,27 +104,27 @@ const StyledButton = withProps<ButtonPropsType>(styled.button)`
 
     ${({ icon }): string => (icon !== undefined ? 'display: flex; align-items: center;' : '')}
 
-    ${({ variant, flat, theme, color }): string => {
+    ${({ variant, flat, theme, color, loading }): string => {
         const subVariant = flat ? 'flat' : 'regular';
 
         return `
             color: ${color ? color : theme.Button[variant][subVariant].idle.color};
             background-color: ${theme.Button[variant][subVariant].idle.backgroundColor};
             text-decoration: ${theme.Button[variant][subVariant].idle.textDecoration};
-            ${!flat ? `border-color: ${theme.Button[variant].regular.hover.borderColor}` : ''};
+            ${!flat && !loading ? `border-color: ${theme.Button[variant].regular.hover.borderColor}` : ''};
             ${!flat ? `box-shadow: ${theme.Button[variant].regular.idle.boxShadow}` : ''};
 
             &:hover {
                 color: ${theme.Button[variant][subVariant].hover.color};
-                background-color: ${theme.Button[variant][subVariant].hover.backgroundColor};
                 text-decoration: ${theme.Button[variant][subVariant].hover.textDecoration};
-                ${!flat ? `border-color: ${theme.Button[variant].regular.hover.borderColor}` : ''};
-                ${!flat ? `box-shadow: ${theme.Button[variant].regular.hover.boxShadow}` : ''};
+                ${!loading ? `background-color: ${theme.Button[variant][subVariant].hover.backgroundColor}` : ''};
+                ${!flat && !loading ? `border-color: ${theme.Button[variant].regular.hover.borderColor}` : ''};
+                ${!flat && !loading ? `box-shadow: ${theme.Button[variant].regular.hover.boxShadow}` : ''};
             }
 
             &:focus {
                 ${
-                    !flat
+                    !flat && !loading
                         ? `
                             color: ${theme.Button[variant].regular.focus.color};
                             background-color: ${theme.Button[variant].regular.focus.backgroundColor};
@@ -138,15 +138,14 @@ const StyledButton = withProps<ButtonPropsType>(styled.button)`
 
             &:active {
                 color: ${theme.Button[variant][subVariant].active.color};
-                background-color: ${theme.Button[variant][subVariant].active.backgroundColor};
                 text-decoration: ${theme.Button[variant][subVariant].active.textDecoration};
-                ${!flat ? `border-color: ${theme.Button[variant].regular.active.borderColor}` : ''};
-                ${!flat ? `box-shadow: ${theme.Button[variant].regular.active.boxShadow}` : ''};
+                ${!flat && !loading ? `border-color: ${theme.Button[variant].regular.active.borderColor}` : ''};
+                ${!flat && !loading ? `box-shadow: ${theme.Button[variant].regular.active.boxShadow}` : ''};
+                ${!loading ? `background-color: ${theme.Button[variant][subVariant].active.backgroundColor}` : ''};
             }
+            ${!loading ? '&:active {transform: translateY(2px);}' : ''}
         `;
-    }} &:active {
-        transform: translateY(2px);
-    }
+    }}
 
     &::before {
         top: 0;

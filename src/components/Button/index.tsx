@@ -50,7 +50,9 @@ const Button: FunctionComponent<PropsType> = (props): JSX.Element => {
     const isLink = props.href !== undefined;
 
     const clickAction = (): void => {
-        if (props.action !== undefined && props.disabled !== true) props.action();
+        if (props.action !== undefined && props.disabled !== true && props.loading !== true) {
+            props.action();
+        }
     };
 
     if (isLink) {
@@ -67,9 +69,9 @@ const Button: FunctionComponent<PropsType> = (props): JSX.Element => {
                 flat={props.flat}
                 id={props.id}
             >
-                {(props.loading === true && (
-                    <Box minHeight="21px" minWidth="21px">
-                        <Spinner color={props.flat || props.variant === 'plain' ? '#000' : '#fff'} />
+                {(props.loading && (
+                    <Box alignItems="center" minHeight={props.icon ? '28px' : '21px'} minWidth="21px">
+                        <Spinner color={'currentColor'} />
                     </Box>
                 )) || (
                     <ButtonContents title={props.title} icon={props.icon} iconAlign={props.iconAlign}>
@@ -95,9 +97,9 @@ const Button: FunctionComponent<PropsType> = (props): JSX.Element => {
             disabled={props.disabled}
             className={props.className}
         >
-            {(props.loading === true && (
-                <Box minHeight="21px" minWidth="21px">
-                    <Spinner color={props.flat || props.variant === 'plain' ? '#000' : '#fff'} />
+            {(props.loading && (
+                <Box alignItems="center" minHeight={props.icon ? '28px' : '21px'} minWidth="21px">
+                    <Spinner color={'currentColor'} />
                 </Box>
             )) || (
                 <ButtonContents title={props.title} icon={props.icon} iconAlign={props.iconAlign}>

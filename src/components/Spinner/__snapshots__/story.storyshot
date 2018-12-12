@@ -2,23 +2,20 @@
 
 exports[`Storyshots Spinner Default 1`] = `
 <div
-  className="sc-bwzfXH ggDxj"
+  className="sc-btzYZH lnMruu"
 >
   <div
     aria-busy="true"
     aria-live="polite"
-    className="sc-jqCOkK jXhULd"
+    className="sc-gZMcBi iCFVFI"
   >
     <svg
-      className="sc-uJMKN bPGFDg"
+      className="sc-gqjmRU kvcfhC"
       color="#5bd16a"
-      fill="transparent"
       viewBox="0 0 150 150"
-      x="0px"
-      y="0px"
     >
       <circle
-        className="sc-bbmXgH cAlCsG"
+        className="spinnerCircle sc-VigVT gAcjar"
         cx="75"
         cy="75"
         r="60"

@@ -25,11 +25,11 @@ storiesOf('Button', module)
                         'primary',
                     ) as PropsType['variant']
                 }
-                loading={boolean('loading', false)}
                 title={text('title', 'Click me')}
                 disabled={boolean('disabled', false)}
-                flat={boolean('flat', false)}
                 compact={boolean('compact', false)}
+                loading={boolean('loading', false)}
+                flat={boolean('flat', false)}
             />
         );
     })
@@ -47,8 +47,9 @@ storiesOf('Button', module)
                 icon={select('Icon', mediumIconKeys, 'keyboard') as PropsType['icon']}
                 iconAlign={select('Align icon', ['left', 'right'], 'right') as PropsType['iconAlign']}
                 disabled={boolean('disabled', false)}
-                flat={boolean('flat', false)}
                 compact={boolean('compact', false)}
+                loading={boolean('loading', false)}
+                flat={boolean('flat', false)}
             />
         );
     })
@@ -61,17 +62,18 @@ storiesOf('Button', module)
                             variant="secondary"
                             title={text('title', 'Click me')}
                             disabled={boolean('disabled', false)}
+                            loading={boolean('loading', false)}
                             action={(): void => {
-                                /* */
+                                /**/
                             }}
                         />
                         <Button
+                            compact
                             variant="plain"
                             title={'Click me'}
                             action={(): void => {
-                                /* */
+                                /**/
                             }}
-                            compact
                         >
                             <Icon size="medium" icon="gear" />
                         </Button>
