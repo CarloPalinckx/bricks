@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Spinner Default 1`] = `
+<div
+  className="sc-btzYZH lnMruu"
+>
+  <div
+    aria-busy="true"
+    aria-live="polite"
+    className="sc-jqCOkK jXhULd"
+  >
+    <svg
+      className="sc-uJMKN bPGFDg"
+      color="#5bd16a"
+      viewBox="0 0 150 150"
+    >
+      <circle
+        className="sc-bbmXgH cAlCsG"
+        cx="75"
+        cy="75"
+        r="60"
+      />
+    </svg>
+  </div>
+</div>
+`;
